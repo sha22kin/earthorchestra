@@ -48,7 +48,8 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 5.5rem;
 }
-html.has-sheet { overflow: hidden; }
+html { overflow-x: hidden; }
+html.has-sheet, html.has-sheet body { overflow: hidden; }
 
 body {
     margin: 0;
@@ -60,6 +61,7 @@ body {
     line-height: 1.65;
     font-kerning: normal;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; /* fallback for older Safari */
     overflow-x: clip;
 }
 

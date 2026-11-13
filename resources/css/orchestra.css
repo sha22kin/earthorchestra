@@ -9,6 +9,7 @@
         radial-gradient(50% 40% at 50% 100%, rgba(143, 191, 202, 0.08), transparent 70%),
         var(--walnut);
     color: var(--ink-on);
+    overflow: hidden; /* fallback for older Safari */
     overflow: clip;
 }
 .orchestra::before {

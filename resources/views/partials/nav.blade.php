@@ -22,15 +22,34 @@
         </button>
     </div>
 
-    <div class="nav-sheet" id="nav-sheet" hidden data-nav-sheet>
-        <nav aria-label="Mobile">
-            <a href="{{ $anchor('overture') }}"><small>00</small>Overture</a>
-            <a href="{{ $anchor('listen') }}"><small>01</small>How to listen</a>
-            <a href="{{ $anchor('programme') }}"><small>02</small>The six movements</a>
-            <a href="{{ $anchor('orchestra') }}"><small>03</small>The full orchestra</a>
-            <a href="{{ route('about') }}"><small>04</small>About us</a>
-            <a href="{{ route('credits') }}"><small>05</small>Credits</a>
+    <div class="nav-sheet" id="nav-sheet" data-nav-sheet aria-hidden="true" inert>
+        <nav class="nav-sheet__links" aria-label="Mobile">
+            @foreach ([
+                ['overture', 'Overture'], ['listen', 'How to listen'], ['programme', 'The six movements'],
+                ['orchestra', 'The full orchestra'], [route('about'), 'About us'], [route('credits'), 'Credits'],
+            ] as $i => [$target, $label])
+                <a href="{{ str_starts_with($target, 'http') ? $target : $anchor($target) }}" style="--i: {{ $i }}">
+                    <small>{{ str_pad($i, 2, '0', STR_PAD_LEFT) }}</small>
+                    <span>{{ $label }}</span>
+                    <x-icon name="arrow-r" />
+                </a>
+            @endforeach
         </nav>
-        <img class="nav-sheet__cloud" src="{{ asset('media/cloud-3.webp') }}" alt="" loading="lazy">
+
+        <div class="nav-sheet__foot" style="--i: 6">
+            <a class="nav-sheet__cta" href="{{ $anchor('programme') }}">
+                <span>
+                    <small>Tonight's programme</small>
+                    Six movements, one orchestra
+                </span>
+                <span class="nav-sheet__disc"><x-icon name="play" /></span>
+            </a>
+            <p class="nav-sheet__meta"><span>NASA GEOS-FP &amp; GEOS-CF data</span> <i aria-hidden="true">◆</i> <span>Autumn 2026</span></p>
+        </div>
+
+        <div class="nav-sheet__sky" aria-hidden="true">
+            <img class="nav-sheet__cloud nav-sheet__cloud--a" src="{{ asset('media/cloud-1.webp') }}" alt="" loading="lazy">
+            <img class="nav-sheet__cloud nav-sheet__cloud--b" src="{{ asset('media/cloud-2.webp') }}" alt="" loading="lazy">
+        </div>
     </div>
 </header>
