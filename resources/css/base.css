@@ -72,10 +72,16 @@ body::before {
     inset: 0;
     z-index: 100;
     pointer-events: none;
-    background-image: var(--grain);
-    opacity: 0.16;
-    mix-blend-mode: multiply;
+    background: url('/media/grain.png') 0 0 / 128px 128px repeat;
+    opacity: 0.2;
+    /* Own compositor layer, no blend mode: costs nothing when other things animate. */
+    transform: translateZ(0);
 }
+
+/* Nothing behind the open mobile menu needs to keep animating. */
+.has-sheet .hero *,
+.has-sheet .overture *,
+.has-sheet .listen * { animation-play-state: paused !important; }
 
 img, svg, video { display: block; max-width: 100%; }
 img { height: auto; }

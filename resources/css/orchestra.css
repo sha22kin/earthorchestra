@@ -16,9 +16,9 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: var(--grain);
-    opacity: 0.5;
-    mix-blend-mode: soft-light;
+    background: url('/media/grain.png') 0 0 / 128px 128px repeat;
+    opacity: 0.18;
+    filter: invert(1);
     pointer-events: none;
 }
 .orchestra .wrap { position: relative; }

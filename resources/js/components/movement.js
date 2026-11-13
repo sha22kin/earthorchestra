@@ -84,9 +84,11 @@ export class Movement {
         this.sampledAt = 0;
         this.lastTap = null;
 
+        // Posters load only when the section gets close, so they don't
+        // compete with the page's first paint and scripts.
         this.poster = new Image();
         this.poster.decoding = 'async';
-        this.poster.src = this.ui.video.getAttribute('poster');
+        this.posterUrl = this.ui.video.dataset.poster;
 
         this.ui.seek.disabled = true;
         this.bind();
@@ -145,8 +147,24 @@ export class Movement {
         ui.lockDot.addEventListener('click', (e) => e.stopPropagation());
     }
 
+    loadPoster() {
+        if (this.poster.src || !this.posterUrl) return;
+        this.ui.video.poster = this.posterUrl;
+        this.poster.src = this.posterUrl;
+    }
+
     observe() {
-        if (!('IntersectionObserver' in window)) return;
+        if (!('IntersectionObserver' in window)) {
+            this.loadPoster();
+            return;
+        }
+        const near = new IntersectionObserver(([entry]) => {
+            if (!entry.isIntersecting) return;
+            this.loadPoster();
+            near.disconnect();
+        }, { rootMargin: '900px 0px' });
+        near.observe(this.el);
+
         new IntersectionObserver(([entry]) => {
             this.visible = entry.isIntersecting;
             if (this.state.playing) stage.emit();
@@ -157,6 +175,7 @@ export class Movement {
 
     async play() {
         stage.claim(this);
+        this.loadPoster();
 
         if (!this.voice) {
             this.voice = createVoice(this.cfg.audio);

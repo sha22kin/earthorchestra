@@ -98,6 +98,7 @@ body:not(.page-home) .site-nav {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
+    will-change: opacity, transform;
     transition: opacity 0.3s ease, transform 0.35s var(--ease-out), visibility 0s linear 0.35s;
 }
 .is-open .nav-sheet {

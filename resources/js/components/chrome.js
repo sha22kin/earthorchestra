@@ -6,32 +6,8 @@ export function initNav() {
     const nav = document.querySelector('[data-nav]');
     if (!nav) return;
 
-    const toggle = nav.querySelector('[data-nav-toggle]');
-    const sheet = nav.querySelector('[data-nav-sheet]');
-
-    // The whole open/close animation is CSS; JS only flips state.
-    const setOpen = (open) => {
-        toggle.setAttribute('aria-expanded', String(open));
-        toggle.querySelector('.sr-only').textContent = open ? 'Close menu' : 'Menu';
-        nav.classList.toggle('is-open', open);
-        document.documentElement.classList.toggle('has-sheet', open);
-        sheet.inert = !open;
-        sheet.setAttribute('aria-hidden', String(!open));
-        if (open) {
-            sheet.scrollTop = 0;
-            setTimeout(() => sheet.querySelector('a')?.focus({ preventScroll: true }), 350);
-        }
-    };
-
-    toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
-    sheet.addEventListener('click', (e) => e.target.closest('a') && setOpen(false));
-    window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => e.matches && setOpen(false));
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && nav.classList.contains('is-open')) {
-            setOpen(false);
-            toggle.focus();
-        }
-    });
+    // Opening and closing the menu is handled by a tiny inline script in
+    // partials/nav.blade.php so it responds before this bundle has loaded.
 
     // Condense the bar once the page scrolls.
     let ticking = false;

@@ -42,7 +42,7 @@
                 <div class="stage__media" data-media>
                     <video class="stage__video" data-video
                            muted playsinline loop preload="none"
-                           poster="{{ asset($v->poster_path) }}"
+                           data-poster="{{ asset($v->poster_path) }}"
                            width="1600" height="800">
                         <source src="{{ asset($v->video_path) }}" type="video/mp4">
                     </video>

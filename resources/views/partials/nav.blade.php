@@ -43,3 +43,26 @@
         </div>
     </div>
 </header>
+{{-- Inline so the menu works the instant the HTML arrives, without waiting for the JS bundle or images. --}}
+<script>
+(function () {
+    var nav = document.querySelector('[data-nav]');
+    var toggle = nav.querySelector('[data-nav-toggle]');
+    var sheet = nav.querySelector('[data-nav-sheet]');
+    function set(open) {
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.querySelector('.sr-only').textContent = open ? 'Close menu' : 'Menu';
+        nav.classList.toggle('is-open', open);
+        document.documentElement.classList.toggle('has-sheet', open);
+        sheet.inert = !open;
+        sheet.setAttribute('aria-hidden', String(!open));
+        if (open) sheet.scrollTop = 0;
+    }
+    toggle.addEventListener('click', function () { set(toggle.getAttribute('aria-expanded') !== 'true'); });
+    sheet.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) { set(false); toggle.focus(); }
+    });
+    window.matchMedia('(min-width: 901px)').addEventListener('change', function (e) { if (e.matches) set(false); });
+})();
+</script>
