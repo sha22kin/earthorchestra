@@ -1,0 +1,904 @@
+[
+  {
+    "slug": "near-surface-temperature",
+    "position": 1,
+    "title": "GEOS-FP Near-Surface Temperature",
+    "short_title": "Temperature",
+    "model": "GEOS-FP",
+    "measurement": "Air temperature, 3 m above the surface",
+    "interaction": "cursor",
+    "accent": "#c0714a",
+    "summary": "This is a changing visualisation of the near-surface air temperature, 3 metres above Earth’s surface, compiled by NASA’s GEOS-FP system.",
+    "body": [
+      {
+        "type": "p",
+        "text": "Temperature is one of the most familiar ways we experience our environment, but the temperature of the air surrounding us is influenced by a surprisingly complex combination of processes. From the amount of sunlight reaching the ground, to the movement of large weather systems, temperatures are constantly changing across the planet. NASA's near-surface temperature visualisation offers a way to observe these changes on a global scale."
+      },
+      {
+        "type": "p",
+        "text": "The data used in this visualisation comes from NASA's Goddard Earth Observing System Forward Processing (GEOS-FP) system. Developed and maintained by NASA's Global Modeling and Assimilation Office (GMAO), GEOS-FP is a computer-based atmospheric model that combines millions of weather observations with mathematical simulations. These observations come from a variety of sources, including ground-based weather stations, aircraft, weather balloons and Earth-observing satellites. By combining these measurements, the system estimates the most realistic atmospheric conditions possible and uses them as the starting point for weather forecasts. This process is known as data assimilation: the integration of real-world observations into a computer model to improve its representation of the atmosphere. [1]"
+      },
+      {
+        "type": "p",
+        "text": "The visualisation focuses on near-surface air temperature, meaning the temperature of the air relatively close to Earth's ground or ocean surface. This is particularly useful because it represents the atmospheric conditions people, animals and plants experience in their immediate surroundings. Unlike measurements of surface temperature, which describe how hot or cold the actual ground or water is, air temperature describes the surrounding atmosphere. These two measurements can differ considerably. For example, sand exposed to direct sunlight can become much hotter than the air immediately above it. [2]"
+      },
+      {
+        "type": "h",
+        "text": "But why does temperature vary so dramatically across the planet?"
+      },
+      {
+        "type": "p",
+        "text": "One major influence is solar radiation, the energy Earth receives from the Sun. Different parts of the planet receive different amounts of sunlight depending on their latitude, the angle at which sunlight arrives and the time of day. The areas closer to the equator generally receive more direct sunlight throughout the year; while the polar regions receive sunlight at a lower angle which causes the sunlight to spread over a much wider area, causing weaker solar heating. Local temperatures are also influenced by factors such as cloud cover, elevation, surface characteristics and ocean currents. For example, land generally heats and cools more quickly than water, meaning coastal regions often experience different temperature patterns from inland areas."
+      },
+      {
+        "type": "p",
+        "text": "Temperature is also an important indicator in the study of climate change. Earth's average temperature is rising as concentrations of greenhouse gases, such as carbon dioxide and methane, increase. These gases absorb and re-emit some of the heat Earth releases after absorbing energy from the Sun, slowing the escape of that energy into space. This natural process, called the greenhouse effect, keeps our planet warm enough to support life. However, increasing greenhouse gas concentrations strengthen this effect and contribute to long-term global warming. [3]"
+      },
+      {
+        "type": "p",
+        "text": "As the planet warms, scientists are particularly interested in changes to extreme temperature events, including heat waves. A heat wave is an extended period of unusually high temperatures relative to what is normal for a particular region. Such events can place considerable pressure on human health, ecosystems and infrastructure. NASA uses observations collected over many years to investigate how these events are changing alongside long-term global temperature patterns. [4]"
+      }
+    ],
+    "legend": {
+      "label": "Air temperature",
+      "unit": "°C",
+      "decimals": 0,
+      "stops": [
+        {
+          "value": -40,
+          "color": "#d8ecf6"
+        },
+        {
+          "value": -35,
+          "color": "#b9a3d6"
+        },
+        {
+          "value": -30,
+          "color": "#7a3c96"
+        },
+        {
+          "value": -25,
+          "color": "#1c209f"
+        },
+        {
+          "value": -18,
+          "color": "#1645e5"
+        },
+        {
+          "value": -10,
+          "color": "#3d7cdd"
+        },
+        {
+          "value": -4,
+          "color": "#63ace6"
+        },
+        {
+          "value": 2,
+          "color": "#90e5e2"
+        },
+        {
+          "value": 7,
+          "color": "#a9ea8f"
+        },
+        {
+          "value": 12,
+          "color": "#d6e75e"
+        },
+        {
+          "value": 16,
+          "color": "#e4c445"
+        },
+        {
+          "value": 20,
+          "color": "#da9532"
+        },
+        {
+          "value": 24,
+          "color": "#cd4c1f"
+        },
+        {
+          "value": 28,
+          "color": "#a92a16"
+        },
+        {
+          "value": 32,
+          "color": "#721b0d"
+        },
+        {
+          "value": 36,
+          "color": "#4a0e03"
+        },
+        {
+          "value": 40,
+          "color": "#8c8c8c"
+        },
+        {
+          "value": 45,
+          "color": "#c4c4c4"
+        }
+      ],
+      "aliases": [
+        {
+          "value": -45,
+          "color": "#21264e"
+        },
+        {
+          "value": -42,
+          "color": "#fefbff"
+        },
+        {
+          "value": -33,
+          "color": "#553452"
+        }
+      ],
+      "neutral": [],
+      "ticks": [
+        -40,
+        -20,
+        0,
+        20,
+        40
+      ]
+    },
+    "svs_id": 5147,
+    "video_path": "media/movement-1.mp4",
+    "poster_path": "media/movement-1.webp",
+    "audio_path": "media/movement-1.m4a",
+    "data_starts_on": "2026-09-12",
+    "data_ends_on": "2026-09-27",
+    "citations": [
+      {
+        "text": "NASA Global Modeling and Assimilation Office. (2025, September 22). Weather analysis & prediction. NASA.",
+        "url": "https://gmao.gsfc.nasa.gov/weather-analysis-prediction/"
+      },
+      {
+        "text": "NASA Global Modeling and Assimilation Office. (2023, September 26). GEOS-FP near-surface temperature [Data visualization]. NASA Scientific Visualization Studio.",
+        "url": "https://svs.gsfc.nasa.gov/5147/"
+      },
+      {
+        "text": "National Aeronautics and Space Administration. (2024, October 23). What is the greenhouse effect? NASA Science.",
+        "url": "https://science.nasa.gov/climate-change/faq/what-is-the-greenhouse-effect/"
+      },
+      {
+        "text": "National Aeronautics and Space Administration. (n.d.). This is how scientists measure global temperature. NASA Science.",
+        "url": "https://science.nasa.gov/earth/measuring_global_temperature/"
+      }
+    ]
+  },
+  {
+    "slug": "near-surface-wind-speed",
+    "position": 2,
+    "title": "GEOS-FP Near-Surface Wind Speed",
+    "short_title": "Wind",
+    "model": "GEOS-FP",
+    "measurement": "Wind speed, 10 m above the surface",
+    "interaction": "slider",
+    "accent": "#5f8f9c",
+    "summary": "This is a changing visualisation of near-surface wind speed, 10 metres above Earth’s surface, compiled by NASA’s GEOS-FP system.",
+    "body": [
+      {
+        "type": "p",
+        "text": "Wind is something we experience almost every day—try opening your windows and you’ll probably feel it right now! It might seem like a simple movement of air, but wind is an essential part of Earth's atmospheric system. It helps distribute heat and moisture around the planet, influences ocean currents, transports pollutants and plays an important role in the development of weather systems."
+      },
+      {
+        "type": "p",
+        "text": "NASA's near-surface wind speed visualisation uses data from the Goddard Earth Observing System Forward Processing (GEOS-FP) model. This system combines observations from weather stations, aircraft, balloons and satellites with mathematical simulations to estimate atmospheric conditions. The visualisation specifically examines wind speed approximately 10 metres (around 30 feet) above Earth's surface. This height provides a consistent reference for comparing near-surface wind conditions across different environments. [1]"
+      },
+      {
+        "type": "h",
+        "text": "But what actually causes wind?"
+      },
+      {
+        "type": "p",
+        "text": "Wind is primarily caused by differences in atmospheric pressure, which describes the force exerted by the weight of the air above a particular area. When the Sun heats Earth's surface unevenly, some regions warm more quickly than others. This causes differences in the temperature and density of the surrounding air, contributing to variations in atmospheric pressure. Air generally moves from areas of higher pressure towards areas of lower pressure, creating wind. The difference in pressure across a given distance is known as the pressure gradient. In general, a greater pressure difference over a shorter distance can produce stronger winds. [2]"
+      },
+      {
+        "type": "p",
+        "text": "However, wind does not simply travel in a straight line between high and low pressure regions. Earth's rotation influences its direction through an effect known as the Coriolis effect. This apparent deflection causes moving air to curve towards the right in the Northern Hemisphere and towards the left in the Southern Hemisphere. As a result, large-scale wind patterns are organised into complex global systems rather than moving directly between areas of different pressure. [2]"
+      },
+      {
+        "type": "p",
+        "text": "Wind speed also varies considerably depending on the surrounding environment. NASA notes that winds are typically stronger over oceans than over land. This is partly because ocean surfaces are relatively smooth, allowing air to move with less friction. Land surfaces, on the other hand, contain trees, buildings, hills and mountains that can slow down or redirect moving air. These differences in surface roughness influence how quickly air travels near the ground. [1]"
+      },
+      {
+        "type": "p",
+        "text": "These patterns are particularly important when studying storms. Weather fronts are boundaries between large masses of air with different temperatures and other atmospheric properties. As these air masses interact, they can produce changes in wind speed and direction, cloud formation and precipitation. Tracking wind patterns helps scientists understand how storms develop, move and change in intensity."
+      },
+      {
+        "type": "p",
+        "text": "Wind also plays an important role in air quality. Pollutants released from cities, industrial areas and wildfires do not necessarily remain where they originate. Moving air can carry these substances across considerable distances, affecting communities far from their original sources. Understanding wind patterns is therefore important when predicting the movement of air pollution. [3]"
+      },
+      {
+        "type": "p",
+        "text": "Beyond weather forecasting, wind measurements have practical applications in renewable energy. Wind turbines convert the movement of air into electricity, making wind an increasingly important energy resource. By studying the distribution and consistency of wind, scientists and energy planners can identify areas that may be suitable for wind energy production."
+      }
+    ],
+    "legend": {
+      "label": "Wind speed",
+      "unit": "m/s",
+      "decimals": 0,
+      "stops": [
+        {
+          "value": 0,
+          "color": "#1e1e22"
+        },
+        {
+          "value": 2,
+          "color": "#2b1f5e"
+        },
+        {
+          "value": 4,
+          "color": "#13239e"
+        },
+        {
+          "value": 6,
+          "color": "#173dd6"
+        },
+        {
+          "value": 8,
+          "color": "#427de5"
+        },
+        {
+          "value": 10,
+          "color": "#78cde5"
+        },
+        {
+          "value": 12,
+          "color": "#98e9b3"
+        },
+        {
+          "value": 14,
+          "color": "#cee65e"
+        },
+        {
+          "value": 17,
+          "color": "#e0b040"
+        },
+        {
+          "value": 20,
+          "color": "#d77a2a"
+        },
+        {
+          "value": 23,
+          "color": "#c03a18"
+        },
+        {
+          "value": 26,
+          "color": "#7a1010"
+        }
+      ],
+      "aliases": [
+        {
+          "value": 0,
+          "color": "#271e2a"
+        },
+        {
+          "value": 1,
+          "color": "#301e47"
+        }
+      ],
+      "neutral": [
+        "#e0dde1",
+        "#d3d1cf",
+        "#ada3b8",
+        "#a4aa9f",
+        "#f6fdf6",
+        "#8c8c94"
+      ],
+      "ticks": [
+        0,
+        8,
+        14,
+        20,
+        26
+      ]
+    },
+    "svs_id": 5148,
+    "video_path": "media/movement-2.mp4",
+    "poster_path": "media/movement-2.webp",
+    "audio_path": "media/movement-2.m4a",
+    "data_starts_on": "2026-09-12",
+    "data_ends_on": "2026-09-27",
+    "citations": [
+      {
+        "text": "NASA Global Modeling and Assimilation Office. (2023, September 26). GEOS-FP near-surface wind speed [Data visualization]. NASA Scientific Visualization Studio.",
+        "url": "https://svs.gsfc.nasa.gov/5148/"
+      },
+      {
+        "text": "NASA Jet Propulsion Laboratory. (2025, September 26). Modeling weather patterns and the Coriolis effect. NASA JPL Education.",
+        "url": "https://www.jpl.nasa.gov/edu/resources/lesson-plan/modeling-weather-patterns-and-the-coriolis-effect/"
+      },
+      {
+        "text": "Herring, D. (1999, April 27). Ocean and climate. NASA Earth Observatory.",
+        "url": "https://science.nasa.gov/earth/earth-observatory/ocean-and-climate/"
+      }
+    ]
+  },
+  {
+    "slug": "precipitation-and-clouds",
+    "position": 3,
+    "title": "GEOS-FP Precipitation and Clouds",
+    "short_title": "Rain & Cloud",
+    "model": "GEOS-FP",
+    "measurement": "Total precipitation over cloud optical thickness",
+    "interaction": "slider",
+    "accent": "#6a9e7a",
+    "summary": "This is a changing visualisation of precipitation and clouds, calculated using fields from NASA’s GEOS-FP system.",
+    "body": [
+      {
+        "type": "p",
+        "text": "Clouds and precipitation are among the most visible expressions of Earth's constantly changing atmosphere. From thin, scattered stratus clouds to enormous churning storm clouds, these formations reveal how water moves through the atmosphere and interacts with the planet's surface."
+      },
+      {
+        "type": "p",
+        "text": "NASA's precipitation and clouds visualisation uses atmospheric fields from its Goddard Earth Observing System Forward Processing (GEOS-FP) model. By combining observations with mathematical simulations, GEOS-FP estimates atmospheric conditions and helps scientists understand processes such as cloud formation and precipitation. The visualisation overlays total precipitation, including both rain and snow, onto simulated cloud fields. These clouds are shaded according to their optical thickness, a measurement describing how much light is scattered or absorbed as it passes through a cloud. Clouds with greater optical thickness generally reflect more incoming sunlight. [1][2]"
+      },
+      {
+        "type": "p",
+        "text": "To understand how these formations develop, it helps to begin with the water cycle. I know, it's that one topic from 4th grade—it is the continuous movement of water between Earth's surface, oceans and atmosphere. Water from oceans, rivers and lakes evaporates when it absorbs energy, changing from liquid water into an invisible gas called water vapour. Plants also release water vapour into the atmosphere through a process called transpiration. Together, evaporation and transpiration contribute moisture to the air. [3]"
+      },
+      {
+        "type": "p",
+        "text": "As moist air rises, it expands and cools. When it reaches conditions that allow water vapour to condense, some of that vapour changes back into tiny liquid droplets or ice crystals. This process is known as condensation. These droplets and crystals gather to form clouds. Condensation commonly occurs around microscopic particles suspended in the atmosphere, known as aerosols. These can include dust, sea salt and smoke particles. As cloud droplets and ice crystals grow, they may eventually become large enough to fall towards Earth's surface as precipitation. [3]"
+      },
+      {
+        "type": "p",
+        "text": "Precipitation refers to water falling from the atmosphere in different forms, including rain, snow, sleet and hail. The type of precipitation that reaches the ground depends on atmospheric conditions, particularly the temperature of the different layers of air through which falling water passes."
+      },
+      {
+        "type": "p",
+        "text": "Clouds also have a surprisingly important influence on Earth's climate. They interact with the energy entering and leaving our planet. Some clouds reflect incoming sunlight back into space, reducing the amount of solar energy absorbed by Earth's surface and producing a cooling effect. Others absorb and re-emit heat released by Earth's surface, contributing to atmospheric warming. Their overall influence depends on factors such as their altitude, optical thickness, composition and coverage. [2]"
+      },
+      {
+        "type": "p",
+        "text": "Climate change is also influencing the water cycle. As global temperatures rise, evaporation increases and the atmosphere can contain more water vapour. This can contribute to more intense precipitation in certain regions, increasing the possibility of heavy rainfall and flooding. However, these changes do not mean that every region will receive more rainfall; precipitation patterns can shift differently depending on local and regional conditions. [3]"
+      },
+      {
+        "type": "p",
+        "text": "NASA has also investigated atmospheric rivers. These are long, relatively narrow regions of the atmosphere that transport large quantities of water vapour across considerable distances. When they encounter land, particularly mountainous regions, they can release substantial amounts of precipitation. Although they are important sources of water, particularly in some western coastal regions of the United States, particularly intense atmospheric rivers can contribute to flooding and other hazards. [4]"
+      }
+    ],
+    "legend": {
+      "label": "Cloud, then precipitation",
+      "unit": "mm/hr",
+      "decimals": 1,
+      "stops": [
+        {
+          "value": 0,
+          "color": "#19233f",
+          "label": "Clear sky"
+        },
+        {
+          "value": 0,
+          "color": "#586063",
+          "label": "Thin cloud"
+        },
+        {
+          "value": 0,
+          "color": "#9ca193",
+          "label": "Cloud"
+        },
+        {
+          "value": 0,
+          "color": "#edf1ec",
+          "label": "Thick cloud"
+        },
+        {
+          "value": 0.5,
+          "color": "#3bd23c"
+        },
+        {
+          "value": 1,
+          "color": "#0fa315"
+        },
+        {
+          "value": 2,
+          "color": "#1e7d3a"
+        },
+        {
+          "value": 4,
+          "color": "#1984ae"
+        },
+        {
+          "value": 8,
+          "color": "#2457d6"
+        },
+        {
+          "value": 16,
+          "color": "#9b3fd0"
+        }
+      ],
+      "aliases": [
+        {
+          "value": 0,
+          "color": "#575136",
+          "label": "Clear sky"
+        },
+        {
+          "value": 0,
+          "color": "#25371b",
+          "label": "Clear sky"
+        },
+        {
+          "value": 0,
+          "color": "#122342",
+          "label": "Clear sky"
+        },
+        {
+          "value": 0,
+          "color": "#37404c",
+          "label": "Thin cloud"
+        }
+      ],
+      "neutral": [],
+      "ticks": [
+        "Clear",
+        "Cloud",
+        0.5,
+        4,
+        16
+      ]
+    },
+    "svs_id": 5149,
+    "video_path": "media/movement-3.mp4",
+    "poster_path": "media/movement-3.webp",
+    "audio_path": "media/movement-3.m4a",
+    "data_starts_on": "2026-09-12",
+    "data_ends_on": "2026-09-27",
+    "citations": [
+      {
+        "text": "NASA Global Modeling and Assimilation Office. (2023, September 26). GEOS-FP precipitation and clouds [Data visualization]. NASA Scientific Visualization Studio.",
+        "url": "https://svs.gsfc.nasa.gov/5149/"
+      },
+      {
+        "text": "NASA Scientific Visualization Studio. (2013, October 24). Monthly cloud optical thickness (Aqua/MODIS) [Data visualization]. NASA Goddard Space Flight Center.",
+        "url": "https://svs.gsfc.nasa.gov/30398/"
+      },
+      {
+        "text": "Graham, S., Parkinson, C., & Chahine, M. (2010, October 1). The water cycle. NASA Earth Observatory.",
+        "url": "https://science.nasa.gov/earth/earth-observatory/the-water-cycle/"
+      },
+      {
+        "text": "National Aeronautics and Space Administration. (2024, January 11). Atmospheric rivers [Data visualization]. NASA Science.",
+        "url": "https://science.nasa.gov/resource/atmospheric-rivers/"
+      }
+    ]
+  },
+  {
+    "slug": "near-surface-humidity",
+    "position": 4,
+    "title": "GEOS-FP Near-Surface Humidity",
+    "short_title": "Humidity",
+    "model": "GEOS-FP",
+    "measurement": "Specific humidity (Q2M), 2 m above the surface",
+    "interaction": "cursor",
+    "accent": "#8f7fc4",
+    "summary": "This is a changing visualisation of the near-surface humidity, calculated by combining weather observations with a predictive model to create a global best estimate of weather conditions via NASA’s GEOS-FP system.",
+    "body": [
+      {
+        "type": "p",
+        "text": "The first thing that leaves our lips when we go to the beach on a sunny summer day is, “Woah, it's humid today, huh?” The moisture in the air sticks to your skin and may feel heavy and uncomfortable, while on a crisp autumn afternoon, moisture seems less noticeable. However, humidity is not just about how damp the air feels. It is a measurable property of the atmosphere; one that helps scientists understand how water moves through the environment and influences weather conditions."
+      },
+      {
+        "type": "p",
+        "text": "NASA's near-surface humidity visualisation uses data from the Goddard Earth Observing System Forward Processing (GEOS-FP) model. The system combines observations from ground stations, aircraft, weather balloons and satellites with atmospheric simulations to estimate conditions across the globe. This particular visualisation uses a measurement known as specific humidity, identified by NASA as Q2M, to describe the amount of water vapour present near Earth's surface. The visualisation covers approximately the most recent two weeks of data and is updated daily. [1]"
+      },
+      {
+        "type": "h",
+        "text": "So, what exactly is specific humidity?"
+      },
+      {
+        "type": "p",
+        "text": "Specific humidity measures the mass of water vapour present in a given mass of air. It is commonly expressed in grams of water vapour per kilogram of air (g/kg). For example, a specific humidity of 10 g/kg means that every kilogram of air contains approximately 10 grams of water vapour. Unlike some other measurements of humidity, specific humidity describes the actual amount of water vapour present rather than how close the air is to becoming saturated."
+      },
+      {
+        "type": "p",
+        "text": "This distinction becomes clearer when comparing specific humidity with relative humidity. Relative humidity describes how much water vapour the air currently contains compared with the maximum amount it could contain at a particular temperature, expressed as a percentage. For example, air at 50% relative humidity is holding half of the water vapour required to reach saturation under its current temperature conditions. Warmer air can generally hold more water vapour before reaching saturation than colder air. Consequently, the relative humidity can change as temperature changes, even when the actual amount of water vapour in the air remains the same. [2]"
+      },
+      {
+        "type": "p",
+        "text": "Water vapour enters the atmosphere through several processes. The largest contribution comes from evaporation, particularly from the oceans. When sunlight warms water, some of it changes into water vapour and enters the atmosphere. Plants contribute through transpiration, releasing moisture through tiny openings in their leaves. The resulting water vapour is transported through the atmosphere by moving air and large-scale weather systems. [3]"
+      },
+      {
+        "type": "p",
+        "text": "This moisture is essential for cloud formation and precipitation. When moist air rises and cools, water vapour can condense into tiny droplets or ice crystals, eventually contributing to clouds and rainfall. However, high specific humidity alone does not guarantee precipitation. Other conditions, including the movement and cooling of air, also influence whether clouds develop and produce rain."
+      },
+      {
+        "type": "p",
+        "text": "Humidity is also important when studying agricultural conditions and atmospheric processes. The amount of moisture in the air influences how quickly water evaporates from soil and plant surfaces. It also helps scientists understand how moisture is distributed between oceans, land and the atmosphere."
+      },
+      {
+        "type": "p",
+        "text": "By observing specific humidity across the planet, scientists can follow the movement of atmospheric moisture and investigate how it interacts with temperature, weather systems and precipitation. What might seem like an invisible part of our surroundings is actually one of the essential components keeping Earth's water cycle in motion."
+      }
+    ],
+    "legend": {
+      "label": "Specific humidity",
+      "unit": "g/kg",
+      "decimals": 0,
+      "stops": [
+        {
+          "value": 0,
+          "color": "#4e3f30"
+        },
+        {
+          "value": 2,
+          "color": "#8a7455"
+        },
+        {
+          "value": 4,
+          "color": "#b08c63"
+        },
+        {
+          "value": 6,
+          "color": "#c1a379"
+        },
+        {
+          "value": 8,
+          "color": "#ceb78e"
+        },
+        {
+          "value": 10,
+          "color": "#d6cca5"
+        },
+        {
+          "value": 12,
+          "color": "#caddbc"
+        },
+        {
+          "value": 14,
+          "color": "#aad6c3"
+        },
+        {
+          "value": 16,
+          "color": "#8dc3c1"
+        },
+        {
+          "value": 18,
+          "color": "#79a7b5"
+        },
+        {
+          "value": 20,
+          "color": "#628ca5"
+        },
+        {
+          "value": 22,
+          "color": "#4c7495"
+        },
+        {
+          "value": 25,
+          "color": "#2f5583"
+        }
+      ],
+      "aliases": [],
+      "neutral": [
+        "#141414"
+      ],
+      "ticks": [
+        0,
+        6,
+        12,
+        18,
+        25
+      ]
+    },
+    "svs_id": 5150,
+    "video_path": "media/movement-4.mp4",
+    "poster_path": "media/movement-4.webp",
+    "audio_path": "media/movement-4.m4a",
+    "data_starts_on": "2026-09-12",
+    "data_ends_on": "2026-09-27",
+    "citations": [
+      {
+        "text": "NASA Global Modeling and Assimilation Office. (2023, September 26). GEOS-FP near-surface humidity [Data visualization]. NASA Scientific Visualization Studio.",
+        "url": "https://svs.gsfc.nasa.gov/5150/"
+      },
+      {
+        "text": "NASA Earth Observatory. (2004, March 16). Relative humidity in the upper troposphere. NASA Science.",
+        "url": "https://science.nasa.gov/earth/earth-observatory/relative-humidity-in-the-upper-troposphere-4312/"
+      },
+      {
+        "text": "Graham, S., Parkinson, C., & Chahine, M. (2010, October 1). The water cycle. NASA Earth Observatory.",
+        "url": "https://science.nasa.gov/earth/earth-observatory/the-water-cycle/"
+      }
+    ]
+  },
+  {
+    "slug": "particulate-matter-pm25",
+    "position": 5,
+    "title": "Particulate Matter (PM2.5)",
+    "short_title": "PM2.5",
+    "model": "GEOS-CF",
+    "measurement": "Fine particulate matter near the surface",
+    "interaction": "cursor",
+    "accent": "#c08a1e",
+    "summary": "This is a changing visualisation of the near-surface concentration of fine particulate matter (PM2.5), estimated from aerosol and weather fields produced by NASA’s GEOS-CF model.",
+    "body": [
+      {
+        "type": "p",
+        "text": "The air around us contains more than just gases. Suspended within it are countless microscopic solid particles and liquid droplets, collectively known as aerosols. These particles come from a variety of natural and human-made sources, including windblown dust, sea salt, volcanic ash, vehicle emissions, industrial processes and wildfires. Although many are too small to see individually, they can have considerable effects on atmospheric conditions, visibility and human health. [1]"
+      },
+      {
+        "type": "p",
+        "text": "One particularly important type of airborne pollution is fine particulate matter, commonly referred to as PM2.5. The name describes particles with an aerodynamic diameter of 2.5 micrometres or smaller. A micrometre (µm) is one-millionth of a metre, making these particles exceptionally small. Because of their size, PM2.5 particles can remain suspended in the air and travel deep into the respiratory system when inhaled. Some can even enter the bloodstream after reaching the lungs. [2]"
+      },
+      {
+        "type": "p",
+        "text": "NASA's visualisation estimates near-surface PM2.5 concentrations using atmospheric aerosol and weather fields produced by its Goddard Earth Observing System Composition Forecasting (GEOS-CF) model. Unlike GEOS-FP, which focuses primarily on weather conditions, GEOS-CF also simulates the chemical composition of the atmosphere. It tracks hundreds of gaseous chemical substances and numerous types of particles, allowing scientists to investigate how pollutants are emitted, transformed and transported through the atmosphere. Its predictions combine information about emissions, atmospheric chemistry and weather conditions. [3]"
+      },
+      {
+        "type": "p",
+        "text": "PM2.5 can enter the atmosphere in several different ways. Some particles are emitted directly from sources such as vehicle exhaust, industrial activity, burning fuels, dust and smoke. These are called primary particles. Others form within the atmosphere through chemical reactions involving gases released by various sources. These are known as secondary particles. For example, certain gases can react in the atmosphere and produce tiny particles that contribute to particulate pollution. [4]"
+      },
+      {
+        "type": "p",
+        "text": "The health effects of PM2.5 are an important reason scientists monitor it so closely. Because these particles are small enough to penetrate deep into the lungs, prolonged exposure is associated with several respiratory and cardiovascular problems. These include airway inflammation, reduced lung function, aggravated asthma symptoms and an increased risk of heart-related conditions. The effects can be particularly concerning for people with existing respiratory or cardiovascular conditions. [2]"
+      },
+      {
+        "type": "p",
+        "text": "PM2.5 concentrations are not determined by emissions alone. Weather conditions influence how pollutants accumulate and move. Wind can transport particles over considerable distances, while atmospheric mixing and other weather processes influence how concentrated they become near the surface. This is why pollution from a particular source can affect communities far away from where it originated. NASA's research has demonstrated how smoke and other aerosols from wildfires can travel across regions and even between continents. [1][5]"
+      },
+      {
+        "type": "p",
+        "text": "The visualisation also displays subtle changes in particulate matter concentrations throughout the day. [6] These variations can reflect changing emissions, including traffic activity, alongside changes in weather conditions that influence the movement and distribution of particles."
+      },
+      {
+        "type": "p",
+        "text": "Although improvements in technology and environmental regulations have helped reduce particulate pollution in several regions, wildfires remain an important source of concern. NASA researchers continue to investigate how changing fire patterns and atmospheric conditions influence the movement of smoke and other pollutants."
+      },
+      {
+        "type": "p",
+        "text": "Understanding PM2.5 is not simply about measuring how polluted the air is. It is about understanding where these particles originate, how they travel and how they interact with the environment and the human body. It is important to remember that GEOS-CF provides model-based research estimates, not direct measurements of every location. Its outputs should not replace local air-quality monitoring or official public-health advisories. [3]"
+      }
+    ],
+    "legend": {
+      "label": "PM2.5 concentration",
+      "unit": "µg/m³",
+      "decimals": 0,
+      "stops": [
+        {
+          "value": 0,
+          "color": "#fffbe0"
+        },
+        {
+          "value": 3,
+          "color": "#fdf7ca"
+        },
+        {
+          "value": 6,
+          "color": "#fceead"
+        },
+        {
+          "value": 10,
+          "color": "#fce497"
+        },
+        {
+          "value": 15,
+          "color": "#fcd577"
+        },
+        {
+          "value": 20,
+          "color": "#fcc85d"
+        },
+        {
+          "value": 30,
+          "color": "#fbb543"
+        },
+        {
+          "value": 40,
+          "color": "#f89629"
+        },
+        {
+          "value": 55,
+          "color": "#e27216"
+        },
+        {
+          "value": 75,
+          "color": "#c94901"
+        },
+        {
+          "value": 100,
+          "color": "#993800"
+        },
+        {
+          "value": 150,
+          "color": "#5a2000"
+        }
+      ],
+      "aliases": [],
+      "neutral": [
+        "#141414",
+        "#3a362c"
+      ],
+      "ticks": [
+        0,
+        10,
+        30,
+        75,
+        150
+      ]
+    },
+    "svs_id": 5151,
+    "video_path": "media/movement-5.mp4",
+    "poster_path": "media/movement-5.webp",
+    "audio_path": "media/movement-5.m4a",
+    "data_starts_on": "2026-09-12",
+    "data_ends_on": "2026-09-27",
+    "citations": [
+      {
+        "text": "Voiland, A. (2010, November 2). Aerosols: Tiny particles, big impact. NASA Earth Observatory.",
+        "url": "https://science.nasa.gov/earth/earth-observatory/aerosols/"
+      },
+      {
+        "text": "NASA Science Editorial Team. (2020, October 21). Getting to the heart of the (particulate) matter. NASA Science.",
+        "url": "https://science.nasa.gov/earth/earth-atmosphere/aerosols/getting-to-the-heart-of-the-particulate-matter/"
+      },
+      {
+        "text": "NASA Global Modeling and Assimilation Office. (2026, June 16). GEOS composition forecasts. NASA.",
+        "url": "https://gmao.gsfc.nasa.gov/gmao-products/geos-cf/"
+      },
+      {
+        "text": "National Aeronautics and Space Administration. (n.d.). Clean Air Act from space: Environmental regulations in the U.S. are working [Fact sheet]. NASA Air Quality.",
+        "url": "https://airquality.gsfc.nasa.gov/sites/default/files/airquality/FactSheetDecisionMakers-Pages.pdf"
+      },
+      {
+        "text": "Buis, A. (2021, February 22). The climate connections of a record fire year in the U.S. West. NASA.",
+        "url": "https://science.nasa.gov/earth/climate-change/the-climate-connections-of-a-record-fire-year-in-the-us-west/"
+      },
+      {
+        "text": "NASA Global Modeling and Assimilation Office. (2023, September 26). Particulate Matter (PM) 2.5 [Data visualization]. NASA Scientific Visualization Studio.",
+        "url": "https://svs.gsfc.nasa.gov/5151/"
+      }
+    ]
+  },
+  {
+    "slug": "near-surface-ozone",
+    "position": 6,
+    "title": "Near-Surface Ozone (O₃)",
+    "short_title": "Ozone",
+    "model": "GEOS-CF",
+    "measurement": "Ozone concentration near the surface",
+    "interaction": "slider",
+    "accent": "#b06fac",
+    "summary": "This is a changing visualisation of the near-surface concentration of ozone (O₃), estimated using NASA’s GEOS-CF model.",
+    "body": [
+      {
+        "type": "p",
+        "text": "Ozone is a naturally occurring gas in Earth's atmosphere, but its effects on the environment depend heavily on where it is found. A molecule of ozone consists of three oxygen atoms bound together, giving it the chemical formula O3. Although this molecule plays an essential role in protecting life at higher altitudes, it becomes a harmful air pollutant when present close to Earth's surface."
+      },
+      {
+        "type": "p",
+        "text": "The difference lies in the two main atmospheric regions where ozone is found. High above the ground, within a region of the atmosphere called the stratosphere, ozone forms what is commonly known as the ozone layer. This layer absorbs much of the Sun's harmful ultraviolet (UV) radiation before it reaches Earth's surface, helping protect living organisms from excessive exposure. Near the ground, however, ozone is found within the troposphere, the lowest layer of Earth's atmosphere. Here, elevated ozone concentrations can damage human health and vegetation. This is why ozone in the stratosphere is often referred to as protective ozone, while ground-level ozone is considered an air pollutant. [1]"
+      },
+      {
+        "type": "p",
+        "text": "Unlike pollutants that are released directly from sources such as vehicle exhausts or industrial smokestacks, ground-level ozone is not directly emitted into the atmosphere. Instead, it forms through a series of chemical reactions involving other substances. Two particularly important groups of these substances are nitrogen oxides (NOx) and volatile organic compounds (VOCs)."
+      },
+      {
+        "type": "p",
+        "text": "Nitrogen oxides are gases that include nitrogen dioxide (NO2) and nitrogen monoxide (NO). They are released through processes such as fossil fuel combustion, particularly from vehicles, power plants and industrial activities. Volatile organic compounds are carbon-containing gases that can easily evaporate into the atmosphere. They come from both human activities, such as fuel emissions and industrial processes, and natural sources, including vegetation."
+      },
+      {
+        "type": "p",
+        "text": "When these substances react in the presence of sunlight, a series of chemical reactions can produce ground-level ozone. This sunlight-driven process is an example of photochemical reactions, meaning chemical reactions initiated or influenced by light. Because sunlight is essential to ozone formation, concentrations often increase during the daytime, particularly when temperatures and sunlight intensity are high. [2]"
+      },
+      {
+        "type": "p",
+        "text": "Ozone concentrations also change throughout the day. They can increase following morning emissions of pollutants, as sunlight drives the chemical reactions that produce ozone. Concentrations often reach higher levels later in the day, before declining after sunset as the reactions responsible for its production slow and ozone is removed through other chemical processes. These patterns can vary depending on local emissions, weather conditions and the movement of air masses. [2]"
+      },
+      {
+        "type": "p",
+        "text": "Ground-level ozone can have several harmful effects. When inhaled, it reacts with tissues in the respiratory system, potentially causing irritation and inflammation. Exposure can contribute to coughing, chest discomfort and breathing difficulties, while also aggravating existing respiratory conditions such as asthma and bronchitis. Ozone is also harmful to plants. It can interfere with processes such as photosynthesis, the process through which plants use sunlight to convert carbon dioxide and water into sugars, potentially reducing plant growth and agricultural productivity. [3]"
+      },
+      {
+        "type": "p",
+        "text": "NASA's near-surface ozone visualisation uses estimates produced by the Goddard Earth Observing System Composition Forecasting (GEOS-CF) model. The model combines atmospheric weather information with chemical simulations to estimate the distribution and movement of pollutants. This allows scientists to investigate how ozone concentrations vary across different regions and how they interact with other atmospheric substances. [4]"
+      },
+      {
+        "type": "p",
+        "text": "An important distinction is that surface-level ozone is difficult to measure directly from space using current satellite technology. NASA satellites can, however, observe certain substances involved in its formation, such as nitrogen dioxide, helping scientists investigate pollution patterns alongside atmospheric models. [2]"
+      }
+    ],
+    "legend": {
+      "label": "Ozone concentration",
+      "unit": "ppb",
+      "decimals": 0,
+      "stops": [
+        {
+          "value": 0,
+          "color": "#1a1a1b"
+        },
+        {
+          "value": 8,
+          "color": "#2e2e2e"
+        },
+        {
+          "value": 15,
+          "color": "#454150"
+        },
+        {
+          "value": 20,
+          "color": "#646268"
+        },
+        {
+          "value": 25,
+          "color": "#787681"
+        },
+        {
+          "value": 30,
+          "color": "#868397"
+        },
+        {
+          "value": 35,
+          "color": "#a7a3bb"
+        },
+        {
+          "value": 38,
+          "color": "#d6d3e6"
+        },
+        {
+          "value": 42,
+          "color": "#9684da"
+        },
+        {
+          "value": 48,
+          "color": "#7e61d3"
+        },
+        {
+          "value": 55,
+          "color": "#6a48c7"
+        },
+        {
+          "value": 65,
+          "color": "#4d30aa"
+        },
+        {
+          "value": 80,
+          "color": "#3a1c8c"
+        }
+      ],
+      "aliases": [
+        {
+          "value": 37,
+          "color": "#e0deeb"
+        },
+        {
+          "value": 33,
+          "color": "#938cb1"
+        }
+      ],
+      "neutral": [],
+      "ticks": [
+        0,
+        20,
+        35,
+        55,
+        80
+      ]
+    },
+    "svs_id": 5152,
+    "video_path": "media/movement-6.mp4",
+    "poster_path": "media/movement-6.webp",
+    "audio_path": "media/movement-6.m4a",
+    "data_starts_on": "2026-10-28",
+    "data_ends_on": "2026-11-12",
+    "citations": [
+      {
+        "text": "Carlowicz, M. (2013, April). The ozone layer: Our global sunscreen. ChemMatters, 12.",
+        "url": "https://science.nasa.gov/wp-content/uploads/2024/09/ozone-layer.pdf"
+      },
+      {
+        "text": "National Aeronautics and Space Administration. (2026, September 9). Surface-level ozone. NASA Air Quality.",
+        "url": "https://airquality.gsfc.nasa.gov/surface-level-ozone"
+      },
+      {
+        "text": "Allen, J. (2003, January 28). Chemistry in the sunlight. NASA Earth Observatory.",
+        "url": "https://science.nasa.gov/earth/earth-observatory/chemistry-in-the-sunlight/"
+      },
+      {
+        "text": "NASA Global Modeling and Assimilation Office. (2023, September 26). Near surface ozone (O3) [Data visualization]. NASA Scientific Visualization Studio.",
+        "url": "https://svs.gsfc.nasa.gov/5152/"
+      }
+    ]
+  }
+]

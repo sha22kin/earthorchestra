@@ -1,0 +1,61 @@
+[
+  {
+    "slug": "home",
+    "title": "Earth Orchestra",
+    "lede": "NASA Earth data you can see, hear and play with.",
+    "content": {
+      "intro": [
+        "Have you ever wondered what the Earth would sound like? Not just the sounds of its oceans, forests, and wildlife, but the constant shifts and changes taking place all around us? From how temperatures shift to changing winds and rainfall, our planet is constantly changing in its own arcane harmony. With Earth Orchestra, we invite you to explore these changes through sound, turning NASA's Earth data into something you can see, hear, and play with."
+      ],
+      "how": [
+        "Each section begins with a short introduction to the environmental data you're exploring. Below it is a colour-coded legend that shows what each colour is supposed to mean. For example, the pale blue at the leftmost end of the temperature legend represents the lowest temperature shown, at -40°C.",
+        "There are two ways to interact with the visualisations, indicated beside each section's title: cursor and slider."
+      ],
+      "cursor": [
+        "Move your cursor across the visualisation and watch the sound change with the data. In this case, the legend also shows you how each colour translates into sound. For instance, pale blue in the temperature visualisation corresponds to the lowest volume.",
+        "Found a sound you like? Double-click on the corresponding region to lock it in place. A small dot will mark your selection, keeping that volume fixed as you continue exploring. To change your selection, simply double-click the dot again. There is even a little checkmark provided below the visualisation to help you check it off more easily :)"
+      ],
+      "slider": [
+        "Pick up the slider by holding onto it with your mouse, then place it wherever you like. It then acts as a reference point for you as the video and audio play together."
+      ],
+      "orchestra": "Six datasets, six instruments. Bring them in one at a time, balance them however you like, and keep the arrangement you end up with."
+    }
+  },
+  {
+    "slug": "about",
+    "title": "About us",
+    "lede": "Why we turned NASA's Earth data into an orchestra.",
+    "content": {
+      "paragraphs": [
+        "When we first took on this project and opened up NASA's website, the first thing we realised was just how intimidating it could appear. We quickly understood that if we wanted to make NASA's data more accessible, the first thing we'd have to get rid of was that initial apprehension of being faced with an overwhelmingly science-heavy interface. Concepts can seem considerably more or less complex depending on how they're presented, and that is exactly what we aimed for: showcasing NASA data in a fun and interactive manner so that the initial terror of \"oh, I'm dealing with actual freaking NASA data\" doesn't even have a chance to set in.",
+        "Another thing we wanted to ensure was that, in making science more accessible and easier to understand, we wouldn't dumb down the scientific explanations themselves. We sincerely believe that simplifying something does not mean diminishing its value.",
+        "The musical interpretations we have created are primarily for creative purposes; they are not intended to serve as serious scientific representations of NASA's data. Rather, they are a fun, interactive way to engage with the data and ease users into more complex scientific topics without the initial apprehension they might experience when approaching them directly.",
+        "It is also important to recognise that Earth Orchestra is a prototype, built around a limited selection of NASA's available datasets and based on snapshots of the visualisations displayed on this website. These visualisations are not regularly updated, and our website currently lacks the computational capabilities to continuously generate music or synchronise it with the latest data from NASA. What you are experiencing is therefore a demonstration of our concept and its possibilities, rather than a fully automated, continuously updated system.",
+        "Thank you for exploring our website. We hope you enjoyed it just as much as we did when building it :)"
+      ],
+      "pullquote": "Simplifying something does not mean diminishing its value."
+    }
+  },
+  {
+    "slug": "credits",
+    "title": "Credits",
+    "lede": "The people, tools and sources behind the performance.",
+    "content": {
+      "team": [
+        { "role": "Coding", "names": ["Sahil Sadman"] },
+        { "role": "Overview & Management", "names": ["Rishwana Hoque"] },
+        { "role": "Illustration", "names": ["Rishwana Hoque"] },
+        { "role": "Writing", "names": ["Shadman Shakir", "Lamya Islam"] },
+        { "role": "Research & compiling resources", "names": ["Sauda Tarafder", "Lamya Islam"] },
+        { "role": "Audio design", "names": ["Jannatun Kawsher Kashfia", "Sauda Tarafder"] }
+      ],
+      "programs": [
+        { "label": "Illustration", "value": "ibisPaint X" },
+        { "label": "Audio design", "value": "FL Studio 2026" },
+        { "label": "Coding", "value": "Laravel, MySQL & JavaScript" }
+      ],
+      "ai_note": "AI was used in moderation while writing the text within the learn more sections due to time constraints. The written text was factually checked by the writers manually. The illustrations were all hand created by Rishwana Hoque.",
+      "citations_note": "The citations for the data used in the learn more sections are provided below the main body text of each section."
+    }
+  }
+]
