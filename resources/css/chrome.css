@@ -3,7 +3,7 @@
     position: fixed;
     inset: 0 0 auto;
     z-index: 50;
-    transition: background-color 0.35s, box-shadow 0.35s, backdrop-filter 0.35s;
+    transition: background-color 0.35s, box-shadow 0.35s;
 }
 .site-nav.is-scrolled,
 .site-nav.is-open,
@@ -84,27 +84,32 @@ body:not(.page-home) .site-nav {
 .is-open .site-nav__bars i:last-child { width: 22px; transform: translateY(-4px) rotate(-45deg); }
 
 /* Mobile menu
-   Kept deliberately simple: the sheet is display:none until opened, then
-   fades in once. The links themselves never animate, so they're readable
-   the moment the sheet appears (staggered opacity inside a fixed, scrolling
-   layer is what left some phones showing a blank sheet for seconds). */
+   Slides in from the right. Only the panel itself moves (a GPU transform);
+   the links never animate on their own, so they're readable throughout. */
 .nav-sheet {
     position: fixed;
     inset: 0;
-    z-index: -1;
-    display: none;
+    z-index: 49; /* just under the top bar (50), outside it so nothing can clip it */
+    display: flex;
     flex-direction: column;
     padding: 6.5rem var(--gutter) calc(2rem + env(safe-area-inset-bottom));
     background: var(--paper);
+    box-shadow: -18px 0 40px -20px rgba(58, 38, 22, 0.35);
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior: contain;
+    transform: translate3d(100%, 0, 0);
+    visibility: hidden;
+    transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1), visibility 0s linear 0.38s;
 }
-.is-open .nav-sheet {
-    display: flex;
-    animation: sheet-in 0.2s ease-out;
+.has-sheet .nav-sheet {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+    transition: transform 0.42s cubic-bezier(0.32, 0.72, 0, 1), visibility 0s;
 }
-@keyframes sheet-in { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+    .nav-sheet, .has-sheet .nav-sheet { transition: none; }
+}
 
 .nav-sheet nav { display: grid; }
 .nav-sheet nav a {
@@ -161,7 +166,7 @@ body:not(.page-home) .site-nav {
     transform: rotate(45deg);
     box-shadow: 0 0 0 3px var(--paper);
 }
-.is-open .nav-sheet__note {
+.has-sheet .nav-sheet__note {
     animation: note-bob 2.4s ease-in-out infinite;
     animation-delay: calc(var(--n) * -0.4s);
 }
@@ -304,3 +309,6 @@ body:not(.page-home) .site-nav {
     backdrop-filter: none;
     background: var(--paper);
 }
+
+/* Keep the floating player out of the way while the menu is open. */
+.has-sheet .now-playing { visibility: hidden; }

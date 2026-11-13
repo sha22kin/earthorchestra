@@ -22,33 +22,35 @@
         </button>
     </div>
 
-    <div class="nav-sheet" id="nav-sheet" data-nav-sheet aria-hidden="true" inert>
-        <nav aria-label="Mobile">
-            <a href="{{ $anchor('overture') }}" style="--i: 0"><small>00</small>Overture</a>
-            <a href="{{ $anchor('listen') }}" style="--i: 1"><small>01</small>How to listen</a>
-            <a href="{{ $anchor('programme') }}" style="--i: 2"><small>02</small>The six movements</a>
-            <a href="{{ $anchor('orchestra') }}" style="--i: 3"><small>03</small>The full orchestra</a>
-            <a href="{{ route('about') }}" style="--i: 4"><small>04</small>About us</a>
-            <a href="{{ route('credits') }}" style="--i: 5"><small>05</small>Credits</a>
-        </nav>
-
-        {{-- A little score: one note per movement, in its own colour. --}}
-        <div class="nav-sheet__score" aria-hidden="true">
-            <div class="nav-sheet__stave">
-                @foreach (\App\Models\Visualisation::ordered() as $v)
-                    <span class="nav-sheet__note" style="--c: {{ $v->accent }}; --n: {{ $loop->index }}; --y: {{ [3, 1, 2, 0, 2, 4][$loop->index] ?? 2 }}"></span>
-                @endforeach
-            </div>
-            <p>Six movements, one orchestra</p>
-        </div>
-    </div>
 </header>
+
+<div class="nav-sheet" id="nav-sheet" data-nav-sheet aria-hidden="true" inert>
+    <nav aria-label="Mobile">
+        <a href="{{ $anchor('overture') }}" style="--i: 0"><small>00</small>Overture</a>
+        <a href="{{ $anchor('listen') }}" style="--i: 1"><small>01</small>How to listen</a>
+        <a href="{{ $anchor('programme') }}" style="--i: 2"><small>02</small>The six movements</a>
+        <a href="{{ $anchor('orchestra') }}" style="--i: 3"><small>03</small>The full orchestra</a>
+        <a href="{{ route('about') }}" style="--i: 4"><small>04</small>About us</a>
+        <a href="{{ route('credits') }}" style="--i: 5"><small>05</small>Credits</a>
+    </nav>
+
+    {{-- A little score: one note per movement, in its own colour. --}}
+    <div class="nav-sheet__score" aria-hidden="true">
+        <div class="nav-sheet__stave">
+            @foreach (\App\Models\Visualisation::ordered() as $v)
+                <span class="nav-sheet__note" style="--c: {{ $v->accent }}; --n: {{ $loop->index }}; --y: {{ [3, 1, 2, 0, 2, 4][$loop->index] ?? 2 }}"></span>
+            @endforeach
+        </div>
+        <p>Six movements, one orchestra</p>
+    </div>
+</div>
+
 {{-- Inline so the menu works the instant the HTML arrives, without waiting for the JS bundle or images. --}}
 <script>
 (function () {
     var nav = document.querySelector('[data-nav]');
     var toggle = nav.querySelector('[data-nav-toggle]');
-    var sheet = nav.querySelector('[data-nav-sheet]');
+    var sheet = document.querySelector('[data-nav-sheet]');
     function set(open) {
         toggle.setAttribute('aria-expanded', String(open));
         toggle.querySelector('.sr-only').textContent = open ? 'Close menu' : 'Menu';
