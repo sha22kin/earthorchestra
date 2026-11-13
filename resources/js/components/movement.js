@@ -1,5 +1,5 @@
 import { Legend, loudness } from '../lib/legend.js';
-import { createVoice, formatTime } from '../lib/audio.js';
+import { createVoice } from '../lib/audio.js';
 import { stage } from '../lib/stage.js';
 
 const SAMPLE_W = 240;
@@ -47,9 +47,6 @@ export class Movement {
             grip: $('[data-slider-grip]'),
             readout: $('[data-readout]'),
             cover: $('[data-cover]'),
-            seek: $('[data-seek]'),
-            time: $('[data-time]'),
-            duration: $('[data-duration]'),
             play: $('[data-play]'),
             modes: [...section.querySelectorAll('[data-mode]')],
             modeTag: $('[data-mode-tag]'),
@@ -90,7 +87,6 @@ export class Movement {
         this.poster.decoding = 'async';
         this.posterUrl = this.ui.video.dataset.poster;
 
-        this.ui.seek.disabled = true;
         this.bind();
         this.setMode(this.state.mode);
         this.observe();
@@ -124,13 +120,6 @@ export class Movement {
             } else {
                 this.unlock();
             }
-        });
-
-        ui.seek.addEventListener('input', () => {
-            if (!this.voice) return;
-            const d = this.voice.el.duration || 31;
-            this.voice.el.currentTime = (ui.seek.value / 1000) * d;
-            this.syncVideo(true);
         });
 
         const f = ui.frame;
@@ -179,9 +168,6 @@ export class Movement {
 
         if (!this.voice) {
             this.voice = createVoice(this.cfg.audio);
-            this.voice.el.addEventListener('loadedmetadata', () => {
-                this.ui.duration.textContent = formatTime(this.voice.el.duration);
-            });
         }
 
         const { video } = this.ui;
@@ -200,7 +186,6 @@ export class Movement {
         video.play().catch(() => {});
 
         this.state.playing = true;
-        this.ui.seek.disabled = false;
         this.el.classList.add('is-playing', 'has-played');
         this.ui.play.setAttribute('aria-label', `Pause ${this.title}`);
         this.applyGain(0.02);
@@ -223,7 +208,6 @@ export class Movement {
         if (!this.state.playing) return;
         if (now - this.sampledAt > SAMPLE_EVERY_MS) this.sample();
         this.syncVideo();
-        this.renderTime();
         this.raf = requestAnimationFrame(this.loop);
     };
 
@@ -236,14 +220,6 @@ export class Movement {
         if (force || Math.abs(video.currentTime - target) > 0.25) video.currentTime = target;
     }
 
-    renderTime() {
-        const a = this.voice.el;
-        if (!a.duration) return;
-        this.ui.time.textContent = formatTime(a.currentTime);
-        if (document.activeElement !== this.ui.seek) {
-            this.ui.seek.value = Math.round((a.currentTime / a.duration) * 1000);
-        }
-    }
 
     applyGain(smoothing) {
         if (!this.voice) return;

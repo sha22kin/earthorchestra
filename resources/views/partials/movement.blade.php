@@ -67,10 +67,6 @@
                 </button>
             </div>
 
-            <div class="stage__progress">
-                <input type="range" min="0" max="1000" value="0" step="1" data-seek aria-label="Seek">
-                <span class="stage__time"><span data-time>0:00</span> / <span data-duration>0:31</span></span>
-            </div>
 
             <figcaption class="controls">
                 <button type="button" class="btn-play" data-play aria-label="Play {{ $v->short_title }}">

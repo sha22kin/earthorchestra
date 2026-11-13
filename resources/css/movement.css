@@ -385,14 +385,6 @@
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
-.stage__progress {
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
-    margin-top: 1.35rem;
-}
-.stage__progress input { flex: 1; }
-.stage__time { font-size: 0.82rem; font-variant-numeric: tabular-nums; color: var(--ink-3); white-space: nowrap; }
 
 .stage__hint {
     margin: 0.9rem 0 0;
@@ -407,7 +399,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 0.9rem 1.4rem;
-    margin-top: 1rem;
+    margin-top: 1.6rem;
 }
 
 .btn-play {
@@ -499,30 +491,25 @@
 .check.is-disabled { opacity: 0.4; cursor: not-allowed; }
 
 /* Range inputs */
-.range,
-.stage__progress input {
+.range {
     -webkit-appearance: none;
     appearance: none;
     height: 22px;
     background: transparent;
     cursor: pointer;
 }
-.range::-webkit-slider-runnable-track,
-.stage__progress input::-webkit-slider-runnable-track {
+.range::-webkit-slider-runnable-track {
     height: 4px;
     border-radius: 4px;
     background: var(--line-strong);
 }
-.range::-moz-range-track,
-.stage__progress input::-moz-range-track {
+.range::-moz-range-track {
     height: 4px;
     border-radius: 4px;
     background: var(--line-strong);
 }
-.range::-moz-range-progress,
-.stage__progress input::-moz-range-progress { height: 4px; border-radius: 4px; background: var(--accent); }
-.range::-webkit-slider-thumb,
-.stage__progress input::-webkit-slider-thumb {
+.range::-moz-range-progress { height: 4px; border-radius: 4px; background: var(--accent); }
+.range::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 16px; height: 16px;
     margin-top: -6px;
@@ -531,15 +518,14 @@
     border: 2px solid var(--ink);
     transition: transform 0.15s;
 }
-.range::-moz-range-thumb,
-.stage__progress input::-moz-range-thumb {
+.range::-moz-range-thumb {
     width: 16px; height: 16px;
     border-radius: 50%;
     background: var(--paper-hi);
     border: 2px solid var(--ink);
 }
 .range:hover::-webkit-slider-thumb { transform: scale(1.15); }
-.range:disabled, .stage__progress input:disabled { opacity: 0.4; cursor: not-allowed; }
+.range:disabled { opacity: 0.4; cursor: not-allowed; }
 
 @media (max-width: 560px) {
     .controls { gap: 0.8rem 1rem; }
