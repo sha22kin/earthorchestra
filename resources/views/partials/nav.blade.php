@@ -23,33 +23,23 @@
     </div>
 
     <div class="nav-sheet" id="nav-sheet" data-nav-sheet aria-hidden="true" inert>
-        <nav class="nav-sheet__links" aria-label="Mobile">
-            @foreach ([
-                ['overture', 'Overture'], ['listen', 'How to listen'], ['programme', 'The six movements'],
-                ['orchestra', 'The full orchestra'], [route('about'), 'About us'], [route('credits'), 'Credits'],
-            ] as $i => [$target, $label])
-                <a href="{{ str_starts_with($target, 'http') ? $target : $anchor($target) }}" style="--i: {{ $i }}">
-                    <small>{{ str_pad($i, 2, '0', STR_PAD_LEFT) }}</small>
-                    <span>{{ $label }}</span>
-                    <x-icon name="arrow-r" />
-                </a>
-            @endforeach
+        <nav aria-label="Mobile">
+            <a href="{{ $anchor('overture') }}" style="--i: 0"><small>00</small>Overture</a>
+            <a href="{{ $anchor('listen') }}" style="--i: 1"><small>01</small>How to listen</a>
+            <a href="{{ $anchor('programme') }}" style="--i: 2"><small>02</small>The six movements</a>
+            <a href="{{ $anchor('orchestra') }}" style="--i: 3"><small>03</small>The full orchestra</a>
+            <a href="{{ route('about') }}" style="--i: 4"><small>04</small>About us</a>
+            <a href="{{ route('credits') }}" style="--i: 5"><small>05</small>Credits</a>
         </nav>
 
-        <div class="nav-sheet__foot" style="--i: 6">
-            <a class="nav-sheet__cta" href="{{ $anchor('programme') }}">
-                <span>
-                    <small>Tonight's programme</small>
-                    Six movements, one orchestra
-                </span>
-                <span class="nav-sheet__disc"><x-icon name="play" /></span>
-            </a>
-            <p class="nav-sheet__meta"><span>NASA GEOS-FP &amp; GEOS-CF data</span> <i aria-hidden="true">◆</i> <span>Autumn 2026</span></p>
-        </div>
-
-        <div class="nav-sheet__sky" aria-hidden="true">
-            <img class="nav-sheet__cloud nav-sheet__cloud--a" src="{{ asset('media/cloud-1.webp') }}" alt="" loading="lazy">
-            <img class="nav-sheet__cloud nav-sheet__cloud--b" src="{{ asset('media/cloud-2.webp') }}" alt="" loading="lazy">
+        {{-- A little score: one note per movement, in its own colour. --}}
+        <div class="nav-sheet__score" aria-hidden="true">
+            <div class="nav-sheet__stave">
+                @foreach (\App\Models\Visualisation::ordered() as $v)
+                    <span class="nav-sheet__note" style="--c: {{ $v->accent }}; --n: {{ $loop->index }}; --y: {{ [3, 1, 2, 0, 2, 4][$loop->index] ?? 2 }}"></span>
+                @endforeach
+            </div>
+            <p>Six movements, one orchestra</p>
         </div>
     </div>
 </header>
