@@ -83,30 +83,29 @@ body:not(.page-home) .site-nav {
 .is-open .site-nav__bars i:first-child { transform: translateY(4px) rotate(45deg); }
 .is-open .site-nav__bars i:last-child { width: 22px; transform: translateY(-4px) rotate(-45deg); }
 
-/* Mobile menu */
+/* Mobile menu
+   Kept deliberately simple: the sheet is display:none until opened, then
+   fades in once. The links themselves never animate, so they're readable
+   the moment the sheet appears (staggered opacity inside a fixed, scrolling
+   layer is what left some phones showing a blank sheet for seconds). */
 .nav-sheet {
     position: fixed;
     inset: 0;
     z-index: -1;
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 6.5rem var(--gutter) calc(2rem + env(safe-area-inset-bottom));
     background: var(--paper);
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior: contain;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-8px);
-    will-change: opacity, transform;
-    transition: opacity 0.3s ease, transform 0.35s var(--ease-out), visibility 0s linear 0.35s;
 }
 .is-open .nav-sheet {
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    transition: opacity 0.3s ease, transform 0.4s var(--ease-out), visibility 0s;
+    display: flex;
+    animation: sheet-in 0.2s ease-out;
 }
+@keyframes sheet-in { from { opacity: 0; } to { opacity: 1; } }
+
 .nav-sheet nav { display: grid; }
 .nav-sheet nav a {
     display: flex;
@@ -119,16 +118,7 @@ body:not(.page-home) .site-nav {
     font-size: clamp(1.6rem, 7vw, 2.2rem);
     line-height: 1.15;
     text-decoration: none;
-    opacity: 0;
-    transform: translateY(12px);
-    transition: opacity 0.2s, transform 0.2s;
-}
-.is-open .nav-sheet nav a,
-.is-open .nav-sheet__score {
-    opacity: 1;
-    transform: none;
-    transition: opacity 0.45s ease, transform 0.5s var(--ease-out);
-    transition-delay: calc(0.08s + var(--i, 6) * 45ms);
+    -webkit-tap-highlight-color: transparent;
 }
 .nav-sheet nav a:active { color: var(--copper-deep); }
 .nav-sheet small {
@@ -146,9 +136,6 @@ body:not(.page-home) .site-nav {
     margin-top: auto;
     padding-top: 3rem;
     text-align: center;
-    opacity: 0;
-    transform: translateY(12px);
-    transition: opacity 0.2s, transform 0.2s;
 }
 .nav-sheet__stave {
     position: relative;

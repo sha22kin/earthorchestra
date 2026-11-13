@@ -73,7 +73,7 @@ body::before {
     z-index: 100;
     pointer-events: none;
     background: url('/media/grain.png') 0 0 / 128px 128px repeat;
-    opacity: 0.2;
+    opacity: 0.14;
     /* Own compositor layer, no blend mode: costs nothing when other things animate. */
     transform: translateZ(0);
 }
