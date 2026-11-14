@@ -11,8 +11,7 @@
     </header>
 
     <div class="wrap wrap--narrow">
-        <section class="bill" aria-labelledby="team-title">
-            <h2 id="team-title" class="bill__title">The company</h2>
+        <section class="bill" aria-label="The company">
             <dl class="bill__list">
                 @foreach ($page->content['team'] as $row)
                     <div class="bill__row">
