@@ -59,6 +59,7 @@
         <div class="wrap">
             <header class="listen__head" data-reveal>
                 <h2 class="section-title">How to use</h2>
+                <span class="ornament" aria-hidden="true"><i></i></span>
                 <div id="how-text">
                     @foreach ($page->content['how'] as $paragraph)
                         <p>{{ $paragraph }}</p>

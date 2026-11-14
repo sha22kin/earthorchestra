@@ -180,7 +180,9 @@
 }
 .listen .wrap { position: relative; }
 
-.listen__head { max-width: 46rem; margin-bottom: 2rem; }
+.listen__head { max-width: 46rem; margin: 0 auto 2rem; text-align: center; }
+.listen__head .section-title { margin-bottom: 0.9rem; }
+.listen__head p { text-wrap: pretty; }
 .listen__head p { color: var(--ink-2); }
 
 .listen__ways {
