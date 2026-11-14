@@ -47,7 +47,6 @@ export class Movement {
             cover: $('[data-cover]'),
             play: $('[data-play]'),
             modes: [...section.querySelectorAll('[data-mode]')],
-            modeTag: $('[data-mode-tag]'),
             manual: $('[data-manual]'),
             manualLevel: $('[data-manual-level]'),
             manualPct: $('[data-manual-pct]'),
@@ -226,7 +225,6 @@ export class Movement {
         const s = this.state;
         s.mode = mode;
         this.ui.modes.forEach((b) => b.setAttribute('aria-checked', String(b.dataset.mode === mode)));
-        this.ui.modeTag.textContent = `(${mode})`;
         this.el.dataset.mode = mode;
 
         const slider = mode === 'slider';

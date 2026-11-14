@@ -2,40 +2,16 @@
     /** @var \App\Models\Visualisation $v */
     $id = $v->slug;
 @endphp
-<section class="movement {{ $loop->even ? 'movement--flip' : '' }}" id="{{ $id }}"
+<section class="movement" id="{{ $id }}"
          style="--accent: {{ $v->accent }}"
          aria-labelledby="{{ $id }}-title"
          data-movement='@json($v->toPlayerConfig())'>
 
     <header class="movement__head" data-reveal>
-        <span class="movement__numeral" aria-hidden="true">{{ $v->numeral }}</span>
-        <div>
-            <p class="eyebrow">Movement {{ $v->numeral }} <span aria-hidden="true">·</span> {{ $v->model }}</p>
-            <h2 class="movement__title" id="{{ $id }}-title">
-                {{ $v->title }}
-                <span class="movement__mode" data-mode-tag>({{ $v->interaction }})</span>
-            </h2>
-        </div>
+        <h2 class="movement__title" id="{{ $id }}-title">{{ $v->title }}</h2>
     </header>
 
-    <div class="movement__grid">
-        <div class="movement__text" data-reveal>
-            <p class="movement__summary" id="{{ $id }}-summary">{{ $v->summary }}</p>
-            <x-read-aloud target="#{{ $id }}-summary" />
-
-            <dl class="movement__facts">
-                <div><dt>Measures</dt><dd>{{ $v->measurement }}</dd></div>
-                <div><dt>Snapshot</dt><dd>{{ $v->date_range }}</dd></div>
-            </dl>
-
-            <x-legend :visualisation="$v" />
-
-            <a class="link-arrow" href="{{ route('visualisations.show', $v->slug) }}">
-                Want to learn more? <span>Read the full notes</span>
-                <x-icon name="arrow-r" />
-            </a>
-        </div>
-
+    <div class="movement__body">
         <figure class="stage" data-reveal>
             <div class="stage__frame" data-stage tabindex="0"
                  aria-label="{{ $v->short_title }} visualisation. Move the pointer, or use arrow keys, to explore the data and change the volume.">
@@ -98,5 +74,24 @@
 
             <p class="stage__hint" data-hint></p>
         </figure>
+
+        <div class="movement__legend" data-reveal>
+            <x-legend :visualisation="$v" />
+        </div>
+
+        <div class="movement__text" data-reveal>
+            <p class="movement__summary" id="{{ $id }}-summary">{{ $v->summary }}</p>
+            <x-read-aloud target="#{{ $id }}-summary" />
+
+            <dl class="movement__facts">
+                <div><dt>Measures</dt><dd>{{ $v->measurement }}</dd></div>
+                <div><dt>Snapshot</dt><dd>{{ $v->date_range }}</dd></div>
+            </dl>
+
+            <a class="link-arrow" href="{{ route('visualisations.show', $v->slug) }}">
+                Want to learn more? <span>Read the full notes</span>
+                <x-icon name="arrow-r" />
+            </a>
+        </div>
     </div>
 </section>
