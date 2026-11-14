@@ -4,7 +4,7 @@
     position: relative;
     max-width: calc(var(--max) + var(--gutter) * 2);
     margin-inline: auto;
-    padding: clamp(2.75rem, 5.5vw, 4.5rem) var(--gutter) 0;
+    padding: clamp(2.75rem, 5.5vw, 4.5rem) var(--gutter) clamp(2rem, 4vw, 3rem);
 }
 
 .movement + .movement::before {
@@ -13,10 +13,8 @@
     top: 0;
     left: var(--gutter);
     right: var(--gutter);
-    height: 26px;
-    background: repeating-linear-gradient(to bottom, var(--line) 0 1px, transparent 1px 6px);
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
-    mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(168, 105, 47, 0.55) 20%, rgba(168, 105, 47, 0.55) 80%, transparent);
 }
 
 .movement__head {
