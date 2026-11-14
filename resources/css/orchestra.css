@@ -32,8 +32,7 @@
 .orchestra .eyebrow { color: var(--gold); }
 
 .orchestra__head { max-width: 46rem; margin: 0 auto 2.5rem; text-align: center; }
-.orchestra__head .section-title,
-.orchestra__intro {
+.orchestra__head .section-title {
     font-family: 'Floraison des Amours', var(--font-display);
     font-weight: 400;
     letter-spacing: 0;
@@ -43,7 +42,7 @@
     line-height: 1.1;
     margin-bottom: 0.75rem;
 }
-.orchestra__intro { color: rgba(241, 230, 207, 0.85); font-size: clamp(1.3rem, 1.1rem + 0.7vw, 1.65rem); line-height: 1.55; text-wrap: balance; }
+.orchestra__intro { color: rgba(241, 230, 207, 0.8); font-size: 1.08rem; text-wrap: balance; }
 .orchestra__loaded {
     display: inline-block;
     margin-top: 0.5rem;
