@@ -45,7 +45,6 @@
     <section class="overture" id="overture">
         <div class="overture__inner" data-reveal>
             <h2 class="section-title">About Earth Orchestra</h2>
-            <span class="ornament" aria-hidden="true"><i></i></span>
             @foreach ($page->content['intro'] as $paragraph)
                 <p class="overture__text" id="intro-{{ $loop->index }}">{{ $paragraph }}</p>
             @endforeach
@@ -59,7 +58,6 @@
         <div class="wrap">
             <header class="listen__head" data-reveal>
                 <h2 class="section-title">How to use</h2>
-                <span class="ornament" aria-hidden="true"><i></i></span>
                 <div id="how-text">
                     @foreach ($page->content['how'] as $paragraph)
                         <p>{{ $paragraph }}</p>
