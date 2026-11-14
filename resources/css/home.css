@@ -6,10 +6,15 @@
 }
 
 .hero__stage {
+    --edge: clamp(14px, 1.8vw, 26px);
+    position: relative;
+    padding-bottom: var(--edge);
+    background: #7d9dbf;
+}
+.hero__frame {
     position: relative;
     width: 100%;
     aspect-ratio: 1600 / 896;
-    max-height: 100svh;
     overflow: hidden;
     background: #a9c3d3 url('/media/hero-first.webp') center / cover no-repeat;
 }
@@ -32,7 +37,7 @@
     content: '';
     position: absolute;
     inset: auto 0 -1px;
-    height: clamp(12px, 1.6vw, 22px);
+    height: var(--edge);
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 18' preserveAspectRatio='none'%3E%3Cpath d='M0 18V9C10 3 20 3 30 9S50 15 60 9 80 3 90 9 110 15 120 9V18Z' fill='%23f3ead8'/%3E%3C/svg%3E") 0 100% / clamp(90px, 9vw, 140px) 100% repeat-x;
     pointer-events: none;
 }

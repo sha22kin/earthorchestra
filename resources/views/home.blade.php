@@ -9,14 +9,16 @@
 @section('content')
     <section class="hero" data-hero>
         <div class="hero__stage">
-            <video class="hero__film" data-hero-film
-                   muted playsinline autoplay preload="auto"
-                   poster="{{ asset('media/hero-first.webp') }}"
-                   disablepictureinpicture disableremoteplayback
-                   aria-hidden="true" tabindex="-1" width="1600" height="896">
-                <source src="{{ asset('media/hero-intro.mp4') }}" type="video/mp4">
-            </video>
-            <img class="hero__still" src="{{ asset('media/hero-still.webp') }}" alt="" width="1600" height="896" aria-hidden="true">
+            <div class="hero__frame">
+                <video class="hero__film" data-hero-film
+                       muted playsinline autoplay preload="auto"
+                       poster="{{ asset('media/hero-first.webp') }}"
+                       disablepictureinpicture disableremoteplayback
+                       aria-hidden="true" tabindex="-1" width="1600" height="896">
+                    <source src="{{ asset('media/hero-intro.mp4') }}" type="video/mp4">
+                </video>
+                <img class="hero__still" src="{{ asset('media/hero-still.webp') }}" alt="" width="1600" height="896" aria-hidden="true">
+            </div>
             <h1 class="sr-only">Earth Orchestra</h1>
         </div>
 
