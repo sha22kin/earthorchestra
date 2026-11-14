@@ -18,16 +18,6 @@
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
     mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
 }
-.movement + .movement::after {
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    width: 13px; height: 13px;
-    background: var(--accent);
-    transform: translateX(-50%) rotate(45deg);
-    box-shadow: 0 0 0 4px var(--paper);
-}
 
 .movement__head {
     display: flex;
