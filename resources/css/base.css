@@ -150,7 +150,7 @@ main:focus { outline: none; }
     margin-inline: auto;
     padding-inline: var(--gutter);
 }
-.wrap--narrow { max-width: calc(46rem + var(--gutter) * 2); }
+.wrap--narrow > * { max-width: 46rem; }
 
 .btn {
     display: inline-flex;

@@ -80,7 +80,7 @@
 }
 
 .article__plate {
-    max-width: calc(68rem + var(--gutter) * 2);
+    max-width: calc(var(--max) + var(--gutter) * 2);
     margin: 0 auto clamp(2.5rem, 6vw, 4.5rem);
     padding-inline: var(--gutter);
 }
@@ -116,7 +116,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) 17rem;
     gap: clamp(2rem, 5vw, 5rem);
-    max-width: calc(68rem + var(--gutter) * 2);
+    max-width: calc(var(--max) + var(--gutter) * 2);
     align-items: start;
 }
 .article__body { max-width: 40rem; }
@@ -217,7 +217,7 @@
     margin-top: clamp(3rem, 7vw, 5rem);
     padding-top: 2rem;
     border-top: 1px solid var(--line);
-    max-width: calc(68rem + var(--gutter) * 2);
+    max-width: calc(var(--max) + var(--gutter) * 2);
 }
 .pager__link {
     display: grid;

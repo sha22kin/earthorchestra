@@ -113,7 +113,8 @@
     overflow: hidden;
     overflow: clip;
 }
-.overture__inner { position: relative; z-index: 1; max-width: 44rem; margin-inline: auto; }
+.overture__inner { position: relative; z-index: 1; max-width: var(--max); margin-inline: auto; }
+.overture__inner > * { max-width: 46rem; }
 .overture__text {
     font-family: var(--font-display);
     font-weight: 380;
@@ -151,7 +152,7 @@
 }
 .listen .wrap { position: relative; }
 
-.listen__head { max-width: 44rem; margin-bottom: 3rem; }
+.listen__head { max-width: 46rem; margin-bottom: 3rem; }
 .listen__head p { color: var(--ink-2); }
 
 .listen__ways {
