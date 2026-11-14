@@ -143,7 +143,7 @@
     "svs_id": 5147,
     "video_path": "media/movement-1.mp4",
     "poster_path": "media/movement-1.webp",
-    "audio_path": "media/movement-1.m4a",
+    "audio_path": "media/movement-1.mp3",
     "data_starts_on": "2026-09-12",
     "data_ends_on": "2026-09-27",
     "citations": [
@@ -296,7 +296,7 @@
     "svs_id": 5148,
     "video_path": "media/movement-2.mp4",
     "poster_path": "media/movement-2.webp",
-    "audio_path": "media/movement-2.m4a",
+    "audio_path": "media/movement-2.mp3",
     "data_starts_on": "2026-09-12",
     "data_ends_on": "2026-09-27",
     "citations": [
@@ -442,7 +442,7 @@
     "svs_id": 5149,
     "video_path": "media/movement-3.mp4",
     "poster_path": "media/movement-3.webp",
-    "audio_path": "media/movement-3.m4a",
+    "audio_path": "media/movement-3.mp3",
     "data_starts_on": "2026-09-12",
     "data_ends_on": "2026-09-27",
     "citations": [
@@ -585,7 +585,7 @@
     "svs_id": 5150,
     "video_path": "media/movement-4.mp4",
     "poster_path": "media/movement-4.webp",
-    "audio_path": "media/movement-4.m4a",
+    "audio_path": "media/movement-4.mp3",
     "data_starts_on": "2026-09-12",
     "data_ends_on": "2026-09-27",
     "citations": [
@@ -721,7 +721,7 @@
     "svs_id": 5151,
     "video_path": "media/movement-5.mp4",
     "poster_path": "media/movement-5.webp",
-    "audio_path": "media/movement-5.m4a",
+    "audio_path": "media/movement-5.mp3",
     "data_starts_on": "2026-09-12",
     "data_ends_on": "2026-09-27",
     "citations": [
@@ -879,7 +879,7 @@
     "svs_id": 5152,
     "video_path": "media/movement-6.mp4",
     "poster_path": "media/movement-6.webp",
-    "audio_path": "media/movement-6.m4a",
+    "audio_path": "media/movement-6.mp3",
     "data_starts_on": "2026-10-28",
     "data_ends_on": "2026-11-12",
     "citations": [
