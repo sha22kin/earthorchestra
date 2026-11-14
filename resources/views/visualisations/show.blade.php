@@ -58,7 +58,7 @@
         </aside>
     </div>
 
-    <div class="wrap wrap--narrow">
+    <div class="wrap wrap--narrow article__end">
         <p class="article__more">
             Want to learn even more right from NASA's official data?
             <a href="{{ $visualisation->svs_url }}" target="_blank" rel="noopener">Visit the Scientific Visualization Studio <x-icon name="external" /></a>

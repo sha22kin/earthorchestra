@@ -114,12 +114,12 @@
 
 .article__layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 17rem;
-    gap: clamp(2rem, 5vw, 5rem);
+    grid-template-columns: minmax(0, 1fr) 19rem;
+    gap: clamp(2rem, 3.5vw, 3rem);
     max-width: calc(var(--max) + var(--gutter) * 2);
     align-items: start;
 }
-.article__body { max-width: 40rem; }
+.article__body { max-width: none; }
 .article__body.is-being-read { position: relative; }
 .article__aside { position: sticky; top: 6rem; }
 
@@ -444,3 +444,7 @@
 
 .page-about .pullquote { border-top: 0; padding-top: 0.5rem; }
 .page-about .pullquote::before { display: none; }
+
+.article__end > * { margin-inline: auto; }
+.article__end .article__more { text-align: center; }
+.article__end .sources h2 { text-align: center; }
