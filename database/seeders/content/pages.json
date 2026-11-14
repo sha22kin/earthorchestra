@@ -42,17 +42,60 @@
     "lede": "The people, tools and sources behind the performance.",
     "content": {
       "team": [
-        { "role": "Coding", "names": ["Sahil Sadman"] },
-        { "role": "Overview & Management", "names": ["Rishwana Hoque"] },
-        { "role": "Illustration", "names": ["Rishwana Hoque"] },
-        { "role": "Writing", "names": ["Shadman Shakir", "Lamya Islam"] },
-        { "role": "Research & compiling resources", "names": ["Sauda Tarafder", "Lamya Islam"] },
-        { "role": "Audio design", "names": ["Jannatun Kawsher Kashfia", "Sauda Tarafder"] }
+        {
+          "role": "Coding",
+          "names": [
+            "Sahil Sadman",
+            "Shadman Shakir"
+          ]
+        },
+        {
+          "role": "Overview & Management",
+          "names": [
+            "Rishwana Hoque"
+          ]
+        },
+        {
+          "role": "Illustration",
+          "names": [
+            "Rishwana Hoque"
+          ]
+        },
+        {
+          "role": "Writing",
+          "names": [
+            "Lamya Islam",
+            "Jannatun Kawsher Kashfia"
+          ]
+        },
+        {
+          "role": "Research & compiling resources",
+          "names": [
+            "Sauda Tarafder",
+            "Rishwana Hoque"
+          ]
+        },
+        {
+          "role": "Audio design",
+          "names": [
+            "Jannatun Kawsher Kashfia",
+            "Sauda Tarafder"
+          ]
+        }
       ],
       "programs": [
-        { "label": "Illustration", "value": "ibisPaint X" },
-        { "label": "Audio design", "value": "FL Studio 2026" },
-        { "label": "Coding", "value": "Laravel, MySQL & JavaScript" }
+        {
+          "label": "Illustration",
+          "value": "ibisPaint X"
+        },
+        {
+          "label": "Audio design",
+          "value": "FL Studio 2026"
+        },
+        {
+          "label": "Coding",
+          "value": "Laravel, MySQL & JavaScript"
+        }
       ],
       "ai_note": "AI was used in moderation while writing the text within the learn more sections due to time constraints. The written text was factually checked by the writers manually. The illustrations were all hand created by Rishwana Hoque.",
       "citations_note": "The citations for the data used in the learn more sections are provided below the main body text of each section."

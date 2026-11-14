@@ -382,3 +382,45 @@
 
 .lost { padding-top: 9rem; text-align: center; display: grid; justify-items: center; }
 .lost img { width: min(340px, 80%); margin-bottom: 1.5rem; animation: drift 10s ease-in-out infinite alternate; }
+
+.page-credits .page__head,
+.page-credits .bill { text-align: center; }
+.page-credits .wrap--narrow > * { margin-inline: auto; }
+.page-credits .page__head { margin-bottom: 2.5rem; }
+
+.page-credits .bill__title { justify-content: center; }
+.page-credits .bill__title::before {
+    content: '';
+    flex: 1;
+    height: 4px;
+    background: var(--wave) repeat-x 0 0 / 14px 4px;
+    opacity: 0.7;
+}
+
+.page-credits .bill__list { gap: 0; }
+.page-credits .bill__row {
+    display: grid;
+    justify-items: center;
+    gap: 0.3rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+}
+.page-credits .bill__row:last-child { border-bottom: 0; }
+.page-credits .bill__row::before { display: none; }
+.page-credits .bill__row dt { white-space: normal; }
+.page-credits .bill__row dd {
+    order: 0;
+    text-align: center;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+    font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.35rem);
+}
+
+.page-credits .bill__sources { justify-items: center; }
+.page-credits .bill__sources li {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 20rem);
+    justify-content: center;
+    text-align: left;
+}
+.page-credits .bill--note p { text-align: center; }
