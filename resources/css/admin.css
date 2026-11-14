@@ -13,10 +13,13 @@
     --danger: #dc2626;
     --danger-soft: #fdecec;
 
-    --blue: #2563eb;   --blue-bg: #eaf1fe;
-    --green: #059669;  --green-bg: #e7f6f0;
+    --blue: #2563eb;
+    --blue-bg: #eaf1fe;
+    --green: #059669;
+    --green-bg: #e7f6f0;
     --orange: #ea7a12; --orange-bg: #fdf1e5;
-    --teal: #0e8fa3;   --teal-bg: #e6f5f8;
+    --teal: #0e8fa3;
+    --teal-bg: #e6f5f8;
     --indigo: #4f46e5; --indigo-bg: #eeedfd;
 
     --ok: #059669; --ok-bg: #e7f6f0;

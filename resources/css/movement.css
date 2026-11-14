@@ -354,7 +354,8 @@
     border-radius: 8px 11px 7px 12px;
     background: radial-gradient(closest-side, rgba(30, 20, 12, 0.45), rgba(30, 20, 12, 0.15));
     color: var(--paper-hi);
-    pointer-events: none;    transition: opacity 0.4s, visibility 0.4s;
+    pointer-events: none;
+    transition: opacity 0.4s, visibility 0.4s;
 }
 .stage__cover-disc, .stage__cover-label { pointer-events: auto; cursor: pointer; }
 .has-played .stage__cover { opacity: 0; visibility: hidden; }
@@ -529,6 +530,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;    overflow: clip;
+    overflow: hidden;
+    overflow: clip;
     border-radius: 8px 11px 7px 12px;
 }
