@@ -209,10 +209,11 @@
     counter-reset: none;
 }
 .programme__list a {
-    display: flex;
-    align-items: baseline;
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 19rem);
     justify-content: center;
-    gap: 1rem;
+    align-items: baseline;
+    gap: 0.75rem;
     padding: 1rem 0;
     border-bottom: 1px solid var(--line);
     text-decoration: none;
@@ -234,6 +235,7 @@
 
 @media (max-width: 760px) {
     .programme__list { grid-template-columns: 1fr; }
+    .programme__list a { grid-template-columns: 1.5rem minmax(0, 14rem); }
 }
 
 .page-home .site-nav:not(.is-scrolled):not(.is-open) .site-nav__links a {
