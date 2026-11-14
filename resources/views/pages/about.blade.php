@@ -24,7 +24,6 @@
         </div>
 
         <div class="page__end">
-            <img src="{{ asset('media/cloud-1.webp') }}" alt="" loading="lazy" width="900" height="526">
             <a class="btn btn--ink" href="{{ route('home') }}#programme">Back to the music <x-icon name="arrow-r" /></a>
         </div>
     </div>
