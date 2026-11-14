@@ -535,3 +535,5 @@
 }
 .is-fullscreen .stage__video { border-radius: 0; }
 .is-fullscreen .stage__fs { right: 24px; bottom: 24px; }
+
+.movement__num { color: var(--accent); }

@@ -8,7 +8,7 @@
          data-movement='@json($v->toPlayerConfig())'>
 
     <header class="movement__head" data-reveal>
-        <h2 class="movement__title" id="{{ $id }}-title">{{ $v->title }}</h2>
+        <h2 class="movement__title" id="{{ $id }}-title"><span class="movement__num">{{ $v->numeral }}.</span> {{ $v->title }}</h2>
     </header>
 
     <div class="movement__body">
