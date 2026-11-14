@@ -89,10 +89,9 @@ export class Orchestra {
         if (this.master) this.master.connect(ac.destination);
 
         for (const c of this.channels) {
-            c.voice = createVoice(c.track.audio, { loop: false, destination: this.master });
+            c.voice = createVoice(c.track.audio, { loop: true, destination: this.master });
             c.analyser = c.voice.connectAnalyser();
             c.buffer = c.analyser ? new Uint8Array(c.analyser.fftSize) : null;
-            c.voice.el.addEventListener('ended', () => this.onEnded());
         }
         this.ready = true;
         this.applyMaster();
@@ -102,10 +101,6 @@ export class Orchestra {
     async play() {
         stage.claim(this);
         this.ensureGraph();
-
-        const lead = this.channels[0].voice.el;
-        const t = lead.currentTime;
-        this.channels.forEach((c) => (c.voice.el.currentTime = t));
 
         try {
             await Promise.all(this.channels.map((c) => c.voice.el.play()));
@@ -133,14 +128,6 @@ export class Orchestra {
         stage.release(this);
     }
 
-    onEnded() {
-        if (this.restarting) return;
-        this.restarting = true;
-        this.seekAll(0);
-        if (this.playing) this.channels.forEach((c) => c.voice.el.play().catch(() => {}));
-        setTimeout(() => (this.restarting = false), 200);
-    }
-
     seekAll(t) {
         if (!this.ready) return;
         this.channels.forEach((c) => (c.voice.el.currentTime = t));
@@ -154,8 +141,8 @@ export class Orchestra {
 
     tick = () => {
         if (!this.playing) return;
-        const lead = this.channels[0].voice.el;
-        if (lead.duration) this.ui.progress.style.setProperty('--p', lead.currentTime / lead.duration);
+        const longest = this.channels.reduce((a, c) => ((c.voice.el.duration || 0) > (a.duration || 0) ? c.voice.el : a), this.channels[0].voice.el);
+        if (longest.duration) this.ui.progress.style.setProperty('--p', longest.currentTime / longest.duration);
 
         if (!prefersReducedMotion()) {
             const time = performance.now() / 1000;
