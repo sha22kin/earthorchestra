@@ -172,7 +172,7 @@
     "short_title": "Wind",
     "model": "GEOS-FP",
     "measurement": "Wind speed, 10 m above the surface",
-    "interaction": "slider",
+    "interaction": "cursor",
     "accent": "#5f8f9c",
     "summary": "This is a changing visualisation of near-surface wind speed, 10 metres above Earth’s surface, compiled by NASA’s GEOS-FP system.",
     "body": [
@@ -321,7 +321,7 @@
     "short_title": "Precipitation and Clouds",
     "model": "GEOS-FP",
     "measurement": "Total precipitation over cloud optical thickness",
-    "interaction": "slider",
+    "interaction": "cursor",
     "accent": "#6a9e7a",
     "summary": "This is a changing visualisation of precipitation and clouds, calculated using fields from NASA’s GEOS-FP system.",
     "body": [
@@ -758,7 +758,7 @@
     "short_title": "Ozone",
     "model": "GEOS-CF",
     "measurement": "Ozone concentration near the surface",
-    "interaction": "slider",
+    "interaction": "cursor",
     "accent": "#b06fac",
     "summary": "This is a changing visualisation of the near-surface concentration of ozone (O₃), estimated using NASA’s GEOS-CF model.",
     "body": [
