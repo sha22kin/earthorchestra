@@ -11,7 +11,7 @@
         <nav class="site-nav__links" aria-label="Primary">
             <a href="{{ $anchor('listen') }}">How to listen</a>
             <a href="{{ $anchor('programme') }}">Movements</a>
-            <a href="{{ $anchor('orchestra') }}">The orchestra</a>
+            <a href="{{ $anchor('orchestra') }}">The Orchestra</a>
             <a href="{{ route('about') }}" @class(['is-current' => request()->routeIs('about')])>About</a>
             <a href="{{ route('credits') }}" @class(['is-current' => request()->routeIs('credits')])>Credits</a>
         </nav>
