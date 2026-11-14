@@ -181,8 +181,8 @@ body:not(.page-home) .site-nav {
 
 .site-footer {
     position: relative;
-    margin-top: clamp(4rem, 8vw, 7rem);
-    padding-top: clamp(4rem, 7vw, 6rem);
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    padding-top: clamp(3rem, 5vw, 4.5rem);
     background: var(--paper-2);
     border-top: 1px solid var(--line);
 }

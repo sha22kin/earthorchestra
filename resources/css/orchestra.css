@@ -1,8 +1,8 @@
 .orchestra {
     --ink-on: #f1e6cf;
     position: relative;
-    margin-top: clamp(4rem, 8vw, 7rem);
-    padding-block: clamp(4.5rem, 9vw, 7.5rem);
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    padding-block: clamp(3rem, 6vw, 5rem);
     background:
         radial-gradient(70% 55% at 50% 0%, rgba(208, 162, 93, 0.16), transparent 70%),
         radial-gradient(50% 40% at 50% 100%, rgba(143, 191, 202, 0.08), transparent 70%),

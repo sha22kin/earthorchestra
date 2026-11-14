@@ -109,16 +109,39 @@
 
 .overture {
     position: relative;
-    padding: clamp(3.5rem, 7vw, 6rem) var(--gutter) clamp(4rem, 8vw, 6rem);
+    padding: clamp(2.5rem, 5vw, 4rem) var(--gutter);
     overflow: hidden;
     overflow: clip;
 }
-.overture__inner { position: relative; z-index: 1; max-width: var(--max); margin-inline: auto; }
-.overture__inner > * { max-width: 46rem; }
+.overture__inner { position: relative; z-index: 1; max-width: var(--max); margin-inline: auto; text-align: center; }
+.overture__inner > * { max-width: 46rem; margin-inline: auto; }
+.overture .section-title { margin-bottom: 0.9rem; }
+.overture__text { text-wrap: pretty; }
+
+.ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-bottom: 1.6rem;
+}
+.ornament::before,
+.ornament::after {
+    content: '';
+    width: 3.5rem;
+    height: 1px;
+    background: var(--line-strong);
+}
+.ornament i {
+    width: 8px;
+    height: 8px;
+    background: var(--copper);
+    transform: rotate(45deg);
+}
 .overture__text {
     font-family: var(--font-display);
     font-weight: 380;
-    font-size: clamp(1.2rem, 1.05rem + 0.75vw, 1.55rem);
+    font-size: clamp(1.08rem, 1rem + 0.35vw, 1.25rem);
     line-height: 1.6;
     color: var(--ink);
     text-wrap: pretty;
@@ -134,9 +157,14 @@
     -webkit-mask-image: radial-gradient(closest-side, #000 40%, transparent);
     mask-image: radial-gradient(closest-side, #000 40%, transparent);
 }
+.overture__motif--left {
+    right: auto;
+    left: -14%;
+    transform: translateY(-50%) rotate(8deg) scaleX(-1);
+}
 
 .listen {
-    padding-block: clamp(4rem, 8vw, 6.5rem);
+    padding-block: clamp(2.75rem, 5vw, 4rem);
     background:
         linear-gradient(var(--paper-2), var(--paper-2)) padding-box;
     border-block: 1px solid var(--line);
@@ -152,7 +180,7 @@
 }
 .listen .wrap { position: relative; }
 
-.listen__head { max-width: 46rem; margin-bottom: 3rem; }
+.listen__head { max-width: 46rem; margin-bottom: 2rem; }
 .listen__head p { color: var(--ink-2); }
 
 .listen__ways {
@@ -198,7 +226,7 @@
     .listen__ways { grid-template-columns: 1fr; }
 }
 
-.programme { padding-block: clamp(4rem, 8vw, 6rem) 1rem; }
+.programme { padding-block: clamp(2.5rem, 5vw, 3.75rem) 0.5rem; }
 .programme__list {
     list-style: none;
     display: grid;
@@ -224,7 +252,7 @@
 }
 .programme__name {
     font-family: var(--font-display);
-    font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem);
+    font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.7rem);
     line-height: 1.1;
     transition: transform 0.35s var(--ease-out);
 }

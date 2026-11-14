@@ -45,12 +45,14 @@
     <section class="overture" id="overture">
         <div class="overture__inner" data-reveal>
             <h2 class="section-title">About Earth Orchestra</h2>
+            <span class="ornament" aria-hidden="true"><i></i></span>
             @foreach ($page->content['intro'] as $paragraph)
                 <p class="overture__text" id="intro-{{ $loop->index }}">{{ $paragraph }}</p>
             @endforeach
             <x-read-aloud target="#intro-0" />
         </div>
         <img class="overture__motif" src="{{ asset('media/motif-tile.webp') }}" alt="" loading="lazy" width="1100" height="825">
+        <img class="overture__motif overture__motif--left" src="{{ asset('media/motif-tile.webp') }}" alt="" loading="lazy" width="1100" height="825">
     </section>
 
     <section class="listen" id="listen">
