@@ -59,7 +59,7 @@ export class Movement {
         };
 
         this.state = {
-            mode: this.cfg.interaction,
+            mode: section.querySelector('[data-mode="slider"]') ? this.cfg.interaction : 'cursor',
             playing: false,
             dataGain: 0.5,
             manual: false,

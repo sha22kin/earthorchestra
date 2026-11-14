@@ -56,7 +56,6 @@
 
                 <div class="segmented" role="radiogroup" aria-label="Interaction">
                     <button type="button" role="radio" data-mode="cursor" aria-checked="false"><x-icon name="cursor" /> Cursor</button>
-                    <button type="button" role="radio" data-mode="slider" aria-checked="false"><x-icon name="slider" /> Slider</button>
                 </div>
 
                 <div class="controls__volume">
