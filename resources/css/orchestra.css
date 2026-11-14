@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Floraison des Amours';
+    src: url('/fonts/floraison-des-amours.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 .orchestra {
     --ink-on: #f1e6cf;
     position: relative;
@@ -23,8 +31,19 @@
 .orchestra .wrap { position: relative; }
 .orchestra .eyebrow { color: var(--gold); }
 
-.orchestra__head { max-width: 46rem; margin: 0 0 2.5rem; }
-.orchestra__intro { color: rgba(241, 230, 207, 0.75); font-size: 1.08rem; }
+.orchestra__head { max-width: 46rem; margin: 0 auto 2.5rem; text-align: center; }
+.orchestra__head .section-title,
+.orchestra__intro {
+    font-family: 'Floraison des Amours', var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.orchestra__head .section-title {
+    font-size: clamp(2.6rem, 1.8rem + 3vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+}
+.orchestra__intro { color: rgba(241, 230, 207, 0.85); font-size: clamp(1.3rem, 1.1rem + 0.7vw, 1.65rem); line-height: 1.55; text-wrap: balance; }
 .orchestra__loaded {
     display: inline-block;
     margin-top: 0.5rem;
@@ -246,46 +265,6 @@
 .presets button:hover { border-color: var(--gold); }
 .presets button.is-active { background: var(--gold); border-color: var(--gold); color: var(--walnut); font-weight: 600; }
 
-.keep {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 1rem 2rem;
-    align-items: center;
-    margin-top: 2rem;
-    padding: clamp(1.25rem, 3vw, 1.75rem) clamp(1.25rem, 3vw, 2rem);
-    border-radius: var(--radius-wobble);
-    background: var(--paper);
-    color: var(--ink);
-    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7);
-}
-.keep h3 {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    margin-bottom: 0.25rem;
-}
-.keep__text p { margin: 0; color: var(--ink-2); }
-.keep__fields { display: flex; gap: 0.6rem; }
-.keep__fields .field { flex: 1; }
-.keep input[type='text'] {
-    width: 100%;
-    min-width: 0;
-    min-height: 3rem;
-    padding: 0.6rem 1rem;
-    border: 1.5px solid var(--line-strong);
-    border-radius: 999px;
-    background: var(--paper-hi);
-    transition: border-color 0.2s;
-}
-.keep input[type='text']:focus { outline: none; border-color: var(--copper); }
-.keep__result { grid-column: 1 / -1; display: flex; gap: 0.6rem; }
-.keep__result input { flex: 1; font-size: 0.92rem; color: var(--ink-2); }
-.keep__error { grid-column: 1 / -1; margin: 0; color: #a3341f; font-weight: 600; }
-
-@media (max-width: 760px) {
-    .keep { grid-template-columns: 1fr; }
-    .keep__fields { width: 100%; }
-}
-
 @media (max-width: 560px) {
     .orchestra__strings { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 2rem; border-top: 0; }
     .orchestra__strings::before { display: none; }
@@ -293,5 +272,4 @@
     .channel__hang { height: 130px; }
     .channel__fader { height: 110px; }
     .channel__fader input { height: 100px; }
-    .keep__result { flex-direction: column; }
 }

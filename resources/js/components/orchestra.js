@@ -43,11 +43,6 @@ export class Orchestra {
             progress: root.querySelector('[data-orchestra-progress]'),
             master: root.querySelector('[data-master]'),
             presets: [...root.querySelectorAll('[data-preset]')],
-            form: root.querySelector('[data-save-form]'),
-            result: root.querySelector('[data-save-result]'),
-            shareUrl: root.querySelector('[data-share-url]'),
-            copy: root.querySelector('[data-copy]'),
-            error: root.querySelector('[data-save-error]'),
         };
 
         this.bind();
@@ -85,11 +80,6 @@ export class Orchestra {
         }
 
         ui.presets.forEach((btn) => btn.addEventListener('click', () => this.applyPreset(btn)));
-        ui.form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            this.save();
-        });
-        ui.copy.addEventListener('click', () => this.copyLink());
     }
 
     ensureGraph() {
@@ -224,54 +214,6 @@ export class Orchestra {
         chip.className = 'orchestra__loaded';
         chip.textContent = `Loaded arrangement: "${arr.title}"`;
         this.root.querySelector('.orchestra__head').append(chip);
-    }
-
-    async save() {
-        const { form, error, result, shareUrl } = this.ui;
-        const button = form.querySelector('button[type="submit"]');
-        const levels = Object.fromEntries(this.channels.map((c) => [c.slug, c.muted ? 0 : c.level]));
-
-        error.hidden = true;
-        button.disabled = true;
-        button.classList.add('is-busy');
-
-        try {
-            const res = await fetch(this.config.saveUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Accept: 'application/json',
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
-                },
-                body: JSON.stringify({ title: form.title.value, levels }),
-            });
-            const body = await res.json().catch(() => ({}));
-
-            if (res.status === 429) throw new Error("That's a lot of saving, give it a minute and try again.");
-            if (!res.ok) throw new Error(Object.values(body.errors || {}).flat()[0] || body.message || "Couldn't save just now.");
-
-            shareUrl.value = body.url;
-            result.hidden = false;
-            shareUrl.select();
-        } catch (err) {
-            error.textContent = err.message;
-            error.hidden = false;
-        } finally {
-            button.disabled = false;
-            button.classList.remove('is-busy');
-        }
-    }
-
-    async copyLink() {
-        const label = this.ui.copy.querySelector('span');
-        try {
-            await navigator.clipboard.writeText(this.ui.shareUrl.value);
-            label.textContent = 'Copied';
-        } catch {
-            this.ui.shareUrl.select();
-            label.textContent = 'Press Ctrl+C';
-        }
-        setTimeout(() => (label.textContent = 'Copy link'), 2200);
     }
 }
 

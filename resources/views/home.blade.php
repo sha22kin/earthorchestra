@@ -119,7 +119,6 @@
         window.EARTH_ORCHESTRA = {
             tracks: @json($playerConfig),
             arrangement: @json($arrangement ? ['code' => $arrangement->code, 'title' => $arrangement->displayTitle(), 'levels' => $arrangement->levels] : null),
-            saveUrl: @json(route('api.arrangements.store')),
         };
     </script>
 @endpush

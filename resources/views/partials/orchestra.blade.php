@@ -1,7 +1,6 @@
 <section class="orchestra" id="orchestra" aria-labelledby="orchestra-title" data-orchestra>
     <div class="wrap">
         <header class="orchestra__head" data-reveal>
-            <p class="eyebrow">Finale</p>
             <h2 class="section-title" id="orchestra-title">The full orchestra</h2>
             <p class="orchestra__intro">{{ $page->content['orchestra'] }}</p>
         </header>
@@ -56,23 +55,5 @@
             </div>
         </div>
 
-        <form class="keep" data-save-form novalidate>
-            <div class="keep__text">
-                <h3>Keep this arrangement</h3>
-                <p>Save your balance and get a link to share. Anyone who opens it hears the same mix.</p>
-            </div>
-            <div class="keep__fields">
-                <label class="field">
-                    <span class="sr-only">Name it (optional)</span>
-                    <input type="text" name="title" maxlength="60" placeholder="Name it (optional)" autocomplete="off">
-                </label>
-                <button type="submit" class="btn btn--ink"><x-icon name="save" /> Save</button>
-            </div>
-            <div class="keep__result" data-save-result hidden>
-                <input type="text" readonly data-share-url aria-label="Share link">
-                <button type="button" class="btn btn--ghost" data-copy><x-icon name="copy" /> <span>Copy link</span></button>
-            </div>
-            <p class="keep__error" data-save-error role="alert" hidden></p>
-        </form>
     </div>
 </section>
