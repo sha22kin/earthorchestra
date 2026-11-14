@@ -1,7 +1,3 @@
-/**
- * Only one thing should make sound at a time: a single movement, or the
- * full orchestra. Players register here and get paused when another starts.
- */
 const listeners = new Set();
 let current = null;
 

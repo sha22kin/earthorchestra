@@ -7,8 +7,6 @@ const SAMPLE_H = 120;
 const SAMPLE_EVERY_MS = 80;
 const DOUBLE_TAP_MS = 320;
 
-// Burned-in overlays on the NASA footage (logo top-left, timestamp bottom-left).
-// Pixels here aren't data, so they're ignored. Normalised x0, y0, x1, y1.
 const OVERLAYS = [
     [0, 0, 0.175, 0.075],
     [0, 0.9, 0.25, 1],
@@ -81,18 +79,15 @@ export class Movement {
         this.sampledAt = 0;
         this.lastTap = null;
 
-        // Posters load only when the section gets close, so they don't
-        // compete with the page's first paint and scripts.
         this.poster = new Image();
         this.poster.decoding = 'async';
         this.posterUrl = this.ui.video.dataset.poster;
+        this.poster.addEventListener('load', () => this.sample());
 
         this.bind();
         this.setMode(this.state.mode);
         this.observe();
     }
-
-    /* ───────────── wiring ───────────── */
 
     bind() {
         const { ui } = this;
@@ -160,8 +155,6 @@ export class Movement {
         }, { threshold: 0.15 }).observe(this.el);
     }
 
-    /* ───────────── transport ───────────── */
-
     async play() {
         stage.claim(this);
         this.loadPoster();
@@ -211,7 +204,6 @@ export class Movement {
         this.raf = requestAnimationFrame(this.loop);
     };
 
-    /** Audio is the clock; the video follows it. */
     syncVideo(force = false) {
         const { video } = this.ui;
         const a = this.voice?.el;
@@ -219,7 +211,6 @@ export class Movement {
         const target = a.currentTime % video.duration;
         if (force || Math.abs(video.currentTime - target) > 0.25) video.currentTime = target;
     }
-
 
     applyGain(smoothing) {
         if (!this.voice) return;
@@ -230,8 +221,6 @@ export class Movement {
         this.voice.setGain(g, smoothing);
         this.currentGain = g;
     }
-
-    /* ───────────── modes ───────────── */
 
     setMode(mode) {
         const s = this.state;
@@ -252,8 +241,6 @@ export class Movement {
         this.sample();
     }
 
-    /* ───────────── sampling ───────────── */
-
     refreshPixels() {
         const now = performance.now();
         if (this.pixels && now - this.sampledAt < SAMPLE_EVERY_MS / 2) return true;
@@ -268,7 +255,7 @@ export class Movement {
             this.sampledAt = now;
             return true;
         } catch {
-            return false; // tainted canvas or not ready yet
+            return false;
         }
     }
 
@@ -289,7 +276,6 @@ export class Movement {
         return this.legend.classify(r / 9, g / 9, b / 9);
     }
 
-    /** Average legend position down a vertical line. */
     readColumn(nx) {
         let sum = 0;
         let n = 0;
@@ -342,10 +328,6 @@ export class Movement {
         this.placeReadout(s.mode === 'slider' ? { x: s.sliderX, y: 0 } : s.probe);
     }
 
-    /**
-     * Put the readout bubble beside the pointer (or the slider line) on
-     * whichever side has room, so it never spills outside the map.
-     */
     placeReadout(anchor) {
         const el = this.ui.readout;
         const W = this.ui.media.clientWidth;
@@ -366,8 +348,6 @@ export class Movement {
 
         el.style.transform = `translate(${Math.round(left)}px, ${Math.round(top)}px)`;
     }
-
-    /* ───────────── pointer & keys ───────────── */
 
     pos(e) {
         const r = this.ui.media.getBoundingClientRect();
@@ -404,7 +384,6 @@ export class Movement {
         this.state.dragging = false;
         if (e.pointerType !== 'touch' || this.state.mode !== 'cursor') return;
 
-        // Manual double-tap detection; dblclick isn't reliable on touch screens.
         const now = performance.now();
         const last = this.lastTap;
         if (last && now - last.t < DOUBLE_TAP_MS && Math.hypot(e.clientX - last.x, e.clientY - last.y) < 30) {
@@ -464,8 +443,6 @@ export class Movement {
             s.playing ? this.pause() : this.play();
         }
     }
-
-    /* ───────────── locking ───────────── */
 
     toggleLockAtEvent(e) {
         if (this.state.mode !== 'cursor' || e.target.closest('[data-cover]')) return;

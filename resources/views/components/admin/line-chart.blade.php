@@ -76,7 +76,6 @@
         @endforeach
     </svg>
 
-    {{-- Axis labels live in HTML so they don't stretch with the SVG. --}}
     <div class="chart__labels" aria-hidden="true">
         @for ($g = 0; $g <= 4; $g++)
             <span class="chart__y" style="top: {{ round($y($step * $g) / $H * 100, 3) }}%; right: {{ round(($W - $padL + 12) / $W * 100, 3) }}%">{{ $step * $g }}</span>

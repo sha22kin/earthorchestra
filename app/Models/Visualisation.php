@@ -35,10 +35,6 @@ class Visualisation extends Model
         static::deleted($flush);
     }
 
-    /**
-     * The six movements are read on almost every request and change rarely,
-     * so keep the ordered set (with citations) in cache until something is saved.
-     */
     public static function ordered(): Collection
     {
         return Cache::rememberForever(
@@ -79,8 +75,8 @@ class Visualisation extends Model
             $end = $this->data_ends_on;
 
             return $start->isSameYear($end)
-                ? $start->format('j M').' – '.$end->format('j M Y')
-                : $start->format('j M Y').' – '.$end->format('j M Y');
+                ? $start->format('j M').' - '.$end->format('j M Y')
+                : $start->format('j M Y').' - '.$end->format('j M Y');
         });
     }
 
@@ -93,13 +89,6 @@ class Visualisation extends Model
         });
     }
 
-    /**
-     * Legend ticks with their position (0–1) along the bar. Stops are drawn
-     * evenly spaced, so a tick's position is found by locating its value
-     * between the two stops that bracket it. Text ticks match a stop label.
-     *
-     * @return array<int, array{label: string, at: float}>
-     */
     public function legendTicks(): array
     {
         $stops = array_values($this->legend['stops']);
@@ -134,10 +123,6 @@ class Visualisation extends Model
         })->filter()->values()->all();
     }
 
-    /**
-     * Payload handed to the browser-side player. Kept deliberately small:
-     * the player only needs media URLs and the legend mapping.
-     */
     public function toPlayerConfig(): array
     {
         return [

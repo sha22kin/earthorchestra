@@ -19,9 +19,9 @@
         @if ($arrangements->isEmpty())
             <p class="empty">
                 @if ($search !== '')
-                    Nothing matches “{{ $search }}”.
+                    Nothing matches "{{ $search }}".
                 @else
-                    No arrangements yet. They appear here when visitors press “Save” in the full orchestra.
+                    No arrangements yet. They appear here when visitors press "Save" in the full orchestra.
                 @endif
             </p>
         @else
@@ -49,7 +49,7 @@
                                 <td class="muted nowrap" title="{{ $a->created_at }}">{{ $a->created_at->format('j M Y, H:i') }}</td>
                                 <td class="actions">
                                     <a class="icon-btn" href="{{ $a->shareUrl() }}" target="_blank" rel="noopener" title="Open share link"><x-admin.icon name="link" /></a>
-                                    <form method="POST" action="{{ route('admin.arrangements.destroy', $a->id) }}" data-confirm="Delete “{{ $a->displayTitle() }}”? Its share link will stop working.">
+                                    <form method="POST" action="{{ route('admin.arrangements.destroy', $a->id) }}" data-confirm="Delete {{ $a->displayTitle() }}? Its share link will stop working.">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="icon-btn icon-btn--danger" title="Delete"><x-admin.icon name="trash" /></button>

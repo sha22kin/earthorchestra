@@ -10,12 +10,6 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
-/**
- * Loads the site copy from database/seeders/content/*.json.
- *
- * Rows that already exist are left alone, so edits made in the admin panel
- * survive a re-seed. Set CONTENT_SEED_OVERWRITE=true to force the JSON back in.
- */
 class ContentSeeder extends Seeder
 {
     private function overwrite(): bool
@@ -30,7 +24,6 @@ class ContentSeeder extends Seeder
             $this->seedPages();
         });
 
-        // Citation-only edits don't fire Visualisation::saved, so clear explicitly.
         Cache::forget(Visualisation::CACHE_KEY);
     }
 

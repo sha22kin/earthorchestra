@@ -1,23 +1,12 @@
-/**
- * Turns a pixel colour from a NASA visualisation into a position on its
- * colour legend (0 = left/quiet, 1 = right/loud) and a readable value.
- *
- * The legend stops are drawn evenly spaced, so we build a lookup table by
- * interpolating between neighbouring stops and then find the nearest entry
- * for any sampled colour. "Aliases" are extra colours that appear in the
- * footage and belong to a known value but aren't drawn on the bar; "neutral"
- * colours (land masks, borders) mean "no data here".
- */
 
 const STEPS_BETWEEN = 10;
-const MAX_DISTANCE = 95; // redmean distance; beyond this we treat the pixel as noise/overlay
+const MAX_DISTANCE = 95;
 
 export function hexToRgb(hex) {
     const n = parseInt(hex.replace('#', ''), 16);
     return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
 }
 
-/** "Redmean" approximation of perceptual colour distance. Cheap and good enough. */
 function distance(r1, g1, b1, r2, g2, b2) {
     const rm = (r1 + r2) / 2;
     const dr = r1 - r2;
@@ -64,7 +53,6 @@ export class Legend {
         return table;
     }
 
-    /** Where a value (or labelled stop) sits on the bar, 0–1. */
     positionOf({ value, label }) {
         const stops = this.stops;
         const last = stops.length - 1;
@@ -83,7 +71,6 @@ export class Legend {
         return 1;
     }
 
-    /** The reading at a given bar position (inverse of positionOf). */
     readingAt(t) {
         const last = this.stops.length - 1;
         const x = Math.min(1, Math.max(0, t)) * last;
@@ -94,9 +81,6 @@ export class Legend {
         return { t, value: a.value + (b.value - a.value) * f, label: f < 0.5 ? a.label : b.label };
     }
 
-    /**
-     * @returns {{t: number, value: number, label?: string} | null}
-     */
     classify(r, g, b) {
         let best = null;
         let bestD = Infinity;
@@ -131,10 +115,6 @@ export class Legend {
     }
 }
 
-/**
- * How loud a legend position should sound. Slightly curved so the quiet end
- * stays audible but the loud end really opens up.
- */
 export function loudness(t) {
     return 0.05 + 0.95 * Math.pow(Math.min(1, Math.max(0, t)), 1.35);
 }

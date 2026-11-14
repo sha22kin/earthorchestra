@@ -4,10 +4,6 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-/**
- * An "arrangement" is a saved mix from the orchestra player at the bottom of
- * the home page: one level per visualisation track, shareable by short code.
- */
 return new class extends Migration
 {
     public function up(): void

@@ -41,9 +41,6 @@ class DashboardController extends Controller
         ]);
     }
 
-    /**
-     * Two series for the chart: arrangements saved per day, and shared-link opens per day.
-     */
     private function lastSevenDays(): array
     {
         $start = Carbon::today()->subDays(6);

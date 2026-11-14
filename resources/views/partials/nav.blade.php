@@ -4,7 +4,7 @@
 @endphp
 <header class="site-nav" data-nav>
     <div class="site-nav__inner">
-        <a class="site-nav__brand" href="{{ route('home') }}" aria-label="Earth Orchestra — home">
+        <a class="site-nav__brand" href="{{ route('home') }}" aria-label="Earth Orchestra - home">
             <img src="{{ asset('media/title.webp') }}" alt="" width="120" height="69">
         </a>
 
@@ -34,7 +34,6 @@
         <a href="{{ route('credits') }}" style="--i: 5"><small>05</small>Credits</a>
     </nav>
 
-    {{-- A little score: one note per movement, in its own colour. --}}
     <div class="nav-sheet__score" aria-hidden="true">
         <div class="nav-sheet__stave">
             @foreach (\App\Models\Visualisation::ordered() as $v)
@@ -45,7 +44,6 @@
     </div>
 </div>
 
-{{-- Inline so the menu works the instant the HTML arrives, without waiting for the JS bundle or images. --}}
 <script>
 (function () {
     var nav = document.querySelector('[data-nav]');

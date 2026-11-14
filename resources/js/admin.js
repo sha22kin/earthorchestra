@@ -1,9 +1,7 @@
-/* Admin panel behaviour: theme, sidebar, toasts, chart tooltip, repeaters,
-   legend preview, autosizing textareas, upload labels, delete confirmation. */
 
 const store = {
     get(k) { try { return localStorage.getItem(k); } catch { return null; } },
-    set(k, v) { try { localStorage.setItem(k, v); } catch { /* private mode */ } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch {  } },
 };
 
 function initTheme() {
@@ -167,7 +165,7 @@ function initUploads() {
             const label = input.closest('.upload');
             const file = input.files[0];
             label.classList.toggle('has-file', !!file);
-            if (file) label.querySelector('small').textContent = `${file.name} · ${(file.size / 1048576).toFixed(1)} MB — will upload on save`;
+            if (file) label.querySelector('small').textContent = `${file.name} · ${(file.size / 1048576).toFixed(1)} MB - will upload on save`;
 
             if (file && input.name === 'poster') {
                 const img = document.querySelector('[data-poster-preview]');

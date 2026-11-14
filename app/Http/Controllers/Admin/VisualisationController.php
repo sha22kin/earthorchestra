@@ -55,7 +55,6 @@ class VisualisationController extends Controller
             }
         });
 
-        // Citations changed without touching the parent, so flush explicitly.
         cache()->forget(Visualisation::CACHE_KEY);
 
         return redirect()
@@ -72,10 +71,6 @@ class VisualisationController extends Controller
         return "media/{$name}";
     }
 
-    /**
-     * The article body is stored as blocks. In the editor it's plain text:
-     * paragraphs separated by a blank line, headings start with "## ".
-     */
     public static function blocksToText(array $blocks): string
     {
         return collect($blocks)

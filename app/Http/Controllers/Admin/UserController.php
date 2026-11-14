@@ -10,7 +10,6 @@ use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\View\View;
 
-/** Managing accounts is limited to administrators (see the manage-users gate). */
 class UserController extends Controller
 {
     public function index(): View
@@ -45,7 +44,7 @@ class UserController extends Controller
         }
 
         if ($user->is($request->user()) && $data['role'] !== 'admin') {
-            return back()->withErrors(['role' => 'You can’t remove your own administrator role.']);
+            return back()->withErrors(['role' => "You can't remove your own administrator role."]);
         }
 
         $user->update($data);
@@ -56,7 +55,7 @@ class UserController extends Controller
     public function destroy(Request $request, User $user): RedirectResponse
     {
         if ($user->is($request->user())) {
-            return back()->withErrors(['user' => 'You can’t delete your own account.']);
+            return back()->withErrors(['user' => "You can't delete your own account."]);
         }
 
         if ($user->isAdmin() && User::where('role', 'admin')->count() <= 1) {

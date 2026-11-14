@@ -14,7 +14,6 @@ class UpdateVisualisationRequest extends FormRequest
 
     protected function prepareForValidation(): void
     {
-        // Drop empty repeater rows before validating.
         $this->merge([
             'citations' => collect($this->input('citations', []))
                 ->filter(fn ($row) => trim($row['reference'] ?? '') !== '')
@@ -82,7 +81,7 @@ class UpdateVisualisationRequest extends FormRequest
     {
         return [
             'accent.regex' => 'Use a six-digit hex colour, like #c0714a.',
-            'legend.json' => 'The legend isn’t valid JSON.',
+            'legend.json' => "The legend isn't valid JSON.",
             'citations.*.url.url' => 'Each citation link must be a full http(s) URL.',
         ];
     }

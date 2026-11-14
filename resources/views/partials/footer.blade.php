@@ -19,7 +19,7 @@
             <h2>Data</h2>
             <p>Visualisations by NASA's Global Modeling and Assimilation Office, via the
                 <a href="https://svs.gsfc.nasa.gov/" rel="noopener" target="_blank">Scientific Visualization Studio</a>.</p>
-            <p class="site-footer__fine">For educational and artistic exploration — not for weather monitoring or scientific analysis.</p>
+            <p class="site-footer__fine">For educational and artistic exploration - not for weather monitoring or scientific analysis.</p>
         </div>
     </div>
 

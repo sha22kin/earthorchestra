@@ -8,10 +8,6 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-/**
- * Each page has its own content shape, so each gets its own small form.
- * Multi-paragraph fields are edited as text with blank lines between paragraphs.
- */
 class PageController extends Controller
 {
     public const PARAGRAPH_FIELDS = [
@@ -49,7 +45,7 @@ class PageController extends Controller
 
         $page->update($base + ['content' => $content]);
 
-        return back()->with('status', "“{$page->title}” saved.");
+        return back()->with('status', "{$page->title} saved.");
     }
 
     private function homeContent(Request $request): array

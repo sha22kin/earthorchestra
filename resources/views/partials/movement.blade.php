@@ -48,7 +48,7 @@
                     </video>
 
                     <span class="stage__probe" data-probe hidden></span>
-                    <button type="button" class="stage__lock" data-lock-dot hidden tabindex="-1" aria-label="Locked point — double-click to release"></button>
+                    <button type="button" class="stage__lock" data-lock-dot hidden tabindex="-1" aria-label="Locked point - double-click to release"></button>
 
                     <div class="stage__slider" data-slider hidden>
                         <span class="stage__slider-line"></span>
@@ -66,7 +66,6 @@
                     <span class="stage__cover-label">Play movement {{ $v->numeral }}</span>
                 </button>
             </div>
-
 
             <figcaption class="controls">
                 <button type="button" class="btn-play" data-play aria-label="Play {{ $v->short_title }}">

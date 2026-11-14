@@ -4,10 +4,6 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-/**
- * One row each time a shared arrangement link is opened. Lets the admin
- * dashboard chart listens per day (the arrangements.listens column is only a total).
- */
 return new class extends Migration
 {
     public function up(): void

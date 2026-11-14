@@ -7,7 +7,6 @@
 @endpush
 
 @section('content')
-    {{-- ───────────── Title ───────────── --}}
     <section class="hero" data-hero>
         <img class="hero__rain" src="{{ asset('media/raindrops.webp') }}" alt="" width="1221" height="740" data-depth="0.15">
         <img class="hero__rain hero__rain--far" src="{{ asset('media/raindrops.webp') }}" alt="" width="1221" height="740" data-depth="0.08">
@@ -42,7 +41,6 @@
         </aside>
     @endif
 
-    {{-- ───────────── Overture ───────────── --}}
     <section class="overture" id="overture">
         <div class="overture__inner" data-reveal>
             <p class="eyebrow">Overture</p>
@@ -55,7 +53,6 @@
         <img class="overture__motif" src="{{ asset('media/motif-tile.webp') }}" alt="" loading="lazy" width="1100" height="825">
     </section>
 
-    {{-- ───────────── How to listen ───────────── --}}
     <section class="listen" id="listen">
         <div class="wrap">
             <header class="listen__head" data-reveal>
@@ -111,7 +108,6 @@
         </div>
     </section>
 
-    {{-- ───────────── Programme ───────────── --}}
     <nav class="programme" id="programme" aria-label="The six movements">
         <div class="wrap">
             <p class="eyebrow" data-reveal>Tonight's programme</p>
@@ -130,14 +126,12 @@
         </div>
     </nav>
 
-    {{-- ───────────── Movements ───────────── --}}
     <div class="movements">
         @foreach ($visualisations as $v)
             @include('partials.movement', ['v' => $v])
         @endforeach
     </div>
 
-    {{-- ───────────── Finale ───────────── --}}
     @include('partials.orchestra')
 @endsection
 

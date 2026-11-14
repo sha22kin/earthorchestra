@@ -40,7 +40,6 @@ class StoreArrangementRequest extends FormRequest
         ];
     }
 
-    /** Levels for every known track, missing ones defaulting to silent. */
     public function levels(): array
     {
         $input = (array) $this->validated('levels');

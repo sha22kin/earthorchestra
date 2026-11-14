@@ -1,4 +1,3 @@
-/* ───────────── Movement section ───────────── */
 .movements { padding-bottom: 2rem; }
 
 .movement {
@@ -8,7 +7,6 @@
     padding: clamp(4rem, 9vw, 7.5rem) var(--gutter) 0;
 }
 
-/* A five-line stave between movements, with a diamond on it like a note. */
 .movement + .movement::before {
     content: '';
     position: absolute;
@@ -106,7 +104,6 @@
     .movement__text { max-width: 40rem; }
 }
 
-/* ───────────── Legend ───────────── */
 .legend { --bar-h: 16px; }
 .legend__caption {
     display: flex;
@@ -199,7 +196,6 @@
 }
 .legend__volume path { fill: var(--accent); opacity: 0.35; }
 
-/* ───────────── Stage (the framed video) ───────────── */
 .stage { position: relative; }
 
 .stage__frame {
@@ -221,7 +217,6 @@
 }
 [data-mode='slider'] .stage__frame { cursor: ew-resize; }
 
-/* Diamond studs on the frame corners, echoing the sparkles in the title lettering. */
 .stage__frame::before,
 .stage__frame::after {
     content: '';
@@ -359,8 +354,7 @@
     border-radius: 8px 11px 7px 12px;
     background: radial-gradient(closest-side, rgba(30, 20, 12, 0.45), rgba(30, 20, 12, 0.15));
     color: var(--paper-hi);
-    pointer-events: none; /* the map stays explorable before playback */
-    transition: opacity 0.4s, visibility 0.4s;
+    pointer-events: none;    transition: opacity 0.4s, visibility 0.4s;
 }
 .stage__cover-disc, .stage__cover-label { pointer-events: auto; cursor: pointer; }
 .has-played .stage__cover { opacity: 0; visibility: hidden; }
@@ -385,7 +379,6 @@
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
-
 .stage__hint {
     margin: 0.9rem 0 0;
     font-size: 0.88rem;
@@ -393,7 +386,6 @@
     color: var(--ink-3);
 }
 
-/* ───────────── Controls ───────────── */
 .controls {
     display: flex;
     flex-wrap: wrap;
@@ -463,7 +455,6 @@
 .controls__pct { min-width: 2.6rem; font-size: 0.85rem; font-variant-numeric: tabular-nums; color: var(--ink-3); }
 .is-manual .controls__pct { color: var(--ink); font-weight: 700; }
 
-/* Checkbox drawn by hand */
 .check {
     display: inline-flex;
     align-items: center;
@@ -490,7 +481,6 @@
 .check input:focus-visible + .check__box { outline: 2px dashed var(--accent); outline-offset: 3px; }
 .check.is-disabled { opacity: 0.4; cursor: not-allowed; }
 
-/* Range inputs */
 .range {
     -webkit-appearance: none;
     appearance: none;
@@ -539,7 +529,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* fallback for older Safari */
-    overflow: clip;
+    overflow: hidden;    overflow: clip;
     border-radius: 8px 11px 7px 12px;
 }

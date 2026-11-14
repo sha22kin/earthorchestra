@@ -28,11 +28,6 @@ Route::prefix('api')->name('api.')->group(function () {
         ->name('arrangements.show');
 });
 
-/*
-|--------------------------------------------------------------------------
-| Admin panel
-|--------------------------------------------------------------------------
-*/
 Route::prefix('admin')->group(function () {
     Route::middleware('guest')->group(function () {
         Route::get('/login', [Admin\AuthController::class, 'create'])->name('login');

@@ -1,6 +1,3 @@
-/* ─────────────────────────────────────────────
-   Admin panel — clean dashboard style
-   ───────────────────────────────────────────── */
 :root {
     --bg: #f5f7fb;
     --surface: #ffffff;
@@ -93,7 +90,6 @@ code { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; font-siz
 .cap { text-transform: capitalize; }
 .mono { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; font-size: 0.86rem; }
 
-/* ───────────── Shell ───────────── */
 .shell { display: flex; min-height: 100vh; }
 
 .sidebar {
@@ -187,7 +183,6 @@ code { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; font-siz
 }
 .avatar--sm { width: 34px; height: 34px; font-size: 0.8rem; }
 
-/* Collapsed sidebar (desktop) */
 .sb-collapsed .sidebar { width: 76px; }
 .sb-collapsed .brand__name,
 .sb-collapsed .sidenav__link span,
@@ -226,7 +221,6 @@ code { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; font-siz
     width: 100%;
 }
 
-/* ───────────── Buttons ───────────── */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -285,7 +279,6 @@ code { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; font-siz
 .back .ai { width: 16px; height: 16px; }
 .back:hover { color: var(--text); }
 
-/* ───────────── Stat cards ───────────── */
 .stats {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -321,7 +314,6 @@ code { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; font-siz
 .tone-teal { background: var(--teal-bg); color: var(--teal); }
 .tone-indigo { background: var(--indigo-bg); color: var(--indigo); }
 
-/* ───────────── Cards ───────────── */
 .card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -349,7 +341,6 @@ code { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; font-siz
 
 .empty { padding: 2.5rem 1.25rem; text-align: center; color: var(--muted); }
 
-/* ───────────── Status list ───────────── */
 .status { list-style: none; margin: 0; padding: 0; }
 .status li {
     display: flex;
@@ -396,7 +387,6 @@ code { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; font-siz
 }
 .tag--blue { background: var(--primary-soft); color: var(--primary); border-color: transparent; margin-left: 0.35rem; }
 
-/* ───────────── Tables ───────────── */
 .table-wrap { overflow-x: auto; }
 .table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
 .table th {
@@ -446,7 +436,6 @@ code { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; font-siz
 .bars__track span { display: block; height: 100%; border-radius: 4px; background: var(--primary); }
 .bars__value { text-align: right; font-weight: 600; }
 
-/* ───────────── Chart ───────────── */
 .chart { position: relative; }
 .chart__legend { display: flex; justify-content: flex-end; gap: 1rem; list-style: none; margin: 0 0 0.5rem; padding: 0; font-size: 0.86rem; color: var(--muted); }
 .chart__legend li { display: inline-flex; align-items: center; gap: 0.4rem; }
@@ -479,7 +468,6 @@ code { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; font-siz
 .chart__tip i { width: 8px; height: 8px; border-radius: 50%; background: var(--c); }
 .chart__tip b { margin-left: auto; padding-left: 1rem; }
 
-/* ───────────── Toasts & alerts ───────────── */
 .toast {
     position: fixed;
     top: calc(var(--topbar-h) + 1rem);
@@ -516,7 +504,6 @@ code { font-family: ui-monospace, 'Cascadia Code', Consolas, monospace; font-siz
 .alert > .ai { color: var(--danger); margin-top: 1px; }
 .alert ul { margin: 0.25rem 0 0; padding-left: 1.1rem; color: var(--text-2); font-size: 0.92rem; }
 
-/* ───────────── Forms ───────────── */
 .form-grid { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 1.25rem; align-items: start; }
 .form-main, .form-side { display: grid; gap: 1.25rem; min-width: 0; }
 .form-side { position: sticky; top: calc(var(--topbar-h) + 1.5rem); }
@@ -630,7 +617,6 @@ audio { width: 100%; height: 40px; }
 .tile h2 { margin-top: 0.5rem; font-size: 1.1rem; font-weight: 600; }
 .tile__actions { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
 
-/* ───────────── Login ───────────── */
 body.auth {
     display: grid;
     place-items: center;
@@ -653,7 +639,6 @@ body.auth {
 .auth__card > .muted { margin: 0.35rem 0 1.5rem; }
 .brand--center { height: auto; padding: 0; border: 0; justify-content: flex-start; }
 
-/* ───────────── Responsive ───────────── */
 .scrim { display: none; }
 
 @media (max-width: 1280px) {

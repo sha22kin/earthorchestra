@@ -1,12 +1,7 @@
-/**
- * "Read aloud" buttons using the browser's own speech synthesis.
- * Where the CSS Custom Highlight API exists, the word being spoken is
- * highlighted in place without touching the DOM.
- */
 const synth = window.speechSynthesis;
 const canHighlight = typeof CSS !== 'undefined' && 'highlights' in CSS && typeof Highlight !== 'undefined';
 
-let active = null; // { button, target }
+let active = null;
 
 function pickVoice() {
     const voices = synth.getVoices();
@@ -18,7 +13,6 @@ function pickVoice() {
     );
 }
 
-/** Text nodes with their offsets, so a character index maps back to a Range. */
 function collectText(root) {
     const nodes = [];
     let text = '';
@@ -98,7 +92,6 @@ function speak(button) {
 export function initReadAloud() {
     if (!synth || typeof SpeechSynthesisUtterance === 'undefined') return;
 
-    // Some browsers load voices asynchronously.
     synth.getVoices();
     synth.addEventListener?.('voiceschanged', () => synth.getVoices());
 

@@ -7,10 +7,6 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Throwable;
 
-/**
- * Lightweight health checks shown on the admin dashboard.
- * Each row: [label, icon, state (ok|warn|off), badge text].
- */
 final class SystemStatus
 {
     public static function checks(): array

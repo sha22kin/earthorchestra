@@ -31,7 +31,7 @@
                             <td class="actions">
                                 <a class="btn btn--ghost btn--sm" href="{{ route('admin.users.edit', $u) }}"><x-admin.icon name="pencil" /> Edit</a>
                                 @unless ($u->is(auth()->user()))
-                                    <form method="POST" action="{{ route('admin.users.destroy', $u) }}" data-confirm="Remove {{ $u->name }}? They won’t be able to sign in.">
+                                    <form method="POST" action="{{ route('admin.users.destroy', $u) }}" data-confirm="Remove {{ $u->name }}? They won't be able to sign in.">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="icon-btn icon-btn--danger" title="Remove"><x-admin.icon name="trash" /></button>

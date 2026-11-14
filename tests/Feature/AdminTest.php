@@ -102,7 +102,7 @@ class AdminTest extends TestCase
             'legend' => json_encode($legend),
             'citations' => [
                 ['reference' => 'Source one.', 'url' => 'https://example.org/one'],
-                ['reference' => '', 'url' => ''], // empty repeater row is ignored
+                ['reference' => '', 'url' => ''],
             ],
         ])->assertRedirect("/admin/movements/{$v->slug}/edit")->assertSessionHasNoErrors();
 
@@ -117,7 +117,6 @@ class AdminTest extends TestCase
         $this->assertSame('Wind (edited)', $v->legend['label']);
         $this->assertSame(1, $v->citations()->count());
 
-        // The public site reflects the change straight away (cache is flushed).
         $this->get('/')->assertSee('Wind, edited');
         $this->get("/movements/{$v->slug}")->assertSee('A heading?')->assertSee('example.org/one');
     }

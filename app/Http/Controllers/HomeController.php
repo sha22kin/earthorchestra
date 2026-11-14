@@ -14,10 +14,6 @@ class HomeController extends Controller
         return $this->render();
     }
 
-    /**
-     * Opening a shared arrangement link renders the normal home page with
-     * that mix preloaded into the orchestra.
-     */
     public function arrangement(Arrangement $arrangement): View
     {
         $arrangement->recordListen();

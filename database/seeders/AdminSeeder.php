@@ -5,10 +5,6 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-/**
- * Creates the first administrator when the users table is empty.
- * Credentials come from ADMIN_EMAIL / ADMIN_PASSWORD in .env.
- */
 class AdminSeeder extends Seeder
 {
     public function run(): void
@@ -26,6 +22,6 @@ class AdminSeeder extends Seeder
             'role' => 'admin',
         ]);
 
-        $this->command?->warn("Admin created: {$email} — change the password after first sign-in.");
+        $this->command?->warn("Admin created: {$email} - change the password after first sign-in.");
     }
 }

@@ -1,7 +1,7 @@
 @if ($paginator->hasPages())
     <nav class="pager-a" aria-label="Pagination">
         <span class="pager-a__info">
-            {{ $paginator->firstItem() }}–{{ $paginator->lastItem() }} of {{ $paginator->total() }}
+            {{ $paginator->firstItem() }}-{{ $paginator->lastItem() }} of {{ $paginator->total() }}
         </span>
         <span class="pager-a__links">
             @if ($paginator->onFirstPage())

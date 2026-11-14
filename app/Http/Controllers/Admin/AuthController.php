@@ -36,7 +36,7 @@ class AuthController extends Controller
         if (! Auth::attempt($credentials, $request->boolean('remember'))) {
             RateLimiter::hit($key, 60);
 
-            throw ValidationException::withMessages(['email' => 'Those details don’t match an account.']);
+            throw ValidationException::withMessages(['email' => "Those details don't match an account."]);
         }
 
         RateLimiter::clear($key);

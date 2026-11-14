@@ -8,7 +8,6 @@ use Illuminate\Support\Str;
 
 class Arrangement extends Model
 {
-    /** Unambiguous alphabet: no 0/O, 1/l/I. */
     private const ALPHABET = 'abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 
     protected $guarded = ['id'];
@@ -28,7 +27,6 @@ class Arrangement extends Model
         return $this->hasMany(ArrangementPlay::class);
     }
 
-    /** Count a listen: bump the running total and log it for per-day charts. */
     public function recordListen(): void
     {
         $this->increment('listens');

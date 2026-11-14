@@ -1,4 +1,3 @@
-{{-- Shared wrapper for the three page editors. --}}
 @extends('admin.layout', ['title' => 'Edit · '.$page->title])
 
 @section('action')

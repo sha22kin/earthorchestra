@@ -1,15 +1,9 @@
 import { stage, prefersReducedMotion } from '../lib/stage.js';
 
-/* ───────────── Navigation ───────────── */
-
 export function initNav() {
     const nav = document.querySelector('[data-nav]');
     if (!nav) return;
 
-    // Opening and closing the menu is handled by a tiny inline script in
-    // partials/nav.blade.php so it responds before this bundle has loaded.
-
-    // Condense the bar once the page scrolls.
     let ticking = false;
     const onScroll = () => {
         if (ticking) return;
@@ -22,8 +16,6 @@ export function initNav() {
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 }
-
-/* ───────────── Reveal on scroll ───────────── */
 
 export function initReveal() {
     const items = document.querySelectorAll('[data-reveal]');
@@ -43,8 +35,6 @@ export function initReveal() {
 
     items.forEach((el) => io.observe(el));
 }
-
-/* ───────────── Hero parallax ───────────── */
 
 export function initParallax() {
     const hero = document.querySelector('[data-hero]');
@@ -77,8 +67,6 @@ export function initParallax() {
         schedule();
     }, { passive: true });
 }
-
-/* ───────────── "Now playing" pill ───────────── */
 
 export function initNowPlaying() {
     const pill = document.querySelector('[data-now-playing]');

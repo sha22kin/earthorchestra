@@ -92,8 +92,6 @@ export class Orchestra {
         ui.copy.addEventListener('click', () => this.copyLink());
     }
 
-    /* ───────────── audio ───────────── */
-
     ensureGraph() {
         if (this.ready) return;
         const ac = audioContext();
@@ -145,7 +143,6 @@ export class Orchestra {
         stage.release(this);
     }
 
-    /** Tracks differ by a fraction of a second; restart them together. */
     onEnded() {
         if (this.restarting) return;
         this.restarting = true;
@@ -183,11 +180,9 @@ export class Orchestra {
         this.raf = requestAnimationFrame(this.tick);
     };
 
-    /* ───────────── channels ───────────── */
-
     renderChannel(c) {
         c.fader.value = c.level;
-        c.value.textContent = c.muted ? '—' : c.level;
+        c.value.textContent = c.muted ? '-' : c.level;
         c.mute.setAttribute('aria-pressed', String(c.muted));
         c.el.classList.toggle('is-muted', c.muted || c.level === 0);
         c.el.style.setProperty('--level', (c.muted ? 0 : c.level) / 100);
@@ -227,11 +222,9 @@ export class Orchestra {
         this.setLevels(arr.levels);
         const chip = document.createElement('p');
         chip.className = 'orchestra__loaded';
-        chip.textContent = `Loaded arrangement: “${arr.title}”`;
+        chip.textContent = `Loaded arrangement: "${arr.title}"`;
         this.root.querySelector('.orchestra__head').append(chip);
     }
-
-    /* ───────────── saving ───────────── */
 
     async save() {
         const { form, error, result, shareUrl } = this.ui;
@@ -254,8 +247,8 @@ export class Orchestra {
             });
             const body = await res.json().catch(() => ({}));
 
-            if (res.status === 429) throw new Error('That’s a lot of saving — give it a minute and try again.');
-            if (!res.ok) throw new Error(Object.values(body.errors || {}).flat()[0] || body.message || 'Couldn’t save just now.');
+            if (res.status === 429) throw new Error("That's a lot of saving, give it a minute and try again.");
+            if (!res.ok) throw new Error(Object.values(body.errors || {}).flat()[0] || body.message || "Couldn't save just now.");
 
             shareUrl.value = body.url;
             result.hidden = false;

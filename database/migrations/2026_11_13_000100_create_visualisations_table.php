@@ -14,13 +14,13 @@ return new class extends Migration
             $table->unsignedTinyInteger('position')->index();
             $table->string('title');
             $table->string('short_title', 40);
-            $table->string('model', 16);                      // GEOS-FP | GEOS-CF
+            $table->string('model', 16);
             $table->string('measurement');                    // e.g. "3 m above the surface"
             $table->enum('interaction', ['cursor', 'slider'])->default('cursor');
-            $table->string('accent', 7);                      // hex, used for UI tinting
-            $table->text('summary');                          // short intro shown on the home page
-            $table->json('body');                             // learn-more article: [{type, text}]
-            $table->json('legend');                           // colour → value → loudness mapping
+            $table->string('accent', 7);
+            $table->text('summary');
+            $table->json('body');
+            $table->json('legend');
             $table->string('video_path');
             $table->string('poster_path');
             $table->string('audio_path');

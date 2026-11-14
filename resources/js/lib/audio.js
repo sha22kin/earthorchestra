@@ -1,7 +1,3 @@
-/**
- * One shared AudioContext for the whole page. Browsers only allow audio to
- * start after a user gesture, so it's created lazily from a click handler.
- */
 let ctx = null;
 
 export function audioContext() {
@@ -14,10 +10,6 @@ export function audioContext() {
     return ctx;
 }
 
-/**
- * Wraps an <audio> element in a gain node so volume can glide smoothly
- * (and so it works on iOS, where element.volume is read-only).
- */
 export function createVoice(src, { loop = true, destination = null } = {}) {
     const el = new Audio();
     el.src = src;
@@ -56,7 +48,6 @@ export function createVoice(src, { loop = true, destination = null } = {}) {
     };
 }
 
-/** Root-mean-square level of an analyser, 0–1. */
 export function levelOf(analyser, buffer) {
     analyser.getByteTimeDomainData(buffer);
     let sum = 0;

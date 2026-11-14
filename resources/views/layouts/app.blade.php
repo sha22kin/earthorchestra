@@ -6,8 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="theme-color" content="#f3ead8">
 
-    <title>{{ isset($title) ? $title.' · Earth Orchestra' : 'Earth Orchestra — NASA Earth data, played as music' }}</title>
-    <meta name="description" content="{{ $description ?? 'Explore NASA Earth data through sound. Six interactive visualisations — temperature, wind, rain, humidity, PM2.5 and ozone — each with its own voice in the orchestra.' }}">
+    <title>{{ isset($title) ? $title.' · Earth Orchestra' : 'Earth Orchestra - NASA Earth data, played as music' }}</title>
+    <meta name="description" content="{{ $description ?? 'Explore NASA Earth data through sound. Six interactive visualisations - temperature, wind, rain, humidity, PM2.5 and ozone - each with its own voice in the orchestra.' }}">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Earth Orchestra">
