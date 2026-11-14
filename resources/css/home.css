@@ -229,28 +229,8 @@
     line-height: 1.1;
     transition: transform 0.35s var(--ease-out);
 }
-.programme__dots {
-    flex: 1;
-    min-width: 1rem;
-    height: 1px;
-    border-bottom: 2px dotted var(--line-strong);
-    transform: translateY(-0.3em);
-    transition: border-color 0.3s;
-}
-.programme__mode {
-    font-size: 0.76rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-3);
-}
 .programme__list a:hover .programme__name { transform: translateX(6px); }
-.programme__list a:hover .programme__dots { border-color: var(--accent); }
-
-@media (max-width: 760px) {
-    .programme__list { grid-template-columns: 1fr; }
-}
-
+.programme__list a:hover 
 .hero .btn--ghost { background: rgba(250, 245, 234, 0.75); }
 
 .page-home .site-nav:not(.is-scrolled):not(.is-open) .site-nav__links a {

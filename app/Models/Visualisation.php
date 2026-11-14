@@ -60,7 +60,7 @@ class Visualisation extends Model
 
     protected function numeral(): Attribute
     {
-        return Attribute::get(fn () => [1 => 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'][$this->position] ?? (string) $this->position);
+        return Attribute::get(fn () => (string) $this->position);
     }
 
     protected function svsUrl(): Attribute

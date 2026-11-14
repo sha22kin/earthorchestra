@@ -98,8 +98,6 @@
                         <a href="#{{ $v->slug }}">
                             <span class="programme__num">{{ $v->numeral }}</span>
                             <span class="programme__name">{{ $v->short_title }}</span>
-                            <span class="programme__dots" aria-hidden="true"></span>
-                            <span class="programme__mode">{{ $v->interaction }}</span>
                         </a>
                     </li>
                 @endforeach
