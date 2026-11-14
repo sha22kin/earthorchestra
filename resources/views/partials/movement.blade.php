@@ -37,6 +37,11 @@
                     <output class="stage__readout" data-readout hidden></output>
                 </div>
 
+                <button type="button" class="stage__fs" data-fullscreen aria-label="Full screen" title="Full screen">
+                    <x-icon name="expand" class="icon-expand" />
+                    <x-icon name="collapse" class="icon-collapse" />
+                </button>
+
                 <button type="button" class="stage__cover" data-cover>
                     <span class="stage__cover-disc"><x-icon name="play" /></span>
                     <span class="stage__cover-label">Play movement {{ $v->numeral }}</span>

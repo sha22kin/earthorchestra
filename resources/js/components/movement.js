@@ -45,6 +45,7 @@ export class Movement {
             grip: $('[data-slider-grip]'),
             readout: $('[data-readout]'),
             cover: $('[data-cover]'),
+            fs: $('[data-fullscreen]'),
             play: $('[data-play]'),
             modes: [...section.querySelectorAll('[data-mode]')],
             manual: $('[data-manual]'),
@@ -92,6 +93,18 @@ export class Movement {
         const { ui } = this;
 
         ui.cover.addEventListener('click', () => this.play());
+        ui.fs.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleFullscreen();
+        });
+        const onFsChange = () => {
+            const on = (document.fullscreenElement || document.webkitFullscreenElement) === ui.frame;
+            this.el.classList.toggle('is-fullscreen', on);
+            ui.fs.setAttribute('aria-label', on ? 'Exit full screen' : 'Full screen');
+            ui.fs.title = on ? 'Exit full screen' : 'Full screen';
+        };
+        document.addEventListener('fullscreenchange', onFsChange);
+        document.addEventListener('webkitfullscreenchange', onFsChange);
         ui.play.addEventListener('click', () => (this.state.playing ? this.pause() : this.play()));
         ui.modes.forEach((btn) => btn.addEventListener('click', () => this.setMode(btn.dataset.mode)));
 
@@ -183,6 +196,26 @@ export class Movement {
         this.applyGain(0.02);
         this.loop();
         stage.emit();
+    }
+
+    toggleFullscreen() {
+        const { frame, video } = this.ui;
+        const current = document.fullscreenElement || document.webkitFullscreenElement;
+
+        if (current === frame) {
+            (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+            return;
+        }
+
+        if (!this.state.playing) this.play();
+
+        const request = frame.requestFullscreen || frame.webkitRequestFullscreen;
+        if (request) {
+            const result = request.call(frame);
+            if (result && result.catch) result.catch(() => {});
+        } else if (video.webkitEnterFullscreen) {
+            video.webkitEnterFullscreen();
+        }
     }
 
     pause() {
@@ -356,7 +389,7 @@ export class Movement {
     }
 
     onPointerDown(e) {
-        if (e.target.closest('[data-cover]')) return;
+        if (e.target.closest('[data-cover], [data-fullscreen]')) return;
         const p = this.pos(e);
 
         if (this.state.mode === 'slider') {
@@ -369,7 +402,7 @@ export class Movement {
     }
 
     onPointerMove(e) {
-        if (e.target.closest('[data-cover]')) return;
+        if (e.target.closest('[data-cover], [data-fullscreen]')) return;
         const p = this.pos(e);
         if (this.state.mode === 'slider') {
             if (this.state.dragging) this.moveSlider(p.x);
@@ -443,7 +476,7 @@ export class Movement {
     }
 
     toggleLockAtEvent(e) {
-        if (this.state.mode !== 'cursor' || e.target.closest('[data-cover]')) return;
+        if (this.state.mode !== 'cursor' || e.target.closest('[data-cover], [data-fullscreen]')) return;
         const p = this.pos(e);
         const locked = this.state.locked;
 
