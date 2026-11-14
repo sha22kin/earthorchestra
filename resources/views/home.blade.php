@@ -56,7 +56,6 @@
     <section class="listen" id="listen">
         <div class="wrap">
             <header class="listen__head" data-reveal>
-                <p class="eyebrow">Before the music starts</p>
                 <h2 class="section-title">How to use</h2>
                 <div id="how-text">
                     @foreach ($page->content['how'] as $paragraph)
