@@ -1,7 +1,7 @@
 <section class="orchestra" id="orchestra" aria-labelledby="orchestra-title" data-orchestra>
     <div class="wrap">
         <header class="orchestra__head" data-reveal>
-            <h2 class="section-title" id="orchestra-title">The full orchestra</h2>
+            <h2 class="section-title" id="orchestra-title">The Full Orchestra</h2>
             <p class="orchestra__intro">{{ $page->content['orchestra'] }}</p>
         </header>
 
