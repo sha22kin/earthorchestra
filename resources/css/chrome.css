@@ -114,7 +114,6 @@ body:not(.page-home) .site-nav {
     padding: 0.85rem 0;
     border-bottom: 1px solid var(--line);
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 72, 'SOFT' 100;
     font-size: clamp(1.6rem, 7vw, 2.2rem);
     line-height: 1.15;
     text-decoration: none;
@@ -171,7 +170,6 @@ body:not(.page-home) .site-nav {
     margin: 1rem 0 0;
     font-family: var(--font-display);
     font-style: italic;
-    font-variation-settings: 'opsz' 36, 'SOFT' 100;
     font-size: 1rem;
     color: var(--ink-3);
 }

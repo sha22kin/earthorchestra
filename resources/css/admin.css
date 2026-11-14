@@ -65,7 +65,7 @@ body.admin {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-family: 'Times New Roman', Tinos, Times, serif;
     font-size: 15px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;

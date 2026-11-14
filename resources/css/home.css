@@ -67,7 +67,6 @@
     margin: 0.4rem 0 1rem;
     font-family: var(--font-display);
     font-style: italic;
-    font-variation-settings: 'opsz' 48, 'SOFT' 100, 'WONK' 1;
     font-size: clamp(1.25rem, 1rem + 1.4vw, 1.9rem);
     color: var(--ink-2);
     animation: rise 1s 0.5s var(--ease-out) both;
@@ -134,17 +133,15 @@
 .overture__inner { position: relative; z-index: 1; max-width: 44rem; margin-inline: auto; }
 .overture__text {
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 28, 'SOFT' 60;
     font-weight: 380;
     font-size: clamp(1.2rem, 1.05rem + 0.75vw, 1.55rem);
     line-height: 1.6;
     color: var(--ink);
     text-wrap: pretty;
 }
-.overture__text:first-of-type::first-letter {
+.section-title + .overture__text::first-letter {
     float: left;
     margin: 0.08em 0.12em 0 -0.02em;
-    font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
     font-weight: 600;
     font-size: 4.1em;
     line-height: 0.78;
@@ -202,7 +199,6 @@
     gap: 0.5rem;
     margin: 1.25rem 0 0.75rem;
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 72, 'SOFT' 100;
     font-size: 1.6rem;
 }
 .way h3 .icon { color: var(--copper); }
@@ -247,13 +243,11 @@
     width: 2.6rem;
     font-family: var(--font-display);
     font-style: italic;
-    font-variation-settings: 'opsz' 72, 'SOFT' 100, 'WONK' 1;
     font-size: 1.35rem;
     color: var(--accent);
 }
 .programme__name {
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 96, 'SOFT' 100;
     font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem);
     line-height: 1.1;
     transition: transform 0.35s var(--ease-out);

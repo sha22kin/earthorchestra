@@ -259,7 +259,6 @@
 }
 .keep h3 {
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 72, 'SOFT' 100;
     font-size: 1.5rem;
     margin-bottom: 0.25rem;
 }
