@@ -116,6 +116,7 @@ other way round.
   wind and precipitation). This takes the set from 245 MB to about 80 MB.
 - Each video has a WebP poster.
 - The illustrations are converted to WebP.
+- The home page intro animation (`hero-intro.mp4`) is cropped and re-encoded to H.264 from the original `.mov`, with first and last frames saved as WebP fallbacks.
 - The three clouds are cut out as separate layers so they can drift
   independently.
 

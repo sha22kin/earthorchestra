@@ -1,4 +1,4 @@
-import { initNav, initReveal, initParallax, initNowPlaying } from './components/chrome.js';
+import { initNav, initReveal, initHeroFilm, initNowPlaying } from './components/chrome.js';
 import { initReadAloud } from './components/read-aloud.js';
 import { initMovements } from './components/movement.js';
 import { initOrchestra } from './components/orchestra.js';
@@ -8,7 +8,7 @@ function boot() {
 
     initNav();
     initReveal();
-    initParallax();
+    initHeroFilm();
     initNowPlaying();
     initReadAloud();
     initMovements();

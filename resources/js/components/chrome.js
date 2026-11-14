@@ -36,36 +36,27 @@ export function initReveal() {
     items.forEach((el) => io.observe(el));
 }
 
-export function initParallax() {
+export function initHeroFilm() {
     const hero = document.querySelector('[data-hero]');
-    if (!hero || prefersReducedMotion()) return;
+    const film = hero?.querySelector('[data-hero-film]');
+    if (!film) return;
 
-    const layers = [...hero.querySelectorAll('[data-depth]')].map((el) => ({ el, depth: Number(el.dataset.depth) }));
-    let px = 0, py = 0, sy = 0, frame = null;
-
-    const render = () => {
-        frame = null;
-        for (const { el, depth } of layers) {
-            el.style.setProperty('--px', `${(px * depth * 40).toFixed(1)}px`);
-            el.style.setProperty('--py', `${(py * depth * 24 + sy * depth).toFixed(1)}px`);
-        }
+    const still = () => {
+        hero.classList.add('is-still');
+        film.pause();
     };
-    const schedule = () => frame ??= requestAnimationFrame(render);
 
-    if (window.matchMedia('(pointer: fine)').matches) {
-        hero.addEventListener('pointermove', (e) => {
-            const r = hero.getBoundingClientRect();
-            px = (e.clientX - r.left) / r.width - 0.5;
-            py = (e.clientY - r.top) / r.height - 0.5;
-            schedule();
-        });
+    film.addEventListener('contextmenu', (e) => e.preventDefault());
+    film.addEventListener('ended', () => hero.classList.add('is-still'));
+    film.addEventListener('error', still, true);
+
+    if (prefersReducedMotion()) {
+        still();
+        return;
     }
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > window.innerHeight * 1.2) return;
-        sy = window.scrollY * 0.5;
-        schedule();
-    }, { passive: true });
+    const attempt = film.play();
+    if (attempt) attempt.catch(still);
 }
 
 export function initNowPlaying() {
