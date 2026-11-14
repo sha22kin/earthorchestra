@@ -4,7 +4,7 @@
     <div class="site-footer__inner">
         <div class="site-footer__sign">
             <img src="{{ asset('media/title.webp') }}" alt="Earth Orchestra" width="200" height="114" loading="lazy">
-            <p>A prototype that turns snapshots of NASA's Earth data into something you can hear.</p>
+            <p>A visualizer that you can hear.</p>
         </div>
 
         <nav class="site-footer__col" aria-label="Footer">
