@@ -33,15 +33,6 @@
         <a href="{{ route('about') }}" style="--i: 4"><small>04</small>About us</a>
         <a href="{{ route('credits') }}" style="--i: 5"><small>05</small>Credits</a>
     </nav>
-
-    <div class="nav-sheet__score" aria-hidden="true">
-        <div class="nav-sheet__stave">
-            @foreach (\App\Models\Visualisation::ordered() as $v)
-                <span class="nav-sheet__note" style="--c: {{ $v->accent }}; --n: {{ $loop->index }}; --y: {{ [3, 1, 2, 0, 2, 4][$loop->index] ?? 2 }}"></span>
-            @endforeach
-        </div>
-        <p>Six movements, one orchestra</p>
-    </div>
 </div>
 
 <script>

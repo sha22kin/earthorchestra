@@ -130,49 +130,6 @@ body:not(.page-home) .site-nav {
     color: var(--copper);
 }
 
-.nav-sheet__score {
-    margin-top: auto;
-    padding-top: 3rem;
-    text-align: center;
-}
-.nav-sheet__stave {
-    position: relative;
-    height: 41px;
-    margin: 0 4%;
-}
-.nav-sheet__stave::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(to bottom, var(--line-strong) 0 1px, transparent 1px 10px);
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
-    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
-}
-.nav-sheet__note {
-    position: absolute;
-    left: calc(14% + var(--n) * 14.4%);
-    top: calc(var(--y) * 10px - 6px);
-    width: 12px; height: 12px;
-    background: var(--c);
-    border-radius: 2px;
-    transform: rotate(45deg);
-    box-shadow: 0 0 0 3px var(--paper);
-}
-.has-sheet .nav-sheet__note {
-    animation: note-bob 2.4s ease-in-out infinite;
-    animation-delay: calc(var(--n) * -0.4s);
-}
-@keyframes note-bob {
-    0%, 100% { transform: rotate(45deg) translate(0, 0); }
-    50% { transform: rotate(45deg) translate(-2px, -2px); }
-}
-.nav-sheet__score p {
-    margin: 1rem 0 0;
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 1rem;
-    color: var(--ink-3);
-}
 
 @media (max-width: 900px) {
     .site-nav__links { display: none; }
