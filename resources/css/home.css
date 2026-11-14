@@ -200,6 +200,7 @@
 .way__sketch .sk-cursor { fill: var(--ink); }
 
 .programme { padding-block: clamp(2.5rem, 5vw, 3.75rem) 0.5rem; }
+.programme .eyebrow { text-align: center; margin-bottom: 1.25rem; }
 .programme__list {
     list-style: none;
     display: grid;
@@ -210,6 +211,7 @@
 .programme__list a {
     display: flex;
     align-items: baseline;
+    justify-content: center;
     gap: 1rem;
     padding: 1rem 0;
     border-bottom: 1px solid var(--line);
@@ -217,7 +219,6 @@
 }
 .programme__num {
     flex: none;
-    width: 2.6rem;
     font-family: var(--font-display);
     font-style: italic;
     font-size: 1.35rem;
@@ -227,11 +228,13 @@
     font-family: var(--font-display);
     font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.7rem);
     line-height: 1.1;
-    transition: transform 0.35s var(--ease-out);
+    transition: color 0.25s;
 }
-.programme__list a:hover .programme__name { transform: translateX(6px); }
-.programme__list a:hover 
-.hero .btn--ghost { background: rgba(250, 245, 234, 0.75); }
+.programme__list a:hover .programme__name { color: var(--accent); }
+
+@media (max-width: 760px) {
+    .programme__list { grid-template-columns: 1fr; }
+}
 
 .page-home .site-nav:not(.is-scrolled):not(.is-open) .site-nav__links a {
     color: var(--ink);
