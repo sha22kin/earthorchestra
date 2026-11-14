@@ -67,7 +67,7 @@
             </header>
 
             <div class="listen__ways">
-                <article class="way" data-reveal>
+                <article class="way">
                     <svg class="way__sketch" viewBox="0 0 240 130" aria-hidden="true">
                         <rect x="6" y="6" width="228" height="118" rx="6" class="sk-frame"/>
                         <path class="sk-contour" d="M14 40c30-14 52 10 80-2s46-22 70-8 40 14 62 4"/>
@@ -75,7 +75,7 @@
                         <path class="sk-contour" d="M14 100c34-8 58 8 88-2s50-12 74-2 32 6 50 0"/>
                         <circle class="sk-dot" cx="152" cy="62" r="5"/>
                         <circle class="sk-ring" cx="152" cy="62" r="11"/>
-                        <path class="sk-cursor" d="M96 50l20 9-8 2-3 8z"/>
+                        <path class="sk-cursor" d="M157 67l20 9-8 2-3 8z"/>
                     </svg>
                     <h3><x-icon name="cursor" /> Cursor</h3>
                     <div id="how-cursor">
@@ -84,25 +84,6 @@
                         @endforeach
                     </div>
                     <x-read-aloud target="#how-cursor" />
-                </article>
-
-                <article class="way" data-reveal>
-                    <svg class="way__sketch" viewBox="0 0 240 130" aria-hidden="true">
-                        <rect x="6" y="6" width="228" height="118" rx="6" class="sk-frame"/>
-                        <path class="sk-contour" d="M14 40c30-14 52 10 80-2s46-22 70-8 40 14 62 4"/>
-                        <path class="sk-contour" d="M14 70c26-10 50 12 84 0s44-18 72-4 38 10 56 2"/>
-                        <path class="sk-contour" d="M14 100c34-8 58 8 88-2s50-12 74-2 32 6 50 0"/>
-                        <path class="sk-line" d="M138 8v114"/>
-                        <circle class="sk-grip" cx="138" cy="65" r="9"/>
-                        <path class="sk-arrows" d="M118 65l-8-6v12zM158 65l8-6v12z"/>
-                    </svg>
-                    <h3><x-icon name="slider" /> Slider</h3>
-                    <div id="how-slider">
-                        @foreach ($page->content['slider'] as $paragraph)
-                            <p>{{ $paragraph }}</p>
-                        @endforeach
-                    </div>
-                    <x-read-aloud target="#how-slider" />
                 </article>
             </div>
         </div>
