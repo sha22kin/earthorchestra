@@ -6,6 +6,7 @@
     color: var(--ink);
 }
 .prose p { margin-bottom: 1.25em; text-wrap: pretty; hyphens: auto; }
+.article__body p { text-align: justify; }
 .prose h2 {
     margin: 2.2em 0 0.7em;
     font-weight: 500;
@@ -19,20 +20,6 @@
     line-height: 1.6;
 }
 
-.cite { font-family: var(--font-text); font-size: 0.7em; line-height: 0; margin-left: 0.1em; }
-.cite a {
-    display: inline-block;
-    min-width: 1.4em;
-    padding: 0.15em 0.35em;
-    border-radius: 999px;
-    background: var(--paper-2);
-    color: var(--accent);
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.2s, color 0.2s;
-}
-.cite a:hover { background: var(--accent); color: var(--paper-hi); }
 
 .article { padding-top: 6.5rem; }
 .article__head { text-align: left; margin-bottom: 2.5rem; }

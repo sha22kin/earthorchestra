@@ -37,7 +37,7 @@
                 @if ($block['type'] === 'h')
                     <h2>{{ $block['text'] }}</h2>
                 @else
-                    <p>{{ Prose::withCitations($block['text']) }}</p>
+                    <p>{{ Prose::plain($block['text']) }}</p>
                 @endif
             @endforeach
         </div>

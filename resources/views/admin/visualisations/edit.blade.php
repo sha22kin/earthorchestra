@@ -25,7 +25,7 @@
             <article class="card">
                 <header class="card__head">
                     <h2>Learn-more notes</h2>
-                    <span class="muted small">Blank line between paragraphs · start a line with <code>##</code> for a heading · <code>[1]</code> links to source 1</span>
+                    <span class="muted small">Blank line between paragraphs · start a line with <code>##</code> for a heading</span>
                 </header>
                 <div class="card__body">
                     <x-admin.field name="body" label="Article" type="textarea" rows="16" :value="$bodyText" required data-autosize spellcheck="true" />

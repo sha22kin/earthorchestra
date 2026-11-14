@@ -38,11 +38,12 @@ class PagesTest extends TestCase
         }
     }
 
-    public function test_citation_markers_become_links(): void
+    public function test_citation_markers_are_hidden_in_the_article(): void
     {
         $this->get('/movements/near-surface-temperature')
-            ->assertSee('href="#ref-1"', escape: false)
-            ->assertDontSee('[1]');
+            ->assertDontSee('[1]')
+            ->assertDontSee('class="cite"', escape: false)
+            ->assertSee('id="ref-1"', escape: false);
     }
 
     public function test_static_pages_render(): void
