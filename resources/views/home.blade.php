@@ -44,7 +44,6 @@
 
     <section class="overture" id="overture">
         <div class="overture__inner" data-reveal>
-            <p class="eyebrow">Overture</p>
             <h2 class="section-title">About Earth Orchestra</h2>
             @foreach ($page->content['intro'] as $paragraph)
                 <p class="overture__text" id="intro-{{ $loop->index }}">{{ $paragraph }}</p>

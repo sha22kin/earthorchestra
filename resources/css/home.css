@@ -122,14 +122,6 @@
     color: var(--ink);
     text-wrap: pretty;
 }
-.section-title + .overture__text::first-letter {
-    float: left;
-    margin: 0.08em 0.12em 0 -0.02em;
-    font-weight: 600;
-    font-size: 4.1em;
-    line-height: 0.78;
-    color: var(--copper);
-}
 .overture__motif {
     position: absolute;
     right: -14%;
