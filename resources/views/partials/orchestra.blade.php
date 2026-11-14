@@ -48,7 +48,7 @@
 
             <div class="presets" role="group" aria-label="Starting points">
                 <span class="presets__label">Try</span>
-                <button type="button" data-preset="tutti">Tutti</button>
+                <button type="button" data-preset="tutti">Melody</button>
                 <button type="button" data-preset="weather">Weather only</button>
                 <button type="button" data-preset="air">Air quality</button>
                 <button type="button" data-preset="solo">One at a time</button>
