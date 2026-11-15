@@ -141,11 +141,11 @@
       ]
     },
     "svs_id": 5147,
-    "video_path": "media/movement-1.mp4",
-    "poster_path": "media/movement-1.webp",
+    "video_path": "media/movement-1-v2.mp4",
+    "poster_path": "media/movement-1-v2.webp",
     "audio_path": "media/movement-1.mp3",
-    "data_starts_on": "2026-09-12",
-    "data_ends_on": "2026-09-27",
+    "data_starts_on": "2026-10-30",
+    "data_ends_on": "2026-11-14",
     "citations": [
       {
         "text": "NASA Global Modeling and Assimilation Office. (2025, September 22). Weather analysis & prediction. NASA.",
@@ -294,11 +294,11 @@
       ]
     },
     "svs_id": 5148,
-    "video_path": "media/movement-2.mp4",
-    "poster_path": "media/movement-2.webp",
+    "video_path": "media/movement-2-v2.mp4",
+    "poster_path": "media/movement-2-v2.webp",
     "audio_path": "media/movement-2.mp3",
-    "data_starts_on": "2026-09-12",
-    "data_ends_on": "2026-09-27",
+    "data_starts_on": "2026-10-30",
+    "data_ends_on": "2026-11-14",
     "citations": [
       {
         "text": "NASA Global Modeling and Assimilation Office. (2023, September 26). GEOS-FP near-surface wind speed [Data visualization]. NASA Scientific Visualization Studio.",
@@ -440,11 +440,11 @@
       ]
     },
     "svs_id": 5149,
-    "video_path": "media/movement-3.mp4",
-    "poster_path": "media/movement-3.webp",
+    "video_path": "media/movement-3-v2.mp4",
+    "poster_path": "media/movement-3-v2.webp",
     "audio_path": "media/movement-3.mp3",
-    "data_starts_on": "2026-09-12",
-    "data_ends_on": "2026-09-27",
+    "data_starts_on": "2026-10-30",
+    "data_ends_on": "2026-11-14",
     "citations": [
       {
         "text": "NASA Global Modeling and Assimilation Office. (2023, September 26). GEOS-FP precipitation and clouds [Data visualization]. NASA Scientific Visualization Studio.",
@@ -583,11 +583,11 @@
       ]
     },
     "svs_id": 5150,
-    "video_path": "media/movement-4.mp4",
-    "poster_path": "media/movement-4.webp",
+    "video_path": "media/movement-4-v2.mp4",
+    "poster_path": "media/movement-4-v2.webp",
     "audio_path": "media/movement-4.mp3",
-    "data_starts_on": "2026-09-12",
-    "data_ends_on": "2026-09-27",
+    "data_starts_on": "2026-10-30",
+    "data_ends_on": "2026-11-14",
     "citations": [
       {
         "text": "NASA Global Modeling and Assimilation Office. (2023, September 26). GEOS-FP near-surface humidity [Data visualization]. NASA Scientific Visualization Studio.",
@@ -719,11 +719,11 @@
       ]
     },
     "svs_id": 5151,
-    "video_path": "media/movement-5.mp4",
-    "poster_path": "media/movement-5.webp",
+    "video_path": "media/movement-5-v2.mp4",
+    "poster_path": "media/movement-5-v2.webp",
     "audio_path": "media/movement-5.mp3",
-    "data_starts_on": "2026-09-12",
-    "data_ends_on": "2026-09-27",
+    "data_starts_on": "2026-10-30",
+    "data_ends_on": "2026-11-14",
     "citations": [
       {
         "text": "Voiland, A. (2010, November 2). Aerosols: Tiny particles, big impact. NASA Earth Observatory.",
@@ -877,11 +877,11 @@
       ]
     },
     "svs_id": 5152,
-    "video_path": "media/movement-6.mp4",
-    "poster_path": "media/movement-6.webp",
+    "video_path": "media/movement-6-v2.mp4",
+    "poster_path": "media/movement-6-v2.webp",
     "audio_path": "media/movement-6.mp3",
-    "data_starts_on": "2026-10-28",
-    "data_ends_on": "2026-11-12",
+    "data_starts_on": "2026-10-30",
+    "data_ends_on": "2026-11-14",
     "citations": [
       {
         "text": "Carlowicz, M. (2013, April). The ozone layer: Our global sunscreen. ChemMatters, 12.",

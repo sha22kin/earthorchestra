@@ -13,7 +13,7 @@
     <meta property="og:site_name" content="Earth Orchestra">
     <meta property="og:title" content="{{ $title ?? 'Earth Orchestra' }}">
     <meta property="og:description" content="{{ $description ?? 'NASA Earth data you can see, hear and play with.' }}">
-    <meta property="og:image" content="{{ asset($ogImage ?? 'media/movement-1.webp') }}">
+    <meta property="og:image" content="{{ asset($ogImage ?? 'media/movement-1-v2.webp') }}">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="{{ url()->current() }}">
 
