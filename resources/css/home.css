@@ -55,27 +55,6 @@
 
 @keyframes drift { from { transform: translateX(-18px); } to { transform: translateX(22px); } }
 
-.hero__meta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.35rem 0;
-    margin-bottom: 2rem;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-3);
-    animation: rise 1s 0.65s var(--ease-out) both;
-}
-.hero__meta span + span::before {
-    content: '';
-    display: inline-block;
-    width: 6px; height: 6px;
-    margin: 0 0.9rem 0.12em;
-    background: var(--copper);
-    transform: rotate(45deg);
-}
 
 .hero__actions {
     display: flex;

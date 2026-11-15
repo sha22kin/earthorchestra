@@ -23,11 +23,6 @@
         </div>
 
         <div class="hero__inner">
-            <p class="hero__meta">
-                <span>Six movements</span>
-                <span>GEOS-FP &amp; GEOS-CF</span>
-                <span>Autumn 2026</span>
-            </p>
             <div class="hero__actions">
                 <a class="btn btn--ink" href="#overture">Take your seat <x-icon name="arrow-d" /></a>
             </div>
