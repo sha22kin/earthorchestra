@@ -762,3 +762,43 @@ body.auth {
 .auth__card h1 { margin-top: 1.1rem; font-size: 1.2rem; }
 
 .form-side .fields-2 { grid-template-columns: 1fr; }
+
+/* Lighter, smaller type */
+body.admin { font-size: 13px; }
+.brand { font-size: 0.92rem; font-weight: 600; }
+.topbar__title { font-size: 0.95rem; font-weight: 500; }
+.sidenav__link { font-size: 0.84rem; font-weight: 400; }
+.sidenav__link.is-active { font-weight: 500; }
+.sidenav__label { font-weight: 500; }
+.whoami__text strong { font-size: 0.82rem; font-weight: 500; }
+.whoami__text small { font-size: 0.72rem; }
+
+.stat__body strong { font-size: 1.05rem; font-weight: 500; }
+.stat__body span { font-size: 0.76rem; }
+.card__head h2 { font-size: 0.88rem; font-weight: 500; }
+.tile h2 { font-size: 0.95rem; font-weight: 500; }
+.status li > span:nth-of-type(1) { font-weight: 400; }
+.status__value { font-weight: 500; }
+
+.strong, .row-link { font-weight: 500; }
+.table { font-size: 0.8rem; }
+.table th { font-size: 0.76rem; font-weight: 500; }
+.pill { font-size: 0.7rem; font-weight: 500; }
+.tag { font-size: 0.68rem; font-weight: 500; }
+.swatch { font-weight: 600; font-size: 0.7rem; }
+
+.btn { font-size: 0.8rem; font-weight: 500; }
+.btn--sm { font-size: 0.76rem; }
+.link { font-size: 0.8rem; font-weight: 400; }
+.field label { font-size: 0.76rem; font-weight: 500; }
+.field input, .field select, .field textarea,
+.repeater input, .repeater textarea,
+.toolbar select, .search input { font-size: 0.82rem; }
+.field__hint, .field__error { font-size: 0.74rem; }
+.upload strong { font-weight: 500; font-size: 0.8rem; }
+.upload small { font-size: 0.72rem; }
+.chart__legend, .chart__labels { font-size: 0.74rem; }
+.bars__name, .bars__value { font-weight: 400; }
+.toast { font-weight: 400; font-size: 0.82rem; }
+.auth__card h1 { font-size: 1.05rem; font-weight: 500; }
+.empty, .muted.small, .small { font-size: 0.76rem; }
