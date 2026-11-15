@@ -1,7 +1,7 @@
 @extends('admin.layout', ['title' => 'Edit · '.$page->title])
 
 @section('action')
-    <button type="submit" form="page-form" class="btn btn--primary"><x-admin.icon name="save" /> <span>Save page</span></button>
+    <button type="submit" form="page-form" class="btn btn--primary btn--icon" title="Save page" aria-label="Save page"><x-admin.icon name="save" /></button>
 @endsection
 
 @section('content')

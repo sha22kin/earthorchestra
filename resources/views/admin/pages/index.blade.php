@@ -17,8 +17,8 @@
                 <p class="muted">{{ $desc }}</p>
                 <p class="muted small">Last edited {{ $page->updated_at->diffForHumans() }}</p>
                 <div class="tile__actions">
-                    <a class="btn btn--primary btn--sm" href="{{ route('admin.pages.edit', $page) }}"><x-admin.icon name="pencil" /> Edit</a>
-                    <a class="btn btn--ghost btn--sm" href="{{ $url }}" target="_blank" rel="noopener"><x-admin.icon name="eye" /> View</a>
+                    <a class="btn btn--primary btn--sm btn--icon" href="{{ route('admin.pages.edit', $page) }}" title="Edit" aria-label="Edit {{ $name }}"><x-admin.icon name="pencil" /></a>
+                    <a class="btn btn--ghost btn--sm btn--icon" href="{{ $url }}" target="_blank" rel="noopener" title="View on site" aria-label="View {{ $name }} on site"><x-admin.icon name="eye" /></a>
                 </div>
             </article>
         @endforeach

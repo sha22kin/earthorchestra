@@ -1,7 +1,7 @@
 @extends('admin.layout', ['title' => "Movement {$v->numeral} · {$v->short_title}"])
 
 @section('action')
-    <button type="submit" form="movement-form" class="btn btn--primary"><x-admin.icon name="save" /> <span>Save changes</span></button>
+    <button type="submit" form="movement-form" class="btn btn--primary btn--icon" title="Save changes" aria-label="Save changes"><x-admin.icon name="save" /></button>
 @endsection
 
 @section('content')
@@ -35,7 +35,7 @@
             <article class="card">
                 <header class="card__head">
                     <h2>Bibliography</h2>
-                    <button type="button" class="btn btn--ghost btn--sm" data-repeater-add="citations"><x-admin.icon name="plus" /> Add source</button>
+                    <button type="button" class="btn btn--ghost btn--sm btn--icon" data-repeater-add="citations" title="Add source" aria-label="Add source"><x-admin.icon name="plus" /></button>
                 </header>
                 <div class="card__body">
                     <ol class="repeater" data-repeater="citations">

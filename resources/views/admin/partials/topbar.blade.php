@@ -11,8 +11,8 @@
         @hasSection('action')
             @yield('action')
         @else
-            <a class="btn btn--primary" href="{{ route('admin.visualisations.index') }}">
-                <x-admin.icon name="pencil" /> <span>Edit content</span>
+            <a class="btn btn--primary btn--icon" href="{{ route('admin.visualisations.index') }}" title="Edit content" aria-label="Edit content">
+                <x-admin.icon name="pencil" />
             </a>
         @endif
 

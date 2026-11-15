@@ -24,8 +24,8 @@
                             <td class="muted nowrap">{{ $v->date_range }}</td>
                             <td>{{ $v->citations_count }}</td>
                             <td class="actions">
-                                <a class="icon-btn" href="{{ route('home') }}#{{ $v->slug }}" target="_blank" rel="noopener" title="View on site"><x-admin.icon name="eye" /></a>
-                                <a class="btn btn--ghost btn--sm" href="{{ route('admin.visualisations.edit', $v) }}"><x-admin.icon name="pencil" /> Edit</a>
+                                <a class="icon-btn" href="{{ route('home') }}#{{ $v->slug }}" target="_blank" rel="noopener" title="View on site" aria-label="View {{ $v->short_title }} on site"><x-admin.icon name="eye" /></a>
+                                <a class="icon-btn" href="{{ route('admin.visualisations.edit', $v) }}" title="Edit" aria-label="Edit {{ $v->short_title }}"><x-admin.icon name="pencil" /></a>
                             </td>
                         </tr>
                     @endforeach

@@ -5,14 +5,14 @@
         </span>
         <span class="pager-a__links">
             @if ($paginator->onFirstPage())
-                <span class="btn btn--ghost is-disabled">Previous</span>
+                <span class="btn btn--ghost btn--icon is-disabled" aria-hidden="true"><x-admin.icon name="chevron" class="flip" /></span>
             @else
-                <a class="btn btn--ghost" href="{{ $paginator->previousPageUrl() }}" rel="prev">Previous</a>
+                <a class="btn btn--ghost btn--icon" href="{{ $paginator->previousPageUrl() }}" rel="prev" title="Previous page" aria-label="Previous page"><x-admin.icon name="chevron" class="flip" /></a>
             @endif
             @if ($paginator->hasMorePages())
-                <a class="btn btn--ghost" href="{{ $paginator->nextPageUrl() }}" rel="next">Next</a>
+                <a class="btn btn--ghost btn--icon" href="{{ $paginator->nextPageUrl() }}" rel="next" title="Next page" aria-label="Next page"><x-admin.icon name="chevron" /></a>
             @else
-                <span class="btn btn--ghost is-disabled">Next</span>
+                <span class="btn btn--ghost btn--icon is-disabled" aria-hidden="true"><x-admin.icon name="chevron" /></span>
             @endif
         </span>
     </nav>

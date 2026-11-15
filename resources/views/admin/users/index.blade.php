@@ -1,7 +1,7 @@
 @extends('admin.layout', ['title' => 'Admins & editors'])
 
 @section('action')
-    <a class="btn btn--primary" href="{{ route('admin.users.create') }}"><x-admin.icon name="plus" /> <span>Add person</span></a>
+    <a class="btn btn--primary btn--icon" href="{{ route('admin.users.create') }}" title="Add person" aria-label="Add person"><x-admin.icon name="plus" /></a>
 @endsection
 
 @section('content')
@@ -29,7 +29,7 @@
                             <td><span @class(['pill', 'pill--ok' => $u->isAdmin(), 'pill--neutral' => ! $u->isAdmin()])>{{ $u->role_label }}</span></td>
                             <td class="muted">{{ $u->last_login_at?->diffForHumans() ?? 'Never' }}</td>
                             <td class="actions">
-                                <a class="btn btn--ghost btn--sm" href="{{ route('admin.users.edit', $u) }}"><x-admin.icon name="pencil" /> Edit</a>
+                                <a class="icon-btn" href="{{ route('admin.users.edit', $u) }}" title="Edit" aria-label="Edit {{ $u->name }}"><x-admin.icon name="pencil" /></a>
                                 @unless ($u->is(auth()->user()))
                                     <form method="POST" action="{{ route('admin.users.destroy', $u) }}" data-confirm="Remove {{ $u->name }}? They won't be able to sign in.">
                                         @csrf

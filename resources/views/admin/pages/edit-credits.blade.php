@@ -10,7 +10,7 @@
     <article class="card">
         <header class="card__head">
             <h2>The company</h2>
-            <button type="button" class="btn btn--ghost btn--sm" data-repeater-add="team"><x-admin.icon name="plus" /> Add role</button>
+            <button type="button" class="btn btn--ghost btn--sm btn--icon" data-repeater-add="team" title="Add role" aria-label="Add role"><x-admin.icon name="plus" /></button>
         </header>
         <div class="card__body">
             <ol class="repeater" data-repeater="team">
@@ -27,7 +27,7 @@
     <article class="card">
         <header class="card__head">
             <h2>Instruments (tools)</h2>
-            <button type="button" class="btn btn--ghost btn--sm" data-repeater-add="programs"><x-admin.icon name="plus" /> Add tool</button>
+            <button type="button" class="btn btn--ghost btn--sm btn--icon" data-repeater-add="programs" title="Add tool" aria-label="Add tool"><x-admin.icon name="plus" /></button>
         </header>
         <div class="card__body">
             <ol class="repeater" data-repeater="programs">
