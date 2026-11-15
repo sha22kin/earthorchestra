@@ -63,15 +63,6 @@
 
             <div class="listen__ways">
                 <article class="way">
-                    <svg class="way__sketch" viewBox="0 0 600 170" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                        <rect x="4" y="4" width="592" height="162" rx="10" class="sk-frame"/>
-                        <path class="sk-contour" d="M20 52c60-26 110 18 170-2s95-30 150-10 90 22 140 2 70-14 100-4"/>
-                        <path class="sk-contour" d="M20 92c55-18 105 20 165 0s100-28 155-8 85 18 140 0 75-12 100-2"/>
-                        <path class="sk-contour" d="M20 132c65-14 120 14 180-4s100-20 150-4 80 12 135-2 70-8 95 0"/>
-                        <circle class="sk-ring" cx="300" cy="86" r="15"/>
-                        <circle class="sk-dot" cx="300" cy="86" r="6.5"/>
-                        <path class="sk-cursor" d="M307 93l26 11.5-10.5 2.6-3.9 10.4z"/>
-                    </svg>
                     <h3><x-icon name="cursor" /> Cursor</h3>
                     <div id="how-cursor">
                         @foreach ($page->content['cursor'] as $paragraph)
