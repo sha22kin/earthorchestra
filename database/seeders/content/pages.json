@@ -41,6 +41,12 @@
     "title": "Credits",
     "lede": "The people, tools and sources behind the performance.",
     "content": {
+      "eyebrow": "The programme notes",
+      "programs_title": "Instruments",
+      "sources_title": "Visualisations",
+      "ai_title": "A note on AI usage",
+      "footer_left": "© {year} The Earth Orchestra team",
+      "footer_right": "Illustrated by hand · Scored in Draw Audio",
       "team": [
         {
           "role": "Coding",

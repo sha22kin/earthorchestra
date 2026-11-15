@@ -4,9 +4,26 @@
     $c = $page->content;
     $team = old('team', collect($c['team'] ?? [])->map(fn ($r) => ['role' => $r['role'], 'names' => implode(', ', $r['names'])])->all());
     $programs = old('programs', $c['programs'] ?? []);
+    $defaults = \App\Models\Page::CREDIT_TEXT;
 @endphp
 
 @section('fields')
+    <article class="card">
+        <header class="card__head"><h2>Headings &amp; footer</h2></header>
+        <div class="card__body stack">
+            <div class="fields-2">
+                <x-admin.field name="eyebrow" label="Small line above the title" :value="$c['eyebrow'] ?? ''" :placeholder="$defaults['eyebrow']" />
+                <x-admin.field name="programs_title" label="Tools heading" :value="$c['programs_title'] ?? ''" :placeholder="$defaults['programs_title']" />
+                <x-admin.field name="sources_title" label="Visualisations heading" :value="$c['sources_title'] ?? ''" :placeholder="$defaults['sources_title']" />
+                <x-admin.field name="ai_title" label="AI note heading" :value="$c['ai_title'] ?? ''" :placeholder="$defaults['ai_title']" />
+            </div>
+            <div class="fields-2">
+                <x-admin.field name="footer_left" label="Footer, left" :value="$c['footer_left'] ?? ''" :placeholder="$defaults['footer_left']" hint="{year} becomes the current year." />
+                <x-admin.field name="footer_right" label="Footer, right" :value="$c['footer_right'] ?? ''" :placeholder="$defaults['footer_right']" />
+            </div>
+        </div>
+    </article>
+
     <article class="card">
         <header class="card__head">
             <h2>The company</h2>

@@ -93,9 +93,19 @@ class PageController extends Controller
             'programs.*.value' => ['required', 'string', 'max:120'],
             'ai_note' => ['nullable', 'string', 'max:2000'],
             'citations_note' => ['nullable', 'string', 'max:500'],
+            'eyebrow' => ['nullable', 'string', 'max:120'],
+            'programs_title' => ['nullable', 'string', 'max:120'],
+            'sources_title' => ['nullable', 'string', 'max:120'],
+            'ai_title' => ['nullable', 'string', 'max:120'],
+            'footer_left' => ['nullable', 'string', 'max:200'],
+            'footer_right' => ['nullable', 'string', 'max:200'],
         ]);
 
-        return [
+        $labels = collect(array_keys(Page::CREDIT_TEXT))
+            ->mapWithKeys(fn ($key) => [$key => trim((string) ($v[$key] ?? ''))])
+            ->all();
+
+        return $labels + [
             'team' => collect($v['team'] ?? [])->map(fn ($r) => [
                 'role' => trim($r['role']),
                 'names' => collect(preg_split('/\s*(,|&)\s*/', $r['names']))->filter()->values()->all(),

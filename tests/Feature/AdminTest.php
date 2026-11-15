@@ -157,7 +157,17 @@ class AdminTest extends TestCase
         ])->assertSessionHasNoErrors();
         $credits = Page::where('slug', 'credits')->first()->content;
         $this->assertSame(['Ana', 'Ben', 'Cy'], $credits['team'][0]['names']);
-        $this->get('/credits')->assertSee('Ana &amp; Ben &amp; Cy', escape: false)->assertDontSee('A note on AI usage');
+        $this->get('/credits')->assertSee('Ana &amp; Ben &amp; Cy', escape: false)->assertDontSee('A note on AI usage')
+            ->assertSee('The programme notes')->assertSee('Scored in Draw Audio');
+
+        $this->put('/admin/pages/credits', [
+            'title' => 'Credits',
+            'eyebrow' => 'Behind the curtain',
+            'programs_title' => 'Toolbox',
+            'footer_left' => '© {year} Our team',
+        ])->assertSessionHasNoErrors();
+        $this->get('/credits')->assertSee('Behind the curtain')->assertSee('Toolbox')
+            ->assertSee('© '.date('Y').' Our team')->assertDontSee('The programme notes');
     }
 
     public function test_editors_cannot_manage_people(): void
