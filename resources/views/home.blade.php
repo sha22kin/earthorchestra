@@ -11,7 +11,7 @@
         <div class="hero__stage">
             <div class="hero__frame">
                 <video class="hero__film" data-hero-film
-                       muted playsinline autoplay preload="auto"
+                       muted playsinline autoplay loop preload="auto"
                        poster="{{ asset('media/hero-first.webp') }}"
                        disablepictureinpicture disableremoteplayback
                        aria-hidden="true" tabindex="-1" width="1600" height="896">

@@ -47,7 +47,6 @@ export function initHeroFilm() {
     };
 
     film.addEventListener('contextmenu', (e) => e.preventDefault());
-    film.addEventListener('ended', () => hero.classList.add('is-still'));
     film.addEventListener('error', still, true);
 
     if (prefersReducedMotion()) {
