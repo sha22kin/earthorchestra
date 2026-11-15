@@ -25,6 +25,6 @@
 
     <p class="site-footer__base">
         <span>&copy; {{ date('Y') }} The Earth Orchestra team</span>
-        <span>Illustrated by hand · Scored in FL Studio</span>
+        <span>Illustrated by hand · Scored in Draw Audio</span>
     </p>
 </footer>
