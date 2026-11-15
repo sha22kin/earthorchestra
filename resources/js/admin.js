@@ -167,6 +167,11 @@ function initUploads() {
             label.classList.toggle('has-file', !!file);
             if (file) label.querySelector('small').textContent = `${file.name} · ${(file.size / 1048576).toFixed(1)} MB - will upload on save`;
 
+            if (file && input.name === 'video') {
+                const video = document.querySelector('[data-video-preview]');
+                if (video) video.src = URL.createObjectURL(file);
+            }
+
             if (file && input.name === 'poster') {
                 const img = document.querySelector('[data-poster-preview]');
                 if (img) img.src = URL.createObjectURL(file);

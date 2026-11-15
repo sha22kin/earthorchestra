@@ -85,6 +85,7 @@
             <article class="card">
                 <header class="card__head"><h2>Media</h2></header>
                 <div class="card__body stack">
+                    <video class="poster" src="{{ asset($v->video_path) }}" poster="{{ asset($v->poster_path) }}" controls muted preload="metadata" data-video-preview></video>
                     <img class="poster" src="{{ asset($v->poster_path) }}" alt="Current poster" data-poster-preview>
                     <label class="upload">
                         <x-admin.icon name="upload" />
