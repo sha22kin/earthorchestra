@@ -304,7 +304,7 @@
     pointer-events: none;
     transition: opacity 0.4s, visibility 0.4s;
 }
-.stage__cover-disc, .stage__cover-label { pointer-events: auto; cursor: pointer; }
+.stage__cover-disc { pointer-events: auto; cursor: pointer; }
 .has-played .stage__cover { opacity: 0; visibility: hidden; }
 .stage__cover-disc {
     display: grid;
@@ -319,13 +319,6 @@
 }
 .stage__cover-disc .icon { width: 42%; height: 42%; margin-left: 6%; }
 .stage__cover:hover .stage__cover-disc { transform: scale(1.06); box-shadow: 0 0 0 10px rgba(250, 245, 234, 0.2), 0 14px 30px rgba(0, 0, 0, 0.4); }
-.stage__cover-label {
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-}
 
 .stage__hint {
     margin: 0.9rem 0 0;

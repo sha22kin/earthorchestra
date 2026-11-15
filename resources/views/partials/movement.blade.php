@@ -42,9 +42,8 @@
                     <x-icon name="collapse" class="icon-collapse" />
                 </button>
 
-                <button type="button" class="stage__cover" data-cover>
+                <button type="button" class="stage__cover" data-cover aria-label="Play {{ $v->short_title }}">
                     <span class="stage__cover-disc"><x-icon name="play" /></span>
-                    <span class="stage__cover-label">Play movement {{ $v->numeral }}</span>
                 </button>
             </div>
 
