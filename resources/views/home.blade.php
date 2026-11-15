@@ -63,7 +63,7 @@
 
             <div class="listen__ways">
                 <article class="way">
-                    <h3><x-icon name="cursor" /> Cursor</h3>
+                    <h3>Cursor</h3>
                     <div id="how-cursor">
                         @foreach ($page->content['cursor'] as $paragraph)
                             <p>{{ $paragraph }}</p>
