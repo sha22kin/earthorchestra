@@ -36,6 +36,9 @@ export function initReveal() {
     items.forEach((el) => io.observe(el));
 }
 
+// Playback speed of the hero intro animation (1 = original, 0.5 = half speed).
+const HERO_SPEED = 0.5;
+
 export function initHeroFilm() {
     const hero = document.querySelector('[data-hero]');
     const film = hero?.querySelector('[data-hero-film]');
@@ -53,6 +56,9 @@ export function initHeroFilm() {
         still();
         return;
     }
+
+    film.defaultPlaybackRate = HERO_SPEED;
+    film.playbackRate = HERO_SPEED;
 
     const attempt = film.play();
     if (attempt) attempt.catch(still);
