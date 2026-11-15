@@ -37,7 +37,7 @@ export function initReveal() {
 }
 
 // Playback speed of the hero intro animation (1 = original, 0.5 = half speed).
-const HERO_SPEED = 0.5;
+const HERO_SPEED = 0.4;
 
 export function initHeroFilm() {
     const hero = document.querySelector('[data-hero]');
