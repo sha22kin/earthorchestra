@@ -143,10 +143,16 @@ class AdminTest extends TestCase
             'title' => 'About us',
             'lede' => 'New lede',
             'paragraphs' => "One.\n\nTwo.\n\nThree.",
-            'pullquote' => 'Quote here',
+            'youtube_url' => 'https://youtu.be/dQw4w9WgXcQ?si=abc',
         ])->assertSessionHasNoErrors();
         $this->assertSame(['One.', 'Two.', 'Three.'], Page::where('slug', 'about')->first()->content['paragraphs']);
-        $this->get('/about')->assertSee('Quote here');
+        $this->get('/about')->assertSee('youtube-nocookie.com/embed/dQw4w9WgXcQ');
+
+        $this->put('/admin/pages/about', ['title' => 'About us', 'paragraphs' => 'One.', 'youtube_url' => 'https://vimeo.com/123'])
+            ->assertSessionHasErrors('youtube_url');
+        $this->put('/admin/pages/about', ['title' => 'About us', 'paragraphs' => 'One.', 'youtube_url' => ''])
+            ->assertSessionHasNoErrors();
+        $this->get('/about')->assertDontSee('youtube-nocookie.com');
 
         $this->put('/admin/pages/credits', [
             'title' => 'Credits',

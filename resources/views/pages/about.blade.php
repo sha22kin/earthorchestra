@@ -12,16 +12,19 @@
     </header>
 
     <div class="wrap wrap--narrow">
-        <div class="prose prose--lead" id="about-body">
+        <div class="prose" id="about-body">
             @foreach ($page->content['paragraphs'] as $paragraph)
                 <p>{{ $paragraph }}</p>
-                @if ($loop->index === 1)
-                    <blockquote class="pullquote" aria-hidden="true">
-                        <p>{{ $page->content['pullquote'] }}</p>
-                    </blockquote>
-                @endif
             @endforeach
         </div>
+
+        @if ($video = $page->youtubeId())
+            <figure class="video-embed">
+                <iframe src="https://www.youtube-nocookie.com/embed/{{ $video }}?rel=0" title="{{ $page->title }} video"
+                        loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </figure>
+        @endif
 
         <div class="page__end">
             <a class="btn btn--ink" href="{{ route('home') }}#programme">Back to the music <x-icon name="arrow-r" /></a>

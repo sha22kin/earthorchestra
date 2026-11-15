@@ -71,10 +71,14 @@ class PageController extends Controller
     {
         $v = $request->validate([
             'paragraphs' => ['required', 'string', 'max:15000'],
-            'pullquote' => ['nullable', 'string', 'max:300'],
+            'youtube_url' => ['nullable', 'url', 'max:255', function ($attribute, $value, $fail) {
+                if (! Page::parseYoutubeId($value)) {
+                    $fail('Paste a YouTube video link, e.g. https://www.youtube.com/watch?v=...');
+                }
+            }],
         ]);
 
-        return ['paragraphs' => self::paragraphs($v['paragraphs']), 'pullquote' => trim((string) $v['pullquote'])];
+        return ['paragraphs' => self::paragraphs($v['paragraphs']), 'youtube_url' => trim((string) ($v['youtube_url'] ?? ''))];
     }
 
     private function creditsContent(Request $request): array

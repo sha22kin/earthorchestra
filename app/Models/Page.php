@@ -47,6 +47,23 @@ class Page extends Model
         return str_replace('{year}', date('Y'), filled($value) ? $value : (self::CREDIT_TEXT[$key] ?? ''));
     }
 
+    /** The YouTube video id on the about page, if a link has been set. */
+    public function youtubeId(): ?string
+    {
+        return self::parseYoutubeId($this->content['youtube_url'] ?? null);
+    }
+
+    public static function parseYoutubeId(?string $url): ?string
+    {
+        if (blank($url)) {
+            return null;
+        }
+
+        $pattern = '~^https?://(?:www\.|m\.)?(?:youtube\.com/(?:watch\?(?:.*&)?v=|embed/|shorts/|live/)|youtu\.be/)([A-Za-z0-9_-]{11})~';
+
+        return preg_match($pattern, trim($url), $m) ? $m[1] : null;
+    }
+
     /** Credits label for places outside the credits page, such as the footer. */
     public static function creditText(string $key): string
     {
