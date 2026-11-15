@@ -38,7 +38,7 @@
 .crumb:hover .icon { transform: translateX(-3px); }
 
 .article__title {
-    font-family: var(--font-display);
+    font-family: var(--font-title);
     font-weight: 500;
     font-size: clamp(1.9rem, 1.35rem + 2.2vw, 3rem);
     line-height: 1.02;
@@ -147,7 +147,7 @@
 
 .sources h2 {
     margin-bottom: 1.25rem;
-    font-family: var(--font-display);
+    font-family: var(--font-title);
     font-size: 1.6rem;
 }
 .sources ol { list-style: none; counter-reset: ref; display: grid; gap: 1rem; }
@@ -289,7 +289,7 @@
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
-    font-family: var(--font-display);
+    font-family: var(--font-title);
     font-style: italic;
     font-size: 1.6rem;
     color: var(--copper-deep);
@@ -436,3 +436,12 @@
 .article__end > * { margin-inline: auto; }
 .article__end .article__more { text-align: center; }
 .article__end .sources h2 { text-align: center; }
+
+/* The script title face has a small x-height; give headings a little more size. */
+.section-title,
+.page__title { font-size: clamp(2.3rem, 1.6rem + 2.6vw, 3.4rem); }
+.movement__title { font-size: clamp(1.75rem, 1.35rem + 1.8vw, 2.75rem); }
+.way h3 { font-size: clamp(1.9rem, 1.55rem + 1.2vw, 2.4rem); }
+.article__title { font-size: clamp(2.3rem, 1.6rem + 2.8vw, 3.7rem); }
+.bill__title,
+.sources h2 { font-size: 2rem; font-style: normal; }

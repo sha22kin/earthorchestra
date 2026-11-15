@@ -24,7 +24,7 @@
     margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
 }
 .movement__title {
-    font-family: var(--font-display);
+    font-family: var(--font-title);
     font-weight: 500;
     font-size: clamp(1.45rem, 1.1rem + 1.4vw, 2.2rem);
     line-height: 1.05;
